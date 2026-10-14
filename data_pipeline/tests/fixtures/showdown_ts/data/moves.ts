@@ -568,6 +568,269 @@ export const Moves: import('../sim/dex').DataTable = {
   "status": "brn"
  }
 },
+  "calmmind": {
+    "accuracy": true,
+    "basePower": 0,
+    "boosts": {
+      "spa": 1,
+      "spd": 1
+    },
+    "category": "Status",
+    "contestType": "Clever",
+    "flags": {
+      "metronome": 1,
+      "snatch": 1
+    },
+    "name": "Calm Mind",
+    "num": 347,
+    "pp": 20,
+    "priority": 0,
+    "target": "self",
+    "type": "Psychic",
+    "zMove": {
+      "effect": "clearnegativeboost"
+    }
+  },
+  "doubleedge": {
+    "accuracy": 100,
+    "basePower": 120,
+    "category": "Physical",
+    "contestType": "Tough",
+    "flags": {
+      "contact": 1,
+      "metronome": 1,
+      "mirror": 1,
+      "protect": 1
+    },
+    "name": "Double-Edge",
+    "num": 38,
+    "pp": 15,
+    "priority": 0,
+    "recoil": [
+      33,
+      100
+    ],
+    "target": "normal",
+    "type": "Normal"
+  },
+  "dragondance": {
+    "accuracy": true,
+    "basePower": 0,
+    "boosts": {
+      "atk": 1,
+      "spe": 1
+    },
+    "category": "Status",
+    "contestType": "Cool",
+    "flags": {
+      "dance": 1,
+      "metronome": 1,
+      "snatch": 1
+    },
+    "name": "Dragon Dance",
+    "num": 349,
+    "pp": 20,
+    "priority": 0,
+    "target": "self",
+    "type": "Dragon",
+    "zMove": {
+      "effect": "clearnegativeboost"
+    }
+  },
+  "headsmash": {
+    "accuracy": 80,
+    "basePower": 150,
+    "category": "Physical",
+    "contestType": "Tough",
+    "flags": {
+      "contact": 1,
+      "metronome": 1,
+      "mirror": 1,
+      "protect": 1
+    },
+    "name": "Head Smash",
+    "num": 457,
+    "pp": 5,
+    "priority": 0,
+    "recoil": [
+      1,
+      2
+    ],
+    "target": "normal",
+    "type": "Rock"
+  },
+  "icywind": {
+    "accuracy": 95,
+    "basePower": 55,
+    "category": "Special",
+    "contestType": "Beautiful",
+    "flags": {
+      "metronome": 1,
+      "mirror": 1,
+      "protect": 1,
+      "wind": 1
+    },
+    "name": "Icy Wind",
+    "num": 196,
+    "pp": 15,
+    "priority": 0,
+    "secondary": {
+      "boosts": {
+        "spe": -1
+      },
+      "chance": 100
+    },
+    "target": "allAdjacentFoes",
+    "type": "Ice"
+  },
+  "mysticalfire": {
+    "accuracy": 100,
+    "basePower": 75,
+    "category": "Special",
+    "contestType": "Beautiful",
+    "flags": {
+      "metronome": 1,
+      "mirror": 1,
+      "protect": 1
+    },
+    "name": "Mystical Fire",
+    "num": 595,
+    "pp": 10,
+    "priority": 0,
+    "secondary": {
+      "boosts": {
+        "spa": -1
+      },
+      "chance": 100
+    },
+    "target": "normal",
+    "type": "Fire"
+  },
+  "recover": {
+    "accuracy": true,
+    "basePower": 0,
+    "category": "Status",
+    "contestType": "Clever",
+    "flags": {
+      "heal": 1,
+      "metronome": 1,
+      "snatch": 1
+    },
+    "heal": [
+      1,
+      2
+    ],
+    "name": "Recover",
+    "num": 105,
+    "pp": 5,
+    "priority": 0,
+    "target": "self",
+    "type": "Normal",
+    "zMove": {
+      "effect": "clearnegativeboost"
+    }
+  },
+  "screech": {
+    "accuracy": 85,
+    "basePower": 0,
+    "boosts": {
+      "def": -2
+    },
+    "category": "Status",
+    "contestType": "Clever",
+    "flags": {
+      "allyanim": 1,
+      "bypasssub": 1,
+      "metronome": 1,
+      "mirror": 1,
+      "protect": 1,
+      "reflectable": 1,
+      "sound": 1
+    },
+    "name": "Screech",
+    "num": 103,
+    "pp": 40,
+    "priority": 0,
+    "target": "normal",
+    "type": "Normal",
+    "zMove": {
+      "boost": {
+        "atk": 1
+      }
+    }
+  },
+  "superpower": {
+    "accuracy": 100,
+    "basePower": 120,
+    "category": "Physical",
+    "contestType": "Tough",
+    "flags": {
+      "contact": 1,
+      "metronome": 1,
+      "mirror": 1,
+      "protect": 1
+    },
+    "name": "Superpower",
+    "num": 276,
+    "pp": 5,
+    "priority": 0,
+    "self": {
+      "boosts": {
+        "atk": -1,
+        "def": -1
+      }
+    },
+    "target": "normal",
+    "type": "Fighting"
+  },
+  "swordsdance": {
+    "accuracy": true,
+    "basePower": 0,
+    "boosts": {
+      "atk": 2
+    },
+    "category": "Status",
+    "contestType": "Beautiful",
+    "flags": {
+      "dance": 1,
+      "metronome": 1,
+      "snatch": 1
+    },
+    "name": "Swords Dance",
+    "num": 14,
+    "pp": 20,
+    "priority": 0,
+    "target": "self",
+    "type": "Normal",
+    "zMove": {
+      "effect": "clearnegativeboost"
+    }
+  },
+  "thunderwave": {
+    "accuracy": 90,
+    "basePower": 0,
+    "category": "Status",
+    "contestType": "Cool",
+    "flags": {
+      "metronome": 1,
+      "mirror": 1,
+      "protect": 1,
+      "reflectable": 1
+    },
+    "ignoreImmunity": false,
+    "name": "Thunder Wave",
+    "num": 86,
+    "pp": 20,
+    "priority": 0,
+    "status": "par",
+    "target": "normal",
+    "type": "Electric",
+    "zMove": {
+      "boost": {
+        "spd": 1
+      }
+    }
+  },
 "fxpastmove": {
  "num": 9001,
  "name": "Fxpastmove",

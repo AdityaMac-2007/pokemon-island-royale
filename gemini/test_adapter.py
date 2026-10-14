@@ -68,14 +68,14 @@ class TestAdapterIntegration(unittest.TestCase):
     # 2. Strict Rejection of Unsupported Moves
     # ------------------------------------------------------------------------
     def test_rejection_of_unsupported_moves(self):
-        """Unsupported moves (protect, snarl, irondefense) return None and fail validation."""
-        self.assertIsNone(resolve_move_identifier("protect", self.registry))
+        """Unsupported moves (snarl, irondefense) return None and fail validation."""
+        self.assertEqual(resolve_move_identifier("protect", self.registry), "protect")
         self.assertIsNone(resolve_move_identifier("snarl", self.registry))
         self.assertIsNone(resolve_move_identifier("irondefense", self.registry))
 
         illegal_build = {
             "species": "Garchomp",
-            "moves": ["earthquake", "protect", "closecombat"],
+            "moves": ["earthquake", "snarl", "closecombat"],
             "nature": "Jolly",
             "evs": {"atk": 252, "spe": 252}
         }
@@ -86,19 +86,19 @@ class TestAdapterIntegration(unittest.TestCase):
                 REFERENCE_SPECIES["garchomp"]["types"]
             )
         self.assertIn("Move rejection", str(ctx.exception))
-        self.assertIn("protect", str(ctx.exception))
+        self.assertIn("snarl", str(ctx.exception))
 
     # ------------------------------------------------------------------------
     # 3. Garchomp Candidate-Pool Filter
     # ------------------------------------------------------------------------
     def test_garchomp_candidate_pool_filter(self):
-        """Verifies candidate pool filters exactly to earthquake, closecombat, dracometeor, surf."""
+        """Keeps supported Protect while filtering unsupported moves from Garchomp."""
         raw_pool = REFERENCE_SPECIES["garchomp"]["pool"]
         usable, mapped, rejected = filter_candidate_pool(raw_pool, self.registry)
 
-        self.assertEqual(set(usable), {"earthquake", "closecombat", "dracometeor", "surf"})
-        self.assertEqual(set(mapped), {"earthquake", "close_combat", "draco_meteor", "surf"})
-        self.assertEqual(set(rejected), {"protect", "irondefense", "snarl"})
+        self.assertEqual(set(usable), {"earthquake", "protect", "closecombat", "dracometeor", "surf"})
+        self.assertEqual(set(mapped), {"earthquake", "protect", "close_combat", "draco_meteor", "surf"})
+        self.assertEqual(set(rejected), {"irondefense", "snarl"})
 
     # ------------------------------------------------------------------------
     # 4. Move Pool Override & DB Mutation Protection

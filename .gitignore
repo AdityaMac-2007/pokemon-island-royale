@@ -23,3 +23,6 @@ data/cache/
 
 # Installed Node.js dependencies
 data_pipeline/node/node_modules/
+
+# Local safety backups created during development
+*.before-*

@@ -149,9 +149,6 @@ export const Learnsets: import('../sim/dex').DataTable = {
 },
 "fxnoteng": {
  "learnset": {
-  "protect": [
-   "9M"
-  ],
   "scald": [
    "9M"
   ]
