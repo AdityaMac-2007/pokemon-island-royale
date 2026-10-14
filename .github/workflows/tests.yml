@@ -11,8 +11,8 @@ permissions:
   contents: read
 
 jobs:
-  combat-tests:
-    name: Combat engine tests
+  tests:
+    name: Project test suites
     runs-on: ubuntu-latest
 
     steps:
@@ -24,16 +24,36 @@ jobs:
         with:
           python-version: "3.15"
 
-      - name: Show Python version
-        run: python --version
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
 
-      - name: Run combat test suite
+      - name: Install data-pipeline dependencies
+        working-directory: data_pipeline/node
+        run: npm ci
+
+      - name: Run Combat engine tests
         env:
           PYTHONPATH: Claude engine
         run: |
           python -m unittest discover \
             -s "Claude engine/tests" \
             -p "test_*.py" \
+            -v
+
+      - name: Run data-pipeline tests
+        run: |
+          python -m unittest discover \
+            -s data_pipeline/tests \
+            -p "test_*.py" \
+            -v
+
+      - name: Run Gemini adapter tests
+        run: |
+          python -m unittest discover \
+            -s gemini \
+            -p "test_adapter.py" \
             -v
 
       - name: Verify simulation reproducibility
