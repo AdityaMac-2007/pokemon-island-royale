@@ -1,0 +1,434 @@
+{
+ "engine_compatible": {
+  "flight_reviewed": 24,
+  "incompatible_reasons": {
+   "default_build_illegal": 1,
+   "no_supported_moves": 19
+  },
+  "of_ruleset_eligible": "840/860",
+  "species_entries": 840,
+  "supported_move_count_histogram": {
+   "1": 18,
+   "2": 47,
+   "3": 95,
+   "4+": 680
+  },
+  "with_4_or_more_supported_moves": 680,
+  "with_functional_default_item": 817,
+  "with_functional_legal_ability": 157
+ },
+ "engine_registry": {
+  "engine_moves": 36,
+  "move_notes": {
+   "air_slash": {
+    "hits_air": true,
+    "not_modelled": [
+     "secondary:volatileStatus"
+    ],
+    "reach": "ranged"
+   },
+   "aqua_jet": {
+    "hits_air": false,
+    "not_modelled": [],
+    "reach": "melee"
+   },
+   "body_slam": {
+    "hits_air": false,
+    "not_modelled": [],
+    "reach": "melee"
+   },
+   "brave_bird": {
+    "hits_air": false,
+    "not_modelled": [
+     "recoil"
+    ],
+    "reach": "melee"
+   },
+   "bug_buzz": {
+    "hits_air": true,
+    "not_modelled": [
+     "secondary:boosts"
+    ],
+    "reach": "ranged"
+   },
+   "close_combat": {
+    "hits_air": false,
+    "not_modelled": [
+     "self_boosts"
+    ],
+    "reach": "melee"
+   },
+   "crunch": {
+    "hits_air": false,
+    "not_modelled": [
+     "secondary:boosts"
+    ],
+    "reach": "melee"
+   },
+   "dark_pulse": {
+    "hits_air": true,
+    "not_modelled": [
+     "secondary:volatileStatus"
+    ],
+    "reach": "ranged"
+   },
+   "draco_meteor": {
+    "hits_air": true,
+    "not_modelled": [
+     "self_boosts"
+    ],
+    "reach": "ranged"
+   },
+   "dragon_claw": {
+    "hits_air": false,
+    "not_modelled": [],
+    "reach": "melee"
+   },
+   "earthquake": {
+    "hits_air": false,
+    "not_modelled": [
+     "target:allAdjacent"
+    ],
+    "reach": "ranged"
+   },
+   "energy_ball": {
+    "hits_air": true,
+    "not_modelled": [
+     "secondary:boosts"
+    ],
+    "reach": "ranged"
+   },
+   "extreme_speed": {
+    "hits_air": false,
+    "not_modelled": [],
+    "reach": "melee"
+   },
+   "flamethrower": {
+    "hits_air": true,
+    "not_modelled": [],
+    "reach": "ranged"
+   },
+   "flare_blitz": {
+    "hits_air": false,
+    "not_modelled": [
+     "recoil"
+    ],
+    "reach": "melee"
+   },
+   "flash_cannon": {
+    "hits_air": true,
+    "not_modelled": [
+     "secondary:boosts"
+    ],
+    "reach": "ranged"
+   },
+   "hurricane": {
+    "hits_air": true,
+    "not_modelled": [
+     "scripted:onModifyMove",
+     "secondary:volatileStatus"
+    ],
+    "reach": "ranged"
+   },
+   "hydro_pump": {
+    "hits_air": true,
+    "not_modelled": [],
+    "reach": "ranged"
+   },
+   "hyper_voice": {
+    "hits_air": true,
+    "not_modelled": [
+     "target:allAdjacentFoes"
+    ],
+    "reach": "ranged"
+   },
+   "ice_beam": {
+    "hits_air": true,
+    "not_modelled": [
+     "secondary_status:frz"
+    ],
+    "reach": "ranged"
+   },
+   "icicle_crash": {
+    "hits_air": false,
+    "not_modelled": [
+     "secondary:volatileStatus"
+    ],
+    "reach": "melee"
+   },
+   "iron_head": {
+    "hits_air": false,
+    "not_modelled": [
+     "secondary:volatileStatus"
+    ],
+    "reach": "melee"
+   },
+   "leaf_blade": {
+    "hits_air": false,
+    "not_modelled": [
+     "crit_ratio"
+    ],
+    "reach": "melee"
+   },
+   "moonblast": {
+    "hits_air": true,
+    "not_modelled": [
+     "secondary:boosts"
+    ],
+    "reach": "ranged"
+   },
+   "play_rough": {
+    "hits_air": false,
+    "not_modelled": [
+     "secondary:boosts"
+    ],
+    "reach": "melee"
+   },
+   "psychic": {
+    "hits_air": true,
+    "not_modelled": [
+     "secondary:boosts"
+    ],
+    "reach": "ranged"
+   },
+   "quick_attack": {
+    "hits_air": false,
+    "not_modelled": [],
+    "reach": "melee"
+   },
+   "rock_slide": {
+    "hits_air": true,
+    "not_modelled": [
+     "secondary:volatileStatus",
+     "target:allAdjacentFoes"
+    ],
+    "reach": "ranged"
+   },
+   "shadow_ball": {
+    "hits_air": true,
+    "not_modelled": [
+     "secondary:boosts"
+    ],
+    "reach": "ranged"
+   },
+   "shadow_sneak": {
+    "hits_air": false,
+    "not_modelled": [],
+    "reach": "melee"
+   },
+   "sludge_bomb": {
+    "hits_air": true,
+    "not_modelled": [],
+    "reach": "ranged"
+   },
+   "stone_edge": {
+    "hits_air": false,
+    "not_modelled": [
+     "crit_ratio"
+    ],
+    "reach": "melee"
+   },
+   "surf": {
+    "hits_air": true,
+    "not_modelled": [
+     "target:allAdjacent"
+    ],
+    "reach": "ranged"
+   },
+   "thunderbolt": {
+    "hits_air": true,
+    "not_modelled": [],
+    "reach": "ranged"
+   },
+   "waterfall": {
+    "hits_air": false,
+    "not_modelled": [
+     "secondary:volatileStatus"
+    ],
+    "reach": "melee"
+   },
+   "x_scissor": {
+    "hits_air": false,
+    "not_modelled": [],
+    "reach": "melee"
+   }
+  },
+  "resolved": 36,
+  "stat_mismatches": [],
+  "unresolved": []
+ },
+ "flight": {
+  "overrides_not_eligible_or_unknown": [
+   "alakazam",
+   "ferrothorn",
+   "togekiss"
+  ],
+  "reviewed_overrides": 27,
+  "unreviewed_candidates": [
+   "altaria",
+   "arceusflying",
+   "articuno",
+   "articunogalar",
+   "azelf",
+   "bombirdier",
+   "braviary",
+   "braviaryhisui",
+   "bronzong",
+   "bronzor",
+   "chimecho",
+   "chingling",
+   "combee",
+   "corvisquire",
+   "cramorant",
+   "cresselia",
+   "cryogonal",
+   "dartrix",
+   "delibird",
+   "dodrio",
+   "doduo",
+   "drifblim",
+   "drifloon",
+   "ducklett",
+   "duskull",
+   "eelektrik",
+   "eelektross",
+   "enamorus",
+   "enamorustherian",
+   "flamigo",
+   "fletchinder",
+   "fletchling",
+   "flygon",
+   "gastly",
+   "giratinaorigin",
+   "gligar",
+   "gliscor",
+   "haunter",
+   "hawlucha",
+   "honchkrow",
+   "hooh",
+   "hoothoot",
+   "hoppip",
+   "hydreigon",
+   "ironjugulis",
+   "jumpluff",
+   "kilowattrel",
+   "koffing",
+   "landorus",
+   "landorustherian",
+   "latias",
+   "lugia",
+   "mandibuzz",
+   "masquerain",
+   "mesprit",
+   "minior",
+   "misdreavus",
+   "mismagius",
+   "moltres",
+   "moltresgalar",
+   "murkrow",
+   "noctowl",
+   "noibat",
+   "noivern",
+   "oricorio",
+   "oricoriopau",
+   "oricoriopompom",
+   "oricoriosensu",
+   "pelipper",
+   "pikipek",
+   "rayquaza",
+   "rookidee",
+   "rotom",
+   "rotomfan",
+   "rotomfrost",
+   "rotomheat",
+   "rotommow",
+   "rotomwash",
+   "rowlet",
+   "rufflet",
+   "scyther",
+   "shayminsky",
+   "skiploom",
+   "squawkabilly",
+   "squawkabillyblue",
+   "squawkabillywhite",
+   "squawkabillyyellow",
+   "staraptor",
+   "staravia",
+   "starly",
+   "swablu",
+   "swanna",
+   "talonflame",
+   "thundurus",
+   "thundurustherian",
+   "tornadus",
+   "tornadustherian",
+   "toucannon",
+   "tropius",
+   "trumbeak",
+   "tynamo",
+   "uxie",
+   "vespiquen",
+   "vibrava",
+   "vikavolt",
+   "vivillon",
+   "vivillonfancy",
+   "vivillonpokeball",
+   "vullaby",
+   "wattrel",
+   "weezing",
+   "weezinggalar",
+   "wingull",
+   "yanma",
+   "yanmega",
+   "zapdos",
+   "zapdosgalar"
+  ]
+ },
+ "imported": {
+  "abilities": 321,
+  "by_form_class": {
+   "base": 1121,
+   "battle_only": 163,
+   "cosmetic": 37,
+   "permanent_form": 137,
+   "regional": 60
+  },
+  "distinct_dex_numbers": 1025,
+  "items": 583,
+  "max_dex_number": 1025,
+  "moves": 954,
+  "species_entries": 1518
+ },
+ "limitations": [
+  "A species being imported does not make it engine-playable: the engine registry is a small hard-coded subset.",
+  "'engine_compatible' means >=1 legal move that already exists in the engine's registry plus a legal default build; it says nothing about balance or about the engine modelling the move's full canonical effect (see move_notes).",
+  "Flight capability is never derived from data. Only species listed in data/overrides/flight.json are 'reviewed'; all others default to can_fly=false and are listed as unreviewed candidates when they look aerial.",
+  "Learnset legality follows the ruleset's not_enforced list; event-only moves are excluded unless the ruleset allows them.",
+  "No engine run is performed by the importer; 'engine_compatible' is not 'engine_verified'."
+ ],
+ "ruleset": "gen9-l100-ffa-v1",
+ "ruleset_digest": "7626eff0b2072c56248c5f15dc5aa9b000682558fe325fbd3aa01c7f765eaed8",
+ "ruleset_eligible": {
+  "by_form_class": {
+   "base": 733,
+   "permanent_form": 83,
+   "regional": 44
+  },
+  "distinct_dex_numbers": 733,
+  "excluded_species_reasons": {
+   "form_policy:battle_only": 163,
+   "form_policy:cosmetic": 37,
+   "nonstandard:CAP": 83,
+   "nonstandard:Custom": 19,
+   "nonstandard:Future": 49,
+   "nonstandard:LGPE": 2,
+   "nonstandard:Past": 452,
+   "num<=0": 138
+  },
+  "species_entries": 860
+ },
+ "source": {
+  "commit": "3a766f2cfb5e51c1e428cfe87d0dba91a8f01640",
+  "repo": "https://github.com/smogon/pokemon-showdown.git"
+ }
+}

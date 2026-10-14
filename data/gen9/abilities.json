@@ -1,0 +1,3391 @@
+{
+ "abilities": {
+  "adaptability": {
+   "engine_id": "adaptability",
+   "handlers": [
+    "onModifySTAB"
+   ],
+   "id": "adaptability",
+   "is_nonstandard": null,
+   "name": "Adaptability",
+   "num": 91
+  },
+  "aerilate": {
+   "engine_id": "aerilate",
+   "handlers": [
+    "onBasePower",
+    "onModifyType"
+   ],
+   "id": "aerilate",
+   "is_nonstandard": null,
+   "name": "Aerilate",
+   "num": 184
+  },
+  "aftermath": {
+   "engine_id": "aftermath",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "aftermath",
+   "is_nonstandard": null,
+   "name": "Aftermath",
+   "num": 106
+  },
+  "airlock": {
+   "engine_id": "air_lock",
+   "handlers": [
+    "onEnd",
+    "onStart",
+    "onSwitchIn"
+   ],
+   "id": "airlock",
+   "is_nonstandard": null,
+   "name": "Air Lock",
+   "num": 76
+  },
+  "analytic": {
+   "engine_id": "analytic",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "analytic",
+   "is_nonstandard": null,
+   "name": "Analytic",
+   "num": 148
+  },
+  "angerpoint": {
+   "engine_id": "anger_point",
+   "handlers": [
+    "onHit"
+   ],
+   "id": "angerpoint",
+   "is_nonstandard": null,
+   "name": "Anger Point",
+   "num": 83
+  },
+  "angershell": {
+   "engine_id": "anger_shell",
+   "handlers": [
+    "onAfterMoveSecondary",
+    "onDamage",
+    "onTryEatItem"
+   ],
+   "id": "angershell",
+   "is_nonstandard": null,
+   "name": "Anger Shell",
+   "num": 271
+  },
+  "anticipation": {
+   "engine_id": "anticipation",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "anticipation",
+   "is_nonstandard": null,
+   "name": "Anticipation",
+   "num": 107
+  },
+  "arenatrap": {
+   "engine_id": "arena_trap",
+   "handlers": [
+    "onFoeMaybeTrapPokemon",
+    "onFoeTrapPokemon"
+   ],
+   "id": "arenatrap",
+   "is_nonstandard": null,
+   "name": "Arena Trap",
+   "num": 71
+  },
+  "armortail": {
+   "engine_id": "armor_tail",
+   "handlers": [
+    "onFoeTryMove"
+   ],
+   "id": "armortail",
+   "is_nonstandard": null,
+   "name": "Armor Tail",
+   "num": 296
+  },
+  "aromaveil": {
+   "engine_id": "aroma_veil",
+   "handlers": [
+    "onAllyTryAddVolatile"
+   ],
+   "id": "aromaveil",
+   "is_nonstandard": null,
+   "name": "Aroma Veil",
+   "num": 165
+  },
+  "asoneglastrier": {
+   "engine_id": "as_one_glastrier",
+   "handlers": [
+    "onEnd",
+    "onFoeTryEatItem",
+    "onSourceAfterFaint",
+    "onStart"
+   ],
+   "id": "asoneglastrier",
+   "is_nonstandard": null,
+   "name": "As One (Glastrier)",
+   "num": 266
+  },
+  "asonespectrier": {
+   "engine_id": "as_one_spectrier",
+   "handlers": [
+    "onEnd",
+    "onFoeTryEatItem",
+    "onSourceAfterFaint",
+    "onStart"
+   ],
+   "id": "asonespectrier",
+   "is_nonstandard": null,
+   "name": "As One (Spectrier)",
+   "num": 267
+  },
+  "aurabreak": {
+   "engine_id": "aura_break",
+   "handlers": [
+    "onAnyTryPrimaryHit",
+    "onStart"
+   ],
+   "id": "aurabreak",
+   "is_nonstandard": null,
+   "name": "Aura Break",
+   "num": 188
+  },
+  "auraguard": {
+   "engine_id": "aura_guard",
+   "handlers": [
+    "onSourceModifyDamage"
+   ],
+   "id": "auraguard",
+   "is_nonstandard": "Future",
+   "name": "Aura Guard",
+   "num": 319
+  },
+  "baddreams": {
+   "engine_id": "bad_dreams",
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "baddreams",
+   "is_nonstandard": null,
+   "name": "Bad Dreams",
+   "num": 123
+  },
+  "ballfetch": {
+   "engine_id": "ball_fetch",
+   "handlers": [],
+   "id": "ballfetch",
+   "is_nonstandard": null,
+   "name": "Ball Fetch",
+   "num": 237
+  },
+  "battery": {
+   "engine_id": "battery",
+   "handlers": [
+    "onAllyBasePower"
+   ],
+   "id": "battery",
+   "is_nonstandard": null,
+   "name": "Battery",
+   "num": 217
+  },
+  "battlearmor": {
+   "engine_id": "battle_armor",
+   "handlers": [],
+   "id": "battlearmor",
+   "is_nonstandard": null,
+   "name": "Battle Armor",
+   "num": 4
+  },
+  "battlebond": {
+   "engine_id": "battle_bond",
+   "handlers": [
+    "onModifyMove",
+    "onSourceAfterFaint"
+   ],
+   "id": "battlebond",
+   "is_nonstandard": null,
+   "name": "Battle Bond",
+   "num": 210
+  },
+  "beadsofruin": {
+   "engine_id": "beads_of_ruin",
+   "handlers": [
+    "onAnyModifySpD",
+    "onStart"
+   ],
+   "id": "beadsofruin",
+   "is_nonstandard": null,
+   "name": "Beads of Ruin",
+   "num": 284
+  },
+  "beastboost": {
+   "engine_id": "beast_boost",
+   "handlers": [
+    "onSourceAfterFaint"
+   ],
+   "id": "beastboost",
+   "is_nonstandard": null,
+   "name": "Beast Boost",
+   "num": 224
+  },
+  "berserk": {
+   "engine_id": "berserk",
+   "handlers": [
+    "onAfterMoveSecondary",
+    "onDamage",
+    "onTryEatItem"
+   ],
+   "id": "berserk",
+   "is_nonstandard": null,
+   "name": "Berserk",
+   "num": 201
+  },
+  "bigpecks": {
+   "engine_id": "big_pecks",
+   "handlers": [
+    "onTryBoost"
+   ],
+   "id": "bigpecks",
+   "is_nonstandard": null,
+   "name": "Big Pecks",
+   "num": 145
+  },
+  "blaze": {
+   "engine_id": "blaze",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "blaze",
+   "is_nonstandard": null,
+   "name": "Blaze",
+   "num": 66
+  },
+  "bulletproof": {
+   "engine_id": "bulletproof",
+   "handlers": [
+    "onTryHit"
+   ],
+   "id": "bulletproof",
+   "is_nonstandard": null,
+   "name": "Bulletproof",
+   "num": 171
+  },
+  "cheekpouch": {
+   "engine_id": "cheek_pouch",
+   "handlers": [
+    "onEatItem"
+   ],
+   "id": "cheekpouch",
+   "is_nonstandard": null,
+   "name": "Cheek Pouch",
+   "num": 167
+  },
+  "chillingneigh": {
+   "engine_id": "chilling_neigh",
+   "handlers": [
+    "onSourceAfterFaint"
+   ],
+   "id": "chillingneigh",
+   "is_nonstandard": null,
+   "name": "Chilling Neigh",
+   "num": 264
+  },
+  "chlorophyll": {
+   "engine_id": "chlorophyll",
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "chlorophyll",
+   "is_nonstandard": null,
+   "name": "Chlorophyll",
+   "num": 34
+  },
+  "clearbody": {
+   "engine_id": "clear_body",
+   "handlers": [
+    "onTryBoost"
+   ],
+   "id": "clearbody",
+   "is_nonstandard": null,
+   "name": "Clear Body",
+   "num": 29
+  },
+  "cloudnine": {
+   "engine_id": "cloud_nine",
+   "handlers": [
+    "onEnd",
+    "onStart",
+    "onSwitchIn"
+   ],
+   "id": "cloudnine",
+   "is_nonstandard": null,
+   "name": "Cloud Nine",
+   "num": 13
+  },
+  "colorchange": {
+   "engine_id": "color_change",
+   "handlers": [
+    "onAfterMoveSecondary"
+   ],
+   "id": "colorchange",
+   "is_nonstandard": null,
+   "name": "Color Change",
+   "num": 16
+  },
+  "comatose": {
+   "engine_id": "comatose",
+   "handlers": [
+    "onSetStatus",
+    "onStart"
+   ],
+   "id": "comatose",
+   "is_nonstandard": null,
+   "name": "Comatose",
+   "num": 213
+  },
+  "commander": {
+   "engine_id": "commander",
+   "handlers": [
+    "onAnySwitchIn",
+    "onStart",
+    "onUpdate"
+   ],
+   "id": "commander",
+   "is_nonstandard": null,
+   "name": "Commander",
+   "num": 279
+  },
+  "competitive": {
+   "engine_id": "competitive",
+   "handlers": [
+    "onAfterEachBoost"
+   ],
+   "id": "competitive",
+   "is_nonstandard": null,
+   "name": "Competitive",
+   "num": 172
+  },
+  "compoundeyes": {
+   "engine_id": "compound_eyes",
+   "handlers": [
+    "onSourceModifyAccuracy"
+   ],
+   "id": "compoundeyes",
+   "is_nonstandard": null,
+   "name": "Compound Eyes",
+   "num": 14
+  },
+  "contrary": {
+   "engine_id": "contrary",
+   "handlers": [
+    "onChangeBoost"
+   ],
+   "id": "contrary",
+   "is_nonstandard": null,
+   "name": "Contrary",
+   "num": 126
+  },
+  "corrosion": {
+   "engine_id": "corrosion",
+   "handlers": [],
+   "id": "corrosion",
+   "is_nonstandard": null,
+   "name": "Corrosion",
+   "num": 212
+  },
+  "costar": {
+   "engine_id": "costar",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "costar",
+   "is_nonstandard": null,
+   "name": "Costar",
+   "num": 294
+  },
+  "cottondown": {
+   "engine_id": "cotton_down",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "cottondown",
+   "is_nonstandard": null,
+   "name": "Cotton Down",
+   "num": 238
+  },
+  "cudchew": {
+   "engine_id": "cud_chew",
+   "handlers": [
+    "onEatItem",
+    "onResidual"
+   ],
+   "id": "cudchew",
+   "is_nonstandard": null,
+   "name": "Cud Chew",
+   "num": 291
+  },
+  "curiousmedicine": {
+   "engine_id": "curious_medicine",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "curiousmedicine",
+   "is_nonstandard": null,
+   "name": "Curious Medicine",
+   "num": 261
+  },
+  "cursedbody": {
+   "engine_id": "cursed_body",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "cursedbody",
+   "is_nonstandard": null,
+   "name": "Cursed Body",
+   "num": 130
+  },
+  "cutecharm": {
+   "engine_id": "cute_charm",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "cutecharm",
+   "is_nonstandard": null,
+   "name": "Cute Charm",
+   "num": 56
+  },
+  "damp": {
+   "engine_id": "damp",
+   "handlers": [
+    "onAnyDamage",
+    "onAnyTryMove"
+   ],
+   "id": "damp",
+   "is_nonstandard": null,
+   "name": "Damp",
+   "num": 6
+  },
+  "dancer": {
+   "engine_id": "dancer",
+   "handlers": [],
+   "id": "dancer",
+   "is_nonstandard": null,
+   "name": "Dancer",
+   "num": 216
+  },
+  "darkaura": {
+   "engine_id": "dark_aura",
+   "handlers": [
+    "onAnyBasePower",
+    "onStart"
+   ],
+   "id": "darkaura",
+   "is_nonstandard": null,
+   "name": "Dark Aura",
+   "num": 186
+  },
+  "dauntlessshield": {
+   "engine_id": "dauntless_shield",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "dauntlessshield",
+   "is_nonstandard": null,
+   "name": "Dauntless Shield",
+   "num": 235
+  },
+  "dazzling": {
+   "engine_id": "dazzling",
+   "handlers": [
+    "onFoeTryMove"
+   ],
+   "id": "dazzling",
+   "is_nonstandard": null,
+   "name": "Dazzling",
+   "num": 219
+  },
+  "defeatist": {
+   "engine_id": "defeatist",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "defeatist",
+   "is_nonstandard": null,
+   "name": "Defeatist",
+   "num": 129
+  },
+  "defiant": {
+   "engine_id": "defiant",
+   "handlers": [
+    "onAfterEachBoost"
+   ],
+   "id": "defiant",
+   "is_nonstandard": null,
+   "name": "Defiant",
+   "num": 128
+  },
+  "deltastream": {
+   "engine_id": "delta_stream",
+   "handlers": [
+    "onAnySetWeather",
+    "onEnd",
+    "onStart"
+   ],
+   "id": "deltastream",
+   "is_nonstandard": null,
+   "name": "Delta Stream",
+   "num": 191
+  },
+  "desolateland": {
+   "engine_id": "desolate_land",
+   "handlers": [
+    "onAnySetWeather",
+    "onEnd",
+    "onStart"
+   ],
+   "id": "desolateland",
+   "is_nonstandard": null,
+   "name": "Desolate Land",
+   "num": 190
+  },
+  "disguise": {
+   "engine_id": "disguise",
+   "handlers": [
+    "onCriticalHit",
+    "onDamage",
+    "onEffectiveness",
+    "onUpdate"
+   ],
+   "id": "disguise",
+   "is_nonstandard": null,
+   "name": "Disguise",
+   "num": 209
+  },
+  "download": {
+   "engine_id": "download",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "download",
+   "is_nonstandard": null,
+   "name": "Download",
+   "num": 88
+  },
+  "dragonize": {
+   "engine_id": "dragonize",
+   "handlers": [
+    "onBasePower",
+    "onModifyType"
+   ],
+   "id": "dragonize",
+   "is_nonstandard": "Future",
+   "name": "Dragonize",
+   "num": 312
+  },
+  "dragonsmaw": {
+   "engine_id": "dragons_maw",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "dragonsmaw",
+   "is_nonstandard": null,
+   "name": "Dragon's Maw",
+   "num": 263
+  },
+  "drizzle": {
+   "engine_id": "drizzle",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "drizzle",
+   "is_nonstandard": null,
+   "name": "Drizzle",
+   "num": 2
+  },
+  "drought": {
+   "engine_id": "drought",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "drought",
+   "is_nonstandard": null,
+   "name": "Drought",
+   "num": 70
+  },
+  "dryskin": {
+   "engine_id": "dry_skin",
+   "handlers": [
+    "onSourceBasePower",
+    "onTryHit",
+    "onWeather"
+   ],
+   "id": "dryskin",
+   "is_nonstandard": null,
+   "name": "Dry Skin",
+   "num": 87
+  },
+  "earlybird": {
+   "engine_id": "early_bird",
+   "handlers": [],
+   "id": "earlybird",
+   "is_nonstandard": null,
+   "name": "Early Bird",
+   "num": 48
+  },
+  "eartheater": {
+   "engine_id": "earth_eater",
+   "handlers": [
+    "onTryHit"
+   ],
+   "id": "eartheater",
+   "is_nonstandard": null,
+   "name": "Earth Eater",
+   "num": 297
+  },
+  "eelevate": {
+   "engine_id": "eelevate",
+   "handlers": [
+    "onSourceAfterFaint"
+   ],
+   "id": "eelevate",
+   "is_nonstandard": "Future",
+   "name": "Eelevate",
+   "num": 313
+  },
+  "effectspore": {
+   "engine_id": "effect_spore",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "effectspore",
+   "is_nonstandard": null,
+   "name": "Effect Spore",
+   "num": 27
+  },
+  "electricsurge": {
+   "engine_id": "electric_surge",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "electricsurge",
+   "is_nonstandard": null,
+   "name": "Electric Surge",
+   "num": 226
+  },
+  "electromorphosis": {
+   "engine_id": "electromorphosis",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "electromorphosis",
+   "is_nonstandard": null,
+   "name": "Electromorphosis",
+   "num": 280
+  },
+  "embodyaspectcornerstone": {
+   "engine_id": "embody_aspect_cornerstone",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "embodyaspectcornerstone",
+   "is_nonstandard": null,
+   "name": "Embody Aspect (Cornerstone)",
+   "num": 304
+  },
+  "embodyaspecthearthflame": {
+   "engine_id": "embody_aspect_hearthflame",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "embodyaspecthearthflame",
+   "is_nonstandard": null,
+   "name": "Embody Aspect (Hearthflame)",
+   "num": 303
+  },
+  "embodyaspectteal": {
+   "engine_id": "embody_aspect_teal",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "embodyaspectteal",
+   "is_nonstandard": null,
+   "name": "Embody Aspect (Teal)",
+   "num": 301
+  },
+  "embodyaspectwellspring": {
+   "engine_id": "embody_aspect_wellspring",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "embodyaspectwellspring",
+   "is_nonstandard": null,
+   "name": "Embody Aspect (Wellspring)",
+   "num": 302
+  },
+  "emergencyexit": {
+   "engine_id": "emergency_exit",
+   "handlers": [
+    "onEmergencyExit"
+   ],
+   "id": "emergencyexit",
+   "is_nonstandard": null,
+   "name": "Emergency Exit",
+   "num": 194
+  },
+  "fairyaura": {
+   "engine_id": "fairy_aura",
+   "handlers": [
+    "onAnyBasePower",
+    "onStart"
+   ],
+   "id": "fairyaura",
+   "is_nonstandard": null,
+   "name": "Fairy Aura",
+   "num": 187
+  },
+  "filter": {
+   "engine_id": "filter",
+   "handlers": [
+    "onSourceModifyDamage"
+   ],
+   "id": "filter",
+   "is_nonstandard": null,
+   "name": "Filter",
+   "num": 111
+  },
+  "firemane": {
+   "engine_id": "fire_mane",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "firemane",
+   "is_nonstandard": "Future",
+   "name": "Fire Mane",
+   "num": 316
+  },
+  "flamebody": {
+   "engine_id": "flame_body",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "flamebody",
+   "is_nonstandard": null,
+   "name": "Flame Body",
+   "num": 49
+  },
+  "flareboost": {
+   "engine_id": "flare_boost",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "flareboost",
+   "is_nonstandard": null,
+   "name": "Flare Boost",
+   "num": 138
+  },
+  "flashfire": {
+   "engine_id": "flash_fire",
+   "handlers": [
+    "condition.onEnd",
+    "condition.onModifyAtk",
+    "condition.onModifySpA",
+    "condition.onStart",
+    "onEnd",
+    "onTryHit"
+   ],
+   "id": "flashfire",
+   "is_nonstandard": null,
+   "name": "Flash Fire",
+   "num": 18
+  },
+  "flowergift": {
+   "engine_id": "flower_gift",
+   "handlers": [
+    "onAllyModifyAtk",
+    "onAllyModifySpD",
+    "onStart",
+    "onWeatherChange"
+   ],
+   "id": "flowergift",
+   "is_nonstandard": null,
+   "name": "Flower Gift",
+   "num": 122
+  },
+  "flowerveil": {
+   "engine_id": "flower_veil",
+   "handlers": [
+    "onAllySetStatus",
+    "onAllyTryAddVolatile",
+    "onAllyTryBoost"
+   ],
+   "id": "flowerveil",
+   "is_nonstandard": null,
+   "name": "Flower Veil",
+   "num": 166
+  },
+  "fluffy": {
+   "engine_id": "fluffy",
+   "handlers": [
+    "onSourceModifyDamage"
+   ],
+   "id": "fluffy",
+   "is_nonstandard": null,
+   "name": "Fluffy",
+   "num": 218
+  },
+  "forecast": {
+   "engine_id": "forecast",
+   "handlers": [
+    "onStart",
+    "onWeatherChange"
+   ],
+   "id": "forecast",
+   "is_nonstandard": null,
+   "name": "Forecast",
+   "num": 59
+  },
+  "forewarn": {
+   "engine_id": "forewarn",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "forewarn",
+   "is_nonstandard": null,
+   "name": "Forewarn",
+   "num": 108
+  },
+  "friendguard": {
+   "engine_id": "friend_guard",
+   "handlers": [
+    "onAnyModifyDamage"
+   ],
+   "id": "friendguard",
+   "is_nonstandard": null,
+   "name": "Friend Guard",
+   "num": 132
+  },
+  "frisk": {
+   "engine_id": "frisk",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "frisk",
+   "is_nonstandard": null,
+   "name": "Frisk",
+   "num": 119
+  },
+  "fullmetalbody": {
+   "engine_id": "full_metal_body",
+   "handlers": [
+    "onTryBoost"
+   ],
+   "id": "fullmetalbody",
+   "is_nonstandard": null,
+   "name": "Full Metal Body",
+   "num": 230
+  },
+  "furcoat": {
+   "engine_id": "fur_coat",
+   "handlers": [
+    "onModifyDef"
+   ],
+   "id": "furcoat",
+   "is_nonstandard": null,
+   "name": "Fur Coat",
+   "num": 169
+  },
+  "galewings": {
+   "engine_id": "gale_wings",
+   "handlers": [
+    "onModifyPriority"
+   ],
+   "id": "galewings",
+   "is_nonstandard": null,
+   "name": "Gale Wings",
+   "num": 177
+  },
+  "galvanize": {
+   "engine_id": "galvanize",
+   "handlers": [
+    "onBasePower",
+    "onModifyType"
+   ],
+   "id": "galvanize",
+   "is_nonstandard": null,
+   "name": "Galvanize",
+   "num": 206
+  },
+  "gluttony": {
+   "engine_id": "gluttony",
+   "handlers": [
+    "onDamage",
+    "onStart"
+   ],
+   "id": "gluttony",
+   "is_nonstandard": null,
+   "name": "Gluttony",
+   "num": 82
+  },
+  "goodasgold": {
+   "engine_id": "good_as_gold",
+   "handlers": [
+    "onTryHit"
+   ],
+   "id": "goodasgold",
+   "is_nonstandard": null,
+   "name": "Good as Gold",
+   "num": 283
+  },
+  "gooey": {
+   "engine_id": "gooey",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "gooey",
+   "is_nonstandard": null,
+   "name": "Gooey",
+   "num": 183
+  },
+  "gorillatactics": {
+   "engine_id": "gorilla_tactics",
+   "handlers": [
+    "onBeforeMove",
+    "onDisableMove",
+    "onEnd",
+    "onModifyAtk",
+    "onModifyMove",
+    "onStart"
+   ],
+   "id": "gorillatactics",
+   "is_nonstandard": null,
+   "name": "Gorilla Tactics",
+   "num": 255
+  },
+  "grasspelt": {
+   "engine_id": "grass_pelt",
+   "handlers": [
+    "onModifyDef"
+   ],
+   "id": "grasspelt",
+   "is_nonstandard": null,
+   "name": "Grass Pelt",
+   "num": 179
+  },
+  "grassysurge": {
+   "engine_id": "grassy_surge",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "grassysurge",
+   "is_nonstandard": null,
+   "name": "Grassy Surge",
+   "num": 229
+  },
+  "grimneigh": {
+   "engine_id": "grim_neigh",
+   "handlers": [
+    "onSourceAfterFaint"
+   ],
+   "id": "grimneigh",
+   "is_nonstandard": null,
+   "name": "Grim Neigh",
+   "num": 265
+  },
+  "guarddog": {
+   "engine_id": "guard_dog",
+   "handlers": [
+    "onDragOut",
+    "onTryBoost"
+   ],
+   "id": "guarddog",
+   "is_nonstandard": null,
+   "name": "Guard Dog",
+   "num": 275
+  },
+  "gulpmissile": {
+   "engine_id": "gulp_missile",
+   "handlers": [
+    "onDamagingHit",
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "gulpmissile",
+   "is_nonstandard": null,
+   "name": "Gulp Missile",
+   "num": 241
+  },
+  "guts": {
+   "engine_id": "guts",
+   "handlers": [
+    "onModifyAtk"
+   ],
+   "id": "guts",
+   "is_nonstandard": null,
+   "name": "Guts",
+   "num": 62
+  },
+  "hadronengine": {
+   "engine_id": "hadron_engine",
+   "handlers": [
+    "onModifySpA",
+    "onStart"
+   ],
+   "id": "hadronengine",
+   "is_nonstandard": null,
+   "name": "Hadron Engine",
+   "num": 289
+  },
+  "harvest": {
+   "engine_id": "harvest",
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "harvest",
+   "is_nonstandard": null,
+   "name": "Harvest",
+   "num": 139
+  },
+  "healer": {
+   "engine_id": "healer",
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "healer",
+   "is_nonstandard": null,
+   "name": "Healer",
+   "num": 131
+  },
+  "heatproof": {
+   "engine_id": "heatproof",
+   "handlers": [
+    "onDamage",
+    "onSourceModifyAtk",
+    "onSourceModifySpA"
+   ],
+   "id": "heatproof",
+   "is_nonstandard": null,
+   "name": "Heatproof",
+   "num": 85
+  },
+  "heavymetal": {
+   "engine_id": "heavy_metal",
+   "handlers": [
+    "onModifyWeight"
+   ],
+   "id": "heavymetal",
+   "is_nonstandard": null,
+   "name": "Heavy Metal",
+   "num": 134
+  },
+  "honeygather": {
+   "engine_id": "honey_gather",
+   "handlers": [],
+   "id": "honeygather",
+   "is_nonstandard": null,
+   "name": "Honey Gather",
+   "num": 118
+  },
+  "hospitality": {
+   "engine_id": "hospitality",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "hospitality",
+   "is_nonstandard": null,
+   "name": "Hospitality",
+   "num": 299
+  },
+  "hugepower": {
+   "engine_id": "huge_power",
+   "handlers": [
+    "onModifyAtk"
+   ],
+   "id": "hugepower",
+   "is_nonstandard": null,
+   "name": "Huge Power",
+   "num": 37
+  },
+  "hungerswitch": {
+   "engine_id": "hunger_switch",
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "hungerswitch",
+   "is_nonstandard": null,
+   "name": "Hunger Switch",
+   "num": 258
+  },
+  "hustle": {
+   "engine_id": "hustle",
+   "handlers": [
+    "onModifyAtk",
+    "onSourceModifyAccuracy"
+   ],
+   "id": "hustle",
+   "is_nonstandard": null,
+   "name": "Hustle",
+   "num": 55
+  },
+  "hydration": {
+   "engine_id": "hydration",
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "hydration",
+   "is_nonstandard": null,
+   "name": "Hydration",
+   "num": 93
+  },
+  "hypercutter": {
+   "engine_id": "hyper_cutter",
+   "handlers": [
+    "onTryBoost"
+   ],
+   "id": "hypercutter",
+   "is_nonstandard": null,
+   "name": "Hyper Cutter",
+   "num": 52
+  },
+  "icebody": {
+   "engine_id": "ice_body",
+   "handlers": [
+    "onImmunity",
+    "onWeather"
+   ],
+   "id": "icebody",
+   "is_nonstandard": null,
+   "name": "Ice Body",
+   "num": 115
+  },
+  "iceface": {
+   "engine_id": "ice_face",
+   "handlers": [
+    "onCriticalHit",
+    "onDamage",
+    "onEffectiveness",
+    "onStart",
+    "onUpdate",
+    "onWeatherChange"
+   ],
+   "id": "iceface",
+   "is_nonstandard": null,
+   "name": "Ice Face",
+   "num": 248
+  },
+  "icescales": {
+   "engine_id": "ice_scales",
+   "handlers": [
+    "onSourceModifyDamage"
+   ],
+   "id": "icescales",
+   "is_nonstandard": null,
+   "name": "Ice Scales",
+   "num": 246
+  },
+  "illuminate": {
+   "engine_id": "illuminate",
+   "handlers": [
+    "onModifyMove",
+    "onTryBoost"
+   ],
+   "id": "illuminate",
+   "is_nonstandard": null,
+   "name": "Illuminate",
+   "num": 35
+  },
+  "illusion": {
+   "engine_id": "illusion",
+   "handlers": [
+    "onBeforeSwitchIn",
+    "onDamagingHit",
+    "onEnd",
+    "onFaint"
+   ],
+   "id": "illusion",
+   "is_nonstandard": null,
+   "name": "Illusion",
+   "num": 149
+  },
+  "immunity": {
+   "engine_id": "immunity",
+   "handlers": [
+    "onSetStatus",
+    "onUpdate"
+   ],
+   "id": "immunity",
+   "is_nonstandard": null,
+   "name": "Immunity",
+   "num": 17
+  },
+  "imposter": {
+   "engine_id": "imposter",
+   "handlers": [
+    "onSwitchIn"
+   ],
+   "id": "imposter",
+   "is_nonstandard": null,
+   "name": "Imposter",
+   "num": 150
+  },
+  "infiltrator": {
+   "engine_id": "infiltrator",
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "infiltrator",
+   "is_nonstandard": null,
+   "name": "Infiltrator",
+   "num": 151
+  },
+  "innardsout": {
+   "engine_id": "innards_out",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "innardsout",
+   "is_nonstandard": null,
+   "name": "Innards Out",
+   "num": 215
+  },
+  "innerfocus": {
+   "engine_id": "inner_focus",
+   "handlers": [
+    "onTryAddVolatile",
+    "onTryBoost"
+   ],
+   "id": "innerfocus",
+   "is_nonstandard": null,
+   "name": "Inner Focus",
+   "num": 39
+  },
+  "insomnia": {
+   "engine_id": "insomnia",
+   "handlers": [
+    "onSetStatus",
+    "onTryAddVolatile",
+    "onUpdate"
+   ],
+   "id": "insomnia",
+   "is_nonstandard": null,
+   "name": "Insomnia",
+   "num": 15
+  },
+  "intimidate": {
+   "engine_id": "intimidate",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "intimidate",
+   "is_nonstandard": null,
+   "name": "Intimidate",
+   "num": 22
+  },
+  "intrepidsword": {
+   "engine_id": "intrepid_sword",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "intrepidsword",
+   "is_nonstandard": null,
+   "name": "Intrepid Sword",
+   "num": 234
+  },
+  "ironbarbs": {
+   "engine_id": "iron_barbs",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "ironbarbs",
+   "is_nonstandard": null,
+   "name": "Iron Barbs",
+   "num": 160
+  },
+  "ironfist": {
+   "engine_id": "iron_fist",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "ironfist",
+   "is_nonstandard": null,
+   "name": "Iron Fist",
+   "num": 89
+  },
+  "justified": {
+   "engine_id": "justified",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "justified",
+   "is_nonstandard": null,
+   "name": "Justified",
+   "num": 154
+  },
+  "keeneye": {
+   "engine_id": "keen_eye",
+   "handlers": [
+    "onModifyMove",
+    "onTryBoost"
+   ],
+   "id": "keeneye",
+   "is_nonstandard": null,
+   "name": "Keen Eye",
+   "num": 51
+  },
+  "klutz": {
+   "engine_id": "klutz",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "klutz",
+   "is_nonstandard": null,
+   "name": "Klutz",
+   "num": 103
+  },
+  "leafguard": {
+   "engine_id": "leaf_guard",
+   "handlers": [
+    "onSetStatus",
+    "onTryAddVolatile"
+   ],
+   "id": "leafguard",
+   "is_nonstandard": null,
+   "name": "Leaf Guard",
+   "num": 102
+  },
+  "levitate": {
+   "engine_id": "levitate",
+   "handlers": [],
+   "id": "levitate",
+   "is_nonstandard": null,
+   "name": "Levitate",
+   "num": 26
+  },
+  "libero": {
+   "engine_id": "libero",
+   "handlers": [
+    "onPrepareHit"
+   ],
+   "id": "libero",
+   "is_nonstandard": null,
+   "name": "Libero",
+   "num": 236
+  },
+  "lightmetal": {
+   "engine_id": "light_metal",
+   "handlers": [
+    "onModifyWeight"
+   ],
+   "id": "lightmetal",
+   "is_nonstandard": null,
+   "name": "Light Metal",
+   "num": 135
+  },
+  "lightningrod": {
+   "engine_id": "lightning_rod",
+   "handlers": [
+    "onAnyRedirectTarget",
+    "onTryHit"
+   ],
+   "id": "lightningrod",
+   "is_nonstandard": null,
+   "name": "Lightning Rod",
+   "num": 31
+  },
+  "limber": {
+   "engine_id": "limber",
+   "handlers": [
+    "onSetStatus",
+    "onUpdate"
+   ],
+   "id": "limber",
+   "is_nonstandard": null,
+   "name": "Limber",
+   "num": 7
+  },
+  "lingeringaroma": {
+   "engine_id": "lingering_aroma",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "lingeringaroma",
+   "is_nonstandard": null,
+   "name": "Lingering Aroma",
+   "num": 268
+  },
+  "liquidooze": {
+   "engine_id": "liquid_ooze",
+   "handlers": [
+    "onSourceTryHeal"
+   ],
+   "id": "liquidooze",
+   "is_nonstandard": null,
+   "name": "Liquid Ooze",
+   "num": 64
+  },
+  "liquidvoice": {
+   "engine_id": "liquid_voice",
+   "handlers": [
+    "onModifyType"
+   ],
+   "id": "liquidvoice",
+   "is_nonstandard": null,
+   "name": "Liquid Voice",
+   "num": 204
+  },
+  "longreach": {
+   "engine_id": "long_reach",
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "longreach",
+   "is_nonstandard": null,
+   "name": "Long Reach",
+   "num": 203
+  },
+  "magicbounce": {
+   "engine_id": "magic_bounce",
+   "handlers": [
+    "onAllyTryHitSide",
+    "onTryHit"
+   ],
+   "id": "magicbounce",
+   "is_nonstandard": null,
+   "name": "Magic Bounce",
+   "num": 156
+  },
+  "magicguard": {
+   "engine_id": "magic_guard",
+   "handlers": [
+    "onDamage"
+   ],
+   "id": "magicguard",
+   "is_nonstandard": null,
+   "name": "Magic Guard",
+   "num": 98
+  },
+  "magician": {
+   "engine_id": "magician",
+   "handlers": [
+    "onAfterMoveSecondarySelf"
+   ],
+   "id": "magician",
+   "is_nonstandard": null,
+   "name": "Magician",
+   "num": 170
+  },
+  "magmaarmor": {
+   "engine_id": "magma_armor",
+   "handlers": [
+    "onImmunity",
+    "onUpdate"
+   ],
+   "id": "magmaarmor",
+   "is_nonstandard": null,
+   "name": "Magma Armor",
+   "num": 40
+  },
+  "magnetpull": {
+   "engine_id": "magnet_pull",
+   "handlers": [
+    "onFoeMaybeTrapPokemon",
+    "onFoeTrapPokemon"
+   ],
+   "id": "magnetpull",
+   "is_nonstandard": null,
+   "name": "Magnet Pull",
+   "num": 42
+  },
+  "marvelscale": {
+   "engine_id": "marvel_scale",
+   "handlers": [
+    "onModifyDef"
+   ],
+   "id": "marvelscale",
+   "is_nonstandard": null,
+   "name": "Marvel Scale",
+   "num": 63
+  },
+  "megalauncher": {
+   "engine_id": "mega_launcher",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "megalauncher",
+   "is_nonstandard": null,
+   "name": "Mega Launcher",
+   "num": 178
+  },
+  "megasol": {
+   "engine_id": "mega_sol",
+   "handlers": [
+    "onWeatherModifyDamage"
+   ],
+   "id": "megasol",
+   "is_nonstandard": "Future",
+   "name": "Mega Sol",
+   "num": 315
+  },
+  "merciless": {
+   "engine_id": "merciless",
+   "handlers": [
+    "onModifyCritRatio"
+   ],
+   "id": "merciless",
+   "is_nonstandard": null,
+   "name": "Merciless",
+   "num": 196
+  },
+  "mimicry": {
+   "engine_id": "mimicry",
+   "handlers": [
+    "onStart",
+    "onTerrainChange"
+   ],
+   "id": "mimicry",
+   "is_nonstandard": null,
+   "name": "Mimicry",
+   "num": 250
+  },
+  "mindseye": {
+   "engine_id": "minds_eye",
+   "handlers": [
+    "onModifyMove",
+    "onTryBoost"
+   ],
+   "id": "mindseye",
+   "is_nonstandard": null,
+   "name": "Mind's Eye",
+   "num": 300
+  },
+  "minus": {
+   "engine_id": "minus",
+   "handlers": [
+    "onModifySpA"
+   ],
+   "id": "minus",
+   "is_nonstandard": null,
+   "name": "Minus",
+   "num": 58
+  },
+  "mirrorarmor": {
+   "engine_id": "mirror_armor",
+   "handlers": [
+    "onTryBoost"
+   ],
+   "id": "mirrorarmor",
+   "is_nonstandard": null,
+   "name": "Mirror Armor",
+   "num": 240
+  },
+  "mistysurge": {
+   "engine_id": "misty_surge",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "mistysurge",
+   "is_nonstandard": null,
+   "name": "Misty Surge",
+   "num": 228
+  },
+  "moldbreaker": {
+   "engine_id": "mold_breaker",
+   "handlers": [
+    "onModifyMove",
+    "onStart"
+   ],
+   "id": "moldbreaker",
+   "is_nonstandard": null,
+   "name": "Mold Breaker",
+   "num": 104
+  },
+  "moody": {
+   "engine_id": "moody",
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "moody",
+   "is_nonstandard": null,
+   "name": "Moody",
+   "num": 141
+  },
+  "motordrive": {
+   "engine_id": "motor_drive",
+   "handlers": [
+    "onTryHit"
+   ],
+   "id": "motordrive",
+   "is_nonstandard": null,
+   "name": "Motor Drive",
+   "num": 78
+  },
+  "mountaineer": {
+   "engine_id": "mountaineer",
+   "handlers": [
+    "onDamage",
+    "onTryHit"
+   ],
+   "id": "mountaineer",
+   "is_nonstandard": "CAP",
+   "name": "Mountaineer",
+   "num": -1
+  },
+  "moxie": {
+   "engine_id": "moxie",
+   "handlers": [
+    "onSourceAfterFaint"
+   ],
+   "id": "moxie",
+   "is_nonstandard": null,
+   "name": "Moxie",
+   "num": 153
+  },
+  "multiscale": {
+   "engine_id": "multiscale",
+   "handlers": [
+    "onSourceModifyDamage"
+   ],
+   "id": "multiscale",
+   "is_nonstandard": null,
+   "name": "Multiscale",
+   "num": 136
+  },
+  "multitype": {
+   "engine_id": "multitype",
+   "handlers": [],
+   "id": "multitype",
+   "is_nonstandard": null,
+   "name": "Multitype",
+   "num": 121
+  },
+  "mummy": {
+   "engine_id": "mummy",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "mummy",
+   "is_nonstandard": null,
+   "name": "Mummy",
+   "num": 152
+  },
+  "myceliummight": {
+   "engine_id": "mycelium_might",
+   "handlers": [
+    "onFractionalPriority",
+    "onModifyMove"
+   ],
+   "id": "myceliummight",
+   "is_nonstandard": null,
+   "name": "Mycelium Might",
+   "num": 298
+  },
+  "naturalcure": {
+   "engine_id": "natural_cure",
+   "handlers": [
+    "onCheckShow",
+    "onSwitchOut"
+   ],
+   "id": "naturalcure",
+   "is_nonstandard": null,
+   "name": "Natural Cure",
+   "num": 30
+  },
+  "neuroforce": {
+   "engine_id": "neuroforce",
+   "handlers": [
+    "onModifyDamage"
+   ],
+   "id": "neuroforce",
+   "is_nonstandard": null,
+   "name": "Neuroforce",
+   "num": 233
+  },
+  "neutralizinggas": {
+   "engine_id": "neutralizing_gas",
+   "handlers": [
+    "onEnd",
+    "onSwitchIn"
+   ],
+   "id": "neutralizinggas",
+   "is_nonstandard": null,
+   "name": "Neutralizing Gas",
+   "num": 256
+  },
+  "noability": {
+   "engine_id": "no_ability",
+   "handlers": [],
+   "id": "noability",
+   "is_nonstandard": "Past",
+   "name": "No Ability",
+   "num": 0
+  },
+  "noguard": {
+   "engine_id": "no_guard",
+   "handlers": [
+    "onAnyAccuracy",
+    "onAnyInvulnerability"
+   ],
+   "id": "noguard",
+   "is_nonstandard": null,
+   "name": "No Guard",
+   "num": 99
+  },
+  "normalize": {
+   "engine_id": "normalize",
+   "handlers": [
+    "onBasePower",
+    "onModifyType"
+   ],
+   "id": "normalize",
+   "is_nonstandard": null,
+   "name": "Normalize",
+   "num": 96
+  },
+  "oblivious": {
+   "engine_id": "oblivious",
+   "handlers": [
+    "onImmunity",
+    "onTryBoost",
+    "onTryHit",
+    "onUpdate"
+   ],
+   "id": "oblivious",
+   "is_nonstandard": null,
+   "name": "Oblivious",
+   "num": 12
+  },
+  "opportunist": {
+   "engine_id": "opportunist",
+   "handlers": [
+    "onAnyAfterMega",
+    "onAnyAfterMove",
+    "onAnyAfterTerastallization",
+    "onAnySwitchIn",
+    "onEnd",
+    "onFoeAfterBoost",
+    "onResidual"
+   ],
+   "id": "opportunist",
+   "is_nonstandard": null,
+   "name": "Opportunist",
+   "num": 290
+  },
+  "orichalcumpulse": {
+   "engine_id": "orichalcum_pulse",
+   "handlers": [
+    "onModifyAtk",
+    "onStart"
+   ],
+   "id": "orichalcumpulse",
+   "is_nonstandard": null,
+   "name": "Orichalcum Pulse",
+   "num": 288
+  },
+  "overcoat": {
+   "engine_id": "overcoat",
+   "handlers": [
+    "onImmunity",
+    "onTryHit"
+   ],
+   "id": "overcoat",
+   "is_nonstandard": null,
+   "name": "Overcoat",
+   "num": 142
+  },
+  "overgrow": {
+   "engine_id": "overgrow",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "overgrow",
+   "is_nonstandard": null,
+   "name": "Overgrow",
+   "num": 65
+  },
+  "owntempo": {
+   "engine_id": "own_tempo",
+   "handlers": [
+    "onHit",
+    "onTryAddVolatile",
+    "onTryBoost",
+    "onUpdate"
+   ],
+   "id": "owntempo",
+   "is_nonstandard": null,
+   "name": "Own Tempo",
+   "num": 20
+  },
+  "parentalbond": {
+   "engine_id": "parental_bond",
+   "handlers": [
+    "onPrepareHit",
+    "onSourceModifySecondaries"
+   ],
+   "id": "parentalbond",
+   "is_nonstandard": null,
+   "name": "Parental Bond",
+   "num": 185
+  },
+  "pastelveil": {
+   "engine_id": "pastel_veil",
+   "handlers": [
+    "onAllySetStatus",
+    "onAnySwitchIn",
+    "onSetStatus",
+    "onStart",
+    "onUpdate"
+   ],
+   "id": "pastelveil",
+   "is_nonstandard": null,
+   "name": "Pastel Veil",
+   "num": 257
+  },
+  "perishbody": {
+   "engine_id": "perish_body",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "perishbody",
+   "is_nonstandard": null,
+   "name": "Perish Body",
+   "num": 253
+  },
+  "persistent": {
+   "engine_id": "persistent",
+   "handlers": [],
+   "id": "persistent",
+   "is_nonstandard": "CAP",
+   "name": "Persistent",
+   "num": -3
+  },
+  "pickpocket": {
+   "engine_id": "pickpocket",
+   "handlers": [
+    "onAfterMoveSecondary"
+   ],
+   "id": "pickpocket",
+   "is_nonstandard": null,
+   "name": "Pickpocket",
+   "num": 124
+  },
+  "pickup": {
+   "engine_id": "pickup",
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "pickup",
+   "is_nonstandard": null,
+   "name": "Pickup",
+   "num": 53
+  },
+  "piercingdrill": {
+   "engine_id": "piercing_drill",
+   "handlers": [
+    "onHitProtect"
+   ],
+   "id": "piercingdrill",
+   "is_nonstandard": "Future",
+   "name": "Piercing Drill",
+   "num": 311
+  },
+  "pixilate": {
+   "engine_id": "pixilate",
+   "handlers": [
+    "onBasePower",
+    "onModifyType"
+   ],
+   "id": "pixilate",
+   "is_nonstandard": null,
+   "name": "Pixilate",
+   "num": 182
+  },
+  "plus": {
+   "engine_id": "plus",
+   "handlers": [
+    "onModifySpA"
+   ],
+   "id": "plus",
+   "is_nonstandard": null,
+   "name": "Plus",
+   "num": 57
+  },
+  "poisonheal": {
+   "engine_id": "poison_heal",
+   "handlers": [
+    "onDamage"
+   ],
+   "id": "poisonheal",
+   "is_nonstandard": null,
+   "name": "Poison Heal",
+   "num": 90
+  },
+  "poisonpoint": {
+   "engine_id": "poison_point",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "poisonpoint",
+   "is_nonstandard": null,
+   "name": "Poison Point",
+   "num": 38
+  },
+  "poisonpuppeteer": {
+   "engine_id": "poison_puppeteer",
+   "handlers": [
+    "onAnyAfterSetStatus"
+   ],
+   "id": "poisonpuppeteer",
+   "is_nonstandard": null,
+   "name": "Poison Puppeteer",
+   "num": 310
+  },
+  "poisontouch": {
+   "engine_id": "poison_touch",
+   "handlers": [
+    "onSourceDamagingHit"
+   ],
+   "id": "poisontouch",
+   "is_nonstandard": null,
+   "name": "Poison Touch",
+   "num": 143
+  },
+  "powerconstruct": {
+   "engine_id": "power_construct",
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "powerconstruct",
+   "is_nonstandard": null,
+   "name": "Power Construct",
+   "num": 211
+  },
+  "powerofalchemy": {
+   "engine_id": "power_of_alchemy",
+   "handlers": [
+    "onAllyFaint"
+   ],
+   "id": "powerofalchemy",
+   "is_nonstandard": null,
+   "name": "Power of Alchemy",
+   "num": 223
+  },
+  "powerspot": {
+   "engine_id": "power_spot",
+   "handlers": [
+    "onAllyBasePower"
+   ],
+   "id": "powerspot",
+   "is_nonstandard": null,
+   "name": "Power Spot",
+   "num": 249
+  },
+  "prankster": {
+   "engine_id": "prankster",
+   "handlers": [
+    "onModifyPriority"
+   ],
+   "id": "prankster",
+   "is_nonstandard": null,
+   "name": "Prankster",
+   "num": 158
+  },
+  "pressure": {
+   "engine_id": "pressure",
+   "handlers": [
+    "onDeductPP",
+    "onStart"
+   ],
+   "id": "pressure",
+   "is_nonstandard": null,
+   "name": "Pressure",
+   "num": 46
+  },
+  "primordialsea": {
+   "engine_id": "primordial_sea",
+   "handlers": [
+    "onAnySetWeather",
+    "onEnd",
+    "onStart"
+   ],
+   "id": "primordialsea",
+   "is_nonstandard": null,
+   "name": "Primordial Sea",
+   "num": 189
+  },
+  "prismarmor": {
+   "engine_id": "prism_armor",
+   "handlers": [
+    "onSourceModifyDamage"
+   ],
+   "id": "prismarmor",
+   "is_nonstandard": null,
+   "name": "Prism Armor",
+   "num": 232
+  },
+  "propellertail": {
+   "engine_id": "propeller_tail",
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "propellertail",
+   "is_nonstandard": null,
+   "name": "Propeller Tail",
+   "num": 239
+  },
+  "protean": {
+   "engine_id": "protean",
+   "handlers": [
+    "onPrepareHit"
+   ],
+   "id": "protean",
+   "is_nonstandard": null,
+   "name": "Protean",
+   "num": 168
+  },
+  "protosynthesis": {
+   "engine_id": "protosynthesis",
+   "handlers": [
+    "condition.onEnd",
+    "condition.onModifyAtk",
+    "condition.onModifyDef",
+    "condition.onModifySpA",
+    "condition.onModifySpD",
+    "condition.onModifySpe",
+    "condition.onStart",
+    "onEnd",
+    "onStart",
+    "onWeatherChange"
+   ],
+   "id": "protosynthesis",
+   "is_nonstandard": null,
+   "name": "Protosynthesis",
+   "num": 281
+  },
+  "psychicsurge": {
+   "engine_id": "psychic_surge",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "psychicsurge",
+   "is_nonstandard": null,
+   "name": "Psychic Surge",
+   "num": 227
+  },
+  "punkrock": {
+   "engine_id": "punk_rock",
+   "handlers": [
+    "onBasePower",
+    "onSourceModifyDamage"
+   ],
+   "id": "punkrock",
+   "is_nonstandard": null,
+   "name": "Punk Rock",
+   "num": 244
+  },
+  "purepower": {
+   "engine_id": "pure_power",
+   "handlers": [
+    "onModifyAtk"
+   ],
+   "id": "purepower",
+   "is_nonstandard": null,
+   "name": "Pure Power",
+   "num": 74
+  },
+  "purifyingsalt": {
+   "engine_id": "purifying_salt",
+   "handlers": [
+    "onSetStatus",
+    "onSourceModifyAtk",
+    "onSourceModifySpA",
+    "onTryAddVolatile"
+   ],
+   "id": "purifyingsalt",
+   "is_nonstandard": null,
+   "name": "Purifying Salt",
+   "num": 272
+  },
+  "quarkdrive": {
+   "engine_id": "quark_drive",
+   "handlers": [
+    "condition.onEnd",
+    "condition.onModifyAtk",
+    "condition.onModifyDef",
+    "condition.onModifySpA",
+    "condition.onModifySpD",
+    "condition.onModifySpe",
+    "condition.onStart",
+    "onEnd",
+    "onStart",
+    "onTerrainChange"
+   ],
+   "id": "quarkdrive",
+   "is_nonstandard": null,
+   "name": "Quark Drive",
+   "num": 282
+  },
+  "queenlymajesty": {
+   "engine_id": "queenly_majesty",
+   "handlers": [
+    "onFoeTryMove"
+   ],
+   "id": "queenlymajesty",
+   "is_nonstandard": null,
+   "name": "Queenly Majesty",
+   "num": 214
+  },
+  "quickdraw": {
+   "engine_id": "quick_draw",
+   "handlers": [
+    "onFractionalPriority"
+   ],
+   "id": "quickdraw",
+   "is_nonstandard": null,
+   "name": "Quick Draw",
+   "num": 259
+  },
+  "quickfeet": {
+   "engine_id": "quick_feet",
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "quickfeet",
+   "is_nonstandard": null,
+   "name": "Quick Feet",
+   "num": 95
+  },
+  "raindish": {
+   "engine_id": "rain_dish",
+   "handlers": [
+    "onWeather"
+   ],
+   "id": "raindish",
+   "is_nonstandard": null,
+   "name": "Rain Dish",
+   "num": 44
+  },
+  "rattled": {
+   "engine_id": "rattled",
+   "handlers": [
+    "onAfterBoost",
+    "onDamagingHit"
+   ],
+   "id": "rattled",
+   "is_nonstandard": null,
+   "name": "Rattled",
+   "num": 155
+  },
+  "rebound": {
+   "engine_id": "rebound",
+   "handlers": [
+    "onAllyTryHitSide",
+    "onTryHit"
+   ],
+   "id": "rebound",
+   "is_nonstandard": "CAP",
+   "name": "Rebound",
+   "num": -2
+  },
+  "receiver": {
+   "engine_id": "receiver",
+   "handlers": [
+    "onAllyFaint"
+   ],
+   "id": "receiver",
+   "is_nonstandard": null,
+   "name": "Receiver",
+   "num": 222
+  },
+  "reckless": {
+   "engine_id": "reckless",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "reckless",
+   "is_nonstandard": null,
+   "name": "Reckless",
+   "num": 120
+  },
+  "refrigerate": {
+   "engine_id": "refrigerate",
+   "handlers": [
+    "onBasePower",
+    "onModifyType"
+   ],
+   "id": "refrigerate",
+   "is_nonstandard": null,
+   "name": "Refrigerate",
+   "num": 174
+  },
+  "regenerator": {
+   "engine_id": "regenerator",
+   "handlers": [
+    "onSwitchOut"
+   ],
+   "id": "regenerator",
+   "is_nonstandard": null,
+   "name": "Regenerator",
+   "num": 144
+  },
+  "ripen": {
+   "engine_id": "ripen",
+   "handlers": [
+    "onChangeBoost",
+    "onEatItem",
+    "onSourceModifyDamage",
+    "onTryEatItem",
+    "onTryHeal"
+   ],
+   "id": "ripen",
+   "is_nonstandard": null,
+   "name": "Ripen",
+   "num": 247
+  },
+  "rivalry": {
+   "engine_id": "rivalry",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "rivalry",
+   "is_nonstandard": null,
+   "name": "Rivalry",
+   "num": 79
+  },
+  "rkssystem": {
+   "engine_id": "rks_system",
+   "handlers": [],
+   "id": "rkssystem",
+   "is_nonstandard": null,
+   "name": "RKS System",
+   "num": 225
+  },
+  "rockhead": {
+   "engine_id": "rock_head",
+   "handlers": [
+    "onDamage"
+   ],
+   "id": "rockhead",
+   "is_nonstandard": null,
+   "name": "Rock Head",
+   "num": 69
+  },
+  "rockypayload": {
+   "engine_id": "rocky_payload",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "rockypayload",
+   "is_nonstandard": null,
+   "name": "Rocky Payload",
+   "num": 276
+  },
+  "roughskin": {
+   "engine_id": "rough_skin",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "roughskin",
+   "is_nonstandard": null,
+   "name": "Rough Skin",
+   "num": 24
+  },
+  "runaway": {
+   "engine_id": "run_away",
+   "handlers": [],
+   "id": "runaway",
+   "is_nonstandard": null,
+   "name": "Run Away",
+   "num": 50
+  },
+  "sandforce": {
+   "engine_id": "sand_force",
+   "handlers": [
+    "onBasePower",
+    "onImmunity"
+   ],
+   "id": "sandforce",
+   "is_nonstandard": null,
+   "name": "Sand Force",
+   "num": 159
+  },
+  "sandrush": {
+   "engine_id": "sand_rush",
+   "handlers": [
+    "onImmunity",
+    "onModifySpe"
+   ],
+   "id": "sandrush",
+   "is_nonstandard": null,
+   "name": "Sand Rush",
+   "num": 146
+  },
+  "sandspit": {
+   "engine_id": "sand_spit",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "sandspit",
+   "is_nonstandard": null,
+   "name": "Sand Spit",
+   "num": 245
+  },
+  "sandstream": {
+   "engine_id": "sand_stream",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "sandstream",
+   "is_nonstandard": null,
+   "name": "Sand Stream",
+   "num": 45
+  },
+  "sandveil": {
+   "engine_id": "sand_veil",
+   "handlers": [
+    "onImmunity",
+    "onModifyAccuracy"
+   ],
+   "id": "sandveil",
+   "is_nonstandard": null,
+   "name": "Sand Veil",
+   "num": 8
+  },
+  "sapsipper": {
+   "engine_id": "sap_sipper",
+   "handlers": [
+    "onAllyTryHitSide",
+    "onTryHit"
+   ],
+   "id": "sapsipper",
+   "is_nonstandard": null,
+   "name": "Sap Sipper",
+   "num": 157
+  },
+  "schooling": {
+   "engine_id": "schooling",
+   "handlers": [
+    "onResidual",
+    "onStart"
+   ],
+   "id": "schooling",
+   "is_nonstandard": null,
+   "name": "Schooling",
+   "num": 208
+  },
+  "scrappy": {
+   "engine_id": "scrappy",
+   "handlers": [
+    "onModifyMove",
+    "onTryBoost"
+   ],
+   "id": "scrappy",
+   "is_nonstandard": null,
+   "name": "Scrappy",
+   "num": 113
+  },
+  "screencleaner": {
+   "engine_id": "screen_cleaner",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "screencleaner",
+   "is_nonstandard": null,
+   "name": "Screen Cleaner",
+   "num": 251
+  },
+  "seedsower": {
+   "engine_id": "seed_sower",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "seedsower",
+   "is_nonstandard": null,
+   "name": "Seed Sower",
+   "num": 269
+  },
+  "serenegrace": {
+   "engine_id": "serene_grace",
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "serenegrace",
+   "is_nonstandard": null,
+   "name": "Serene Grace",
+   "num": 32
+  },
+  "shadowshield": {
+   "engine_id": "shadow_shield",
+   "handlers": [
+    "onSourceModifyDamage"
+   ],
+   "id": "shadowshield",
+   "is_nonstandard": null,
+   "name": "Shadow Shield",
+   "num": 231
+  },
+  "shadowtag": {
+   "engine_id": "shadow_tag",
+   "handlers": [
+    "onFoeMaybeTrapPokemon",
+    "onFoeTrapPokemon"
+   ],
+   "id": "shadowtag",
+   "is_nonstandard": null,
+   "name": "Shadow Tag",
+   "num": 23
+  },
+  "sharpness": {
+   "engine_id": "sharpness",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "sharpness",
+   "is_nonstandard": null,
+   "name": "Sharpness",
+   "num": 292
+  },
+  "shedskin": {
+   "engine_id": "shed_skin",
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "shedskin",
+   "is_nonstandard": null,
+   "name": "Shed Skin",
+   "num": 61
+  },
+  "sheerforce": {
+   "engine_id": "sheer_force",
+   "handlers": [
+    "onBasePower",
+    "onModifyMove"
+   ],
+   "id": "sheerforce",
+   "is_nonstandard": null,
+   "name": "Sheer Force",
+   "num": 125
+  },
+  "shellarmor": {
+   "engine_id": "shell_armor",
+   "handlers": [],
+   "id": "shellarmor",
+   "is_nonstandard": null,
+   "name": "Shell Armor",
+   "num": 75
+  },
+  "shielddust": {
+   "engine_id": "shield_dust",
+   "handlers": [
+    "onModifySecondaries"
+   ],
+   "id": "shielddust",
+   "is_nonstandard": null,
+   "name": "Shield Dust",
+   "num": 19
+  },
+  "shieldsdown": {
+   "engine_id": "shields_down",
+   "handlers": [
+    "onResidual",
+    "onSetStatus",
+    "onStart",
+    "onTryAddVolatile"
+   ],
+   "id": "shieldsdown",
+   "is_nonstandard": null,
+   "name": "Shields Down",
+   "num": 197
+  },
+  "simple": {
+   "engine_id": "simple",
+   "handlers": [
+    "onChangeBoost"
+   ],
+   "id": "simple",
+   "is_nonstandard": null,
+   "name": "Simple",
+   "num": 86
+  },
+  "skilllink": {
+   "engine_id": "skill_link",
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "skilllink",
+   "is_nonstandard": null,
+   "name": "Skill Link",
+   "num": 92
+  },
+  "slowstart": {
+   "engine_id": "slow_start",
+   "handlers": [
+    "onEnd",
+    "onModifyAtk",
+    "onModifySpe",
+    "onResidual",
+    "onStart"
+   ],
+   "id": "slowstart",
+   "is_nonstandard": null,
+   "name": "Slow Start",
+   "num": 112
+  },
+  "slushrush": {
+   "engine_id": "slush_rush",
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "slushrush",
+   "is_nonstandard": null,
+   "name": "Slush Rush",
+   "num": 202
+  },
+  "sniper": {
+   "engine_id": "sniper",
+   "handlers": [
+    "onModifyDamage"
+   ],
+   "id": "sniper",
+   "is_nonstandard": null,
+   "name": "Sniper",
+   "num": 97
+  },
+  "snowcloak": {
+   "engine_id": "snow_cloak",
+   "handlers": [
+    "onImmunity",
+    "onModifyAccuracy"
+   ],
+   "id": "snowcloak",
+   "is_nonstandard": null,
+   "name": "Snow Cloak",
+   "num": 81
+  },
+  "snowwarning": {
+   "engine_id": "snow_warning",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "snowwarning",
+   "is_nonstandard": null,
+   "name": "Snow Warning",
+   "num": 117
+  },
+  "solarpower": {
+   "engine_id": "solar_power",
+   "handlers": [
+    "onModifySpA",
+    "onWeather"
+   ],
+   "id": "solarpower",
+   "is_nonstandard": null,
+   "name": "Solar Power",
+   "num": 94
+  },
+  "solidrock": {
+   "engine_id": "solid_rock",
+   "handlers": [
+    "onSourceModifyDamage"
+   ],
+   "id": "solidrock",
+   "is_nonstandard": null,
+   "name": "Solid Rock",
+   "num": 116
+  },
+  "soulheart": {
+   "engine_id": "soul_heart",
+   "handlers": [
+    "onAnyFaint"
+   ],
+   "id": "soulheart",
+   "is_nonstandard": null,
+   "name": "Soul-Heart",
+   "num": 220
+  },
+  "soundproof": {
+   "engine_id": "soundproof",
+   "handlers": [
+    "onAllyTryHitSide",
+    "onTryHit"
+   ],
+   "id": "soundproof",
+   "is_nonstandard": null,
+   "name": "Soundproof",
+   "num": 43
+  },
+  "speedboost": {
+   "engine_id": "speed_boost",
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "speedboost",
+   "is_nonstandard": null,
+   "name": "Speed Boost",
+   "num": 3
+  },
+  "spicyspray": {
+   "engine_id": "spicy_spray",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "spicyspray",
+   "is_nonstandard": "Future",
+   "name": "Spicy Spray",
+   "num": 318
+  },
+  "stakeout": {
+   "engine_id": "stakeout",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "stakeout",
+   "is_nonstandard": null,
+   "name": "Stakeout",
+   "num": 198
+  },
+  "stall": {
+   "engine_id": "stall",
+   "handlers": [],
+   "id": "stall",
+   "is_nonstandard": null,
+   "name": "Stall",
+   "num": 100
+  },
+  "stalwart": {
+   "engine_id": "stalwart",
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "stalwart",
+   "is_nonstandard": null,
+   "name": "Stalwart",
+   "num": 242
+  },
+  "stamina": {
+   "engine_id": "stamina",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "stamina",
+   "is_nonstandard": null,
+   "name": "Stamina",
+   "num": 192
+  },
+  "stancechange": {
+   "engine_id": "stance_change",
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "stancechange",
+   "is_nonstandard": null,
+   "name": "Stance Change",
+   "num": 176
+  },
+  "static": {
+   "engine_id": "static",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "static",
+   "is_nonstandard": null,
+   "name": "Static",
+   "num": 9
+  },
+  "steadfast": {
+   "engine_id": "steadfast",
+   "handlers": [
+    "onFlinch"
+   ],
+   "id": "steadfast",
+   "is_nonstandard": null,
+   "name": "Steadfast",
+   "num": 80
+  },
+  "steamengine": {
+   "engine_id": "steam_engine",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "steamengine",
+   "is_nonstandard": null,
+   "name": "Steam Engine",
+   "num": 243
+  },
+  "steelworker": {
+   "engine_id": "steelworker",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "steelworker",
+   "is_nonstandard": null,
+   "name": "Steelworker",
+   "num": 200
+  },
+  "steelyspirit": {
+   "engine_id": "steely_spirit",
+   "handlers": [
+    "onAllyBasePower"
+   ],
+   "id": "steelyspirit",
+   "is_nonstandard": null,
+   "name": "Steely Spirit",
+   "num": 252
+  },
+  "stench": {
+   "engine_id": "stench",
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "stench",
+   "is_nonstandard": null,
+   "name": "Stench",
+   "num": 1
+  },
+  "stickyhold": {
+   "engine_id": "sticky_hold",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "stickyhold",
+   "is_nonstandard": null,
+   "name": "Sticky Hold",
+   "num": 60
+  },
+  "stormdrain": {
+   "engine_id": "storm_drain",
+   "handlers": [
+    "onAnyRedirectTarget",
+    "onTryHit"
+   ],
+   "id": "stormdrain",
+   "is_nonstandard": null,
+   "name": "Storm Drain",
+   "num": 114
+  },
+  "strongjaw": {
+   "engine_id": "strong_jaw",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "strongjaw",
+   "is_nonstandard": null,
+   "name": "Strong Jaw",
+   "num": 173
+  },
+  "sturdy": {
+   "engine_id": "sturdy",
+   "handlers": [
+    "onDamage",
+    "onTryHit"
+   ],
+   "id": "sturdy",
+   "is_nonstandard": null,
+   "name": "Sturdy",
+   "num": 5
+  },
+  "suctioncups": {
+   "engine_id": "suction_cups",
+   "handlers": [
+    "onDragOut"
+   ],
+   "id": "suctioncups",
+   "is_nonstandard": null,
+   "name": "Suction Cups",
+   "num": 21
+  },
+  "superluck": {
+   "engine_id": "super_luck",
+   "handlers": [
+    "onModifyCritRatio"
+   ],
+   "id": "superluck",
+   "is_nonstandard": null,
+   "name": "Super Luck",
+   "num": 105
+  },
+  "supersweetsyrup": {
+   "engine_id": "supersweet_syrup",
+   "handlers": [
+    "onStart"
+   ],
+   "id": "supersweetsyrup",
+   "is_nonstandard": null,
+   "name": "Supersweet Syrup",
+   "num": 306
+  },
+  "supremeoverlord": {
+   "engine_id": "supreme_overlord",
+   "handlers": [
+    "onBasePower",
+    "onEnd",
+    "onStart"
+   ],
+   "id": "supremeoverlord",
+   "is_nonstandard": null,
+   "name": "Supreme Overlord",
+   "num": 293
+  },
+  "surgesurfer": {
+   "engine_id": "surge_surfer",
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "surgesurfer",
+   "is_nonstandard": null,
+   "name": "Surge Surfer",
+   "num": 207
+  },
+  "swarm": {
+   "engine_id": "swarm",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "swarm",
+   "is_nonstandard": null,
+   "name": "Swarm",
+   "num": 68
+  },
+  "sweetveil": {
+   "engine_id": "sweet_veil",
+   "handlers": [
+    "onAllySetStatus",
+    "onAllyTryAddVolatile"
+   ],
+   "id": "sweetveil",
+   "is_nonstandard": null,
+   "name": "Sweet Veil",
+   "num": 175
+  },
+  "swiftswim": {
+   "engine_id": "swift_swim",
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "swiftswim",
+   "is_nonstandard": null,
+   "name": "Swift Swim",
+   "num": 33
+  },
+  "swordofruin": {
+   "engine_id": "sword_of_ruin",
+   "handlers": [
+    "onAnyModifyDef",
+    "onStart"
+   ],
+   "id": "swordofruin",
+   "is_nonstandard": null,
+   "name": "Sword of Ruin",
+   "num": 285
+  },
+  "symbiosis": {
+   "engine_id": "symbiosis",
+   "handlers": [
+    "onAllyAfterUseItem"
+   ],
+   "id": "symbiosis",
+   "is_nonstandard": null,
+   "name": "Symbiosis",
+   "num": 180
+  },
+  "synchronize": {
+   "engine_id": "synchronize",
+   "handlers": [
+    "onAfterSetStatus"
+   ],
+   "id": "synchronize",
+   "is_nonstandard": null,
+   "name": "Synchronize",
+   "num": 28
+  },
+  "tabletsofruin": {
+   "engine_id": "tablets_of_ruin",
+   "handlers": [
+    "onAnyModifyAtk",
+    "onStart"
+   ],
+   "id": "tabletsofruin",
+   "is_nonstandard": null,
+   "name": "Tablets of Ruin",
+   "num": 284
+  },
+  "tangledfeet": {
+   "engine_id": "tangled_feet",
+   "handlers": [
+    "onModifyAccuracy"
+   ],
+   "id": "tangledfeet",
+   "is_nonstandard": null,
+   "name": "Tangled Feet",
+   "num": 77
+  },
+  "tanglinghair": {
+   "engine_id": "tangling_hair",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "tanglinghair",
+   "is_nonstandard": null,
+   "name": "Tangling Hair",
+   "num": 221
+  },
+  "technician": {
+   "engine_id": "technician",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "technician",
+   "is_nonstandard": null,
+   "name": "Technician",
+   "num": 101
+  },
+  "telepathy": {
+   "engine_id": "telepathy",
+   "handlers": [
+    "onTryHit"
+   ],
+   "id": "telepathy",
+   "is_nonstandard": null,
+   "name": "Telepathy",
+   "num": 140
+  },
+  "teraformzero": {
+   "engine_id": "teraform_zero",
+   "handlers": [
+    "onAfterTerastallization"
+   ],
+   "id": "teraformzero",
+   "is_nonstandard": null,
+   "name": "Teraform Zero",
+   "num": 309
+  },
+  "terashell": {
+   "engine_id": "tera_shell",
+   "handlers": [],
+   "id": "terashell",
+   "is_nonstandard": null,
+   "name": "Tera Shell",
+   "num": 308
+  },
+  "terashift": {
+   "engine_id": "tera_shift",
+   "handlers": [
+    "onSwitchIn"
+   ],
+   "id": "terashift",
+   "is_nonstandard": null,
+   "name": "Tera Shift",
+   "num": 307
+  },
+  "teravolt": {
+   "engine_id": "teravolt",
+   "handlers": [
+    "onModifyMove",
+    "onStart"
+   ],
+   "id": "teravolt",
+   "is_nonstandard": null,
+   "name": "Teravolt",
+   "num": 164
+  },
+  "thermalexchange": {
+   "engine_id": "thermal_exchange",
+   "handlers": [
+    "onDamagingHit",
+    "onSetStatus",
+    "onUpdate"
+   ],
+   "id": "thermalexchange",
+   "is_nonstandard": null,
+   "name": "Thermal Exchange",
+   "num": 270
+  },
+  "thickfat": {
+   "engine_id": "thick_fat",
+   "handlers": [
+    "onSourceModifyAtk",
+    "onSourceModifySpA"
+   ],
+   "id": "thickfat",
+   "is_nonstandard": null,
+   "name": "Thick Fat",
+   "num": 47
+  },
+  "tintedlens": {
+   "engine_id": "tinted_lens",
+   "handlers": [
+    "onModifyDamage"
+   ],
+   "id": "tintedlens",
+   "is_nonstandard": null,
+   "name": "Tinted Lens",
+   "num": 110
+  },
+  "torrent": {
+   "engine_id": "torrent",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "torrent",
+   "is_nonstandard": null,
+   "name": "Torrent",
+   "num": 67
+  },
+  "toughclaws": {
+   "engine_id": "tough_claws",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "toughclaws",
+   "is_nonstandard": null,
+   "name": "Tough Claws",
+   "num": 181
+  },
+  "toxicboost": {
+   "engine_id": "toxic_boost",
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "toxicboost",
+   "is_nonstandard": null,
+   "name": "Toxic Boost",
+   "num": 137
+  },
+  "toxicchain": {
+   "engine_id": "toxic_chain",
+   "handlers": [
+    "onSourceDamagingHit"
+   ],
+   "id": "toxicchain",
+   "is_nonstandard": null,
+   "name": "Toxic Chain",
+   "num": 305
+  },
+  "toxicdebris": {
+   "engine_id": "toxic_debris",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "toxicdebris",
+   "is_nonstandard": null,
+   "name": "Toxic Debris",
+   "num": 295
+  },
+  "trace": {
+   "engine_id": "trace",
+   "handlers": [
+    "onStart",
+    "onUpdate"
+   ],
+   "id": "trace",
+   "is_nonstandard": null,
+   "name": "Trace",
+   "num": 36
+  },
+  "transistor": {
+   "engine_id": "transistor",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "transistor",
+   "is_nonstandard": null,
+   "name": "Transistor",
+   "num": 262
+  },
+  "triage": {
+   "engine_id": "triage",
+   "handlers": [
+    "onModifyPriority"
+   ],
+   "id": "triage",
+   "is_nonstandard": null,
+   "name": "Triage",
+   "num": 205
+  },
+  "truant": {
+   "engine_id": "truant",
+   "handlers": [
+    "onBeforeMove",
+    "onStart"
+   ],
+   "id": "truant",
+   "is_nonstandard": null,
+   "name": "Truant",
+   "num": 54
+  },
+  "turboblaze": {
+   "engine_id": "turboblaze",
+   "handlers": [
+    "onModifyMove",
+    "onStart"
+   ],
+   "id": "turboblaze",
+   "is_nonstandard": null,
+   "name": "Turboblaze",
+   "num": 163
+  },
+  "unaware": {
+   "engine_id": "unaware",
+   "handlers": [
+    "onAnyModifyBoost"
+   ],
+   "id": "unaware",
+   "is_nonstandard": null,
+   "name": "Unaware",
+   "num": 109
+  },
+  "unburden": {
+   "engine_id": "unburden",
+   "handlers": [
+    "condition.onModifySpe",
+    "onAfterUseItem",
+    "onEnd",
+    "onTakeItem"
+   ],
+   "id": "unburden",
+   "is_nonstandard": null,
+   "name": "Unburden",
+   "num": 84
+  },
+  "unnerve": {
+   "engine_id": "unnerve",
+   "handlers": [
+    "onEnd",
+    "onFoeTryEatItem",
+    "onStart"
+   ],
+   "id": "unnerve",
+   "is_nonstandard": null,
+   "name": "Unnerve",
+   "num": 127
+  },
+  "unseenfist": {
+   "engine_id": "unseen_fist",
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "unseenfist",
+   "is_nonstandard": null,
+   "name": "Unseen Fist",
+   "num": 260
+  },
+  "vesselofruin": {
+   "engine_id": "vessel_of_ruin",
+   "handlers": [
+    "onAnyModifySpA",
+    "onStart"
+   ],
+   "id": "vesselofruin",
+   "is_nonstandard": null,
+   "name": "Vessel of Ruin",
+   "num": 284
+  },
+  "victorystar": {
+   "engine_id": "victory_star",
+   "handlers": [
+    "onAnyModifyAccuracy"
+   ],
+   "id": "victorystar",
+   "is_nonstandard": null,
+   "name": "Victory Star",
+   "num": 162
+  },
+  "vitalspirit": {
+   "engine_id": "vital_spirit",
+   "handlers": [
+    "onSetStatus",
+    "onTryAddVolatile",
+    "onUpdate"
+   ],
+   "id": "vitalspirit",
+   "is_nonstandard": null,
+   "name": "Vital Spirit",
+   "num": 72
+  },
+  "voltabsorb": {
+   "engine_id": "volt_absorb",
+   "handlers": [
+    "onTryHit"
+   ],
+   "id": "voltabsorb",
+   "is_nonstandard": null,
+   "name": "Volt Absorb",
+   "num": 10
+  },
+  "wanderingspirit": {
+   "engine_id": "wandering_spirit",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "wanderingspirit",
+   "is_nonstandard": null,
+   "name": "Wandering Spirit",
+   "num": 254
+  },
+  "waterabsorb": {
+   "engine_id": "water_absorb",
+   "handlers": [
+    "onTryHit"
+   ],
+   "id": "waterabsorb",
+   "is_nonstandard": null,
+   "name": "Water Absorb",
+   "num": 11
+  },
+  "waterbubble": {
+   "engine_id": "water_bubble",
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA",
+    "onSetStatus",
+    "onSourceModifyAtk",
+    "onSourceModifySpA",
+    "onUpdate"
+   ],
+   "id": "waterbubble",
+   "is_nonstandard": null,
+   "name": "Water Bubble",
+   "num": 199
+  },
+  "watercompaction": {
+   "engine_id": "water_compaction",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "watercompaction",
+   "is_nonstandard": null,
+   "name": "Water Compaction",
+   "num": 195
+  },
+  "waterveil": {
+   "engine_id": "water_veil",
+   "handlers": [
+    "onSetStatus",
+    "onUpdate"
+   ],
+   "id": "waterveil",
+   "is_nonstandard": null,
+   "name": "Water Veil",
+   "num": 41
+  },
+  "weakarmor": {
+   "engine_id": "weak_armor",
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "weakarmor",
+   "is_nonstandard": null,
+   "name": "Weak Armor",
+   "num": 133
+  },
+  "wellbakedbody": {
+   "engine_id": "well_baked_body",
+   "handlers": [
+    "onTryHit"
+   ],
+   "id": "wellbakedbody",
+   "is_nonstandard": null,
+   "name": "Well-Baked Body",
+   "num": 273
+  },
+  "whitesmoke": {
+   "engine_id": "white_smoke",
+   "handlers": [
+    "onTryBoost"
+   ],
+   "id": "whitesmoke",
+   "is_nonstandard": null,
+   "name": "White Smoke",
+   "num": 73
+  },
+  "wimpout": {
+   "engine_id": "wimp_out",
+   "handlers": [
+    "onEmergencyExit"
+   ],
+   "id": "wimpout",
+   "is_nonstandard": null,
+   "name": "Wimp Out",
+   "num": 193
+  },
+  "windpower": {
+   "engine_id": "wind_power",
+   "handlers": [
+    "onDamagingHit",
+    "onSideConditionStart"
+   ],
+   "id": "windpower",
+   "is_nonstandard": null,
+   "name": "Wind Power",
+   "num": 277
+  },
+  "windrider": {
+   "engine_id": "wind_rider",
+   "handlers": [
+    "onSideConditionStart",
+    "onStart",
+    "onTryHit"
+   ],
+   "id": "windrider",
+   "is_nonstandard": null,
+   "name": "Wind Rider",
+   "num": 274
+  },
+  "wonderguard": {
+   "engine_id": "wonder_guard",
+   "handlers": [
+    "onTryHit"
+   ],
+   "id": "wonderguard",
+   "is_nonstandard": null,
+   "name": "Wonder Guard",
+   "num": 25
+  },
+  "wonderskin": {
+   "engine_id": "wonder_skin",
+   "handlers": [
+    "onModifyAccuracy"
+   ],
+   "id": "wonderskin",
+   "is_nonstandard": null,
+   "name": "Wonder Skin",
+   "num": 147
+  },
+  "zenmode": {
+   "engine_id": "zen_mode",
+   "handlers": [
+    "condition.onEnd",
+    "condition.onStart",
+    "onEnd",
+    "onResidual"
+   ],
+   "id": "zenmode",
+   "is_nonstandard": null,
+   "name": "Zen Mode",
+   "num": 161
+  },
+  "zerotohero": {
+   "engine_id": "zero_to_hero",
+   "handlers": [
+    "onSwitchIn",
+    "onSwitchOut"
+   ],
+   "id": "zerotohero",
+   "is_nonstandard": null,
+   "name": "Zero to Hero",
+   "num": 278
+  }
+ },
+ "schema_version": 1
+}

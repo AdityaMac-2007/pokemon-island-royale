@@ -1,0 +1,31 @@
+{
+  "source": "https://github.com/PokeAPI/sprites",
+  "license": "Sprites: Nintendo/Game Freak/Creatures Inc. (Fair Use Simulation). Repository: BSD-3-Clause",
+  "items": {
+    "charizard": {
+      "dex": 6,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+      "path": "assets/sprites/charizard.png"
+    },
+    "gengar": {
+      "dex": 94,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+      "path": "assets/sprites/gengar.png"
+    },
+    "latios": {
+      "dex": 381,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/381.png",
+      "path": "assets/sprites/latios.png"
+    },
+    "garchomp": {
+      "dex": 445,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png",
+      "path": "assets/sprites/garchomp.png"
+    },
+    "corviknight": {
+      "dex": 823,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/823.png",
+      "path": "assets/sprites/corviknight.png"
+    }
+  }
+}

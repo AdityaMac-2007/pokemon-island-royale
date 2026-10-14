@@ -1,0 +1,20 @@
+{
+ "adamant": {
+  "minus": "spa",
+  "name": "Adamant",
+  "plus": "atk"
+ },
+ "bold": {
+  "minus": "atk",
+  "name": "Bold",
+  "plus": "def"
+ },
+ "hardy": {
+  "name": "Hardy"
+ },
+ "modest": {
+  "minus": "atk",
+  "name": "Modest",
+  "plus": "spa"
+ }
+}

@@ -1,0 +1,155 @@
+{
+ "natures": {
+  "adamant": {
+   "id": "adamant",
+   "minus": "spa",
+   "name": "Adamant",
+   "plus": "atk"
+  },
+  "bashful": {
+   "id": "bashful",
+   "minus": null,
+   "name": "Bashful",
+   "plus": null
+  },
+  "bold": {
+   "id": "bold",
+   "minus": "atk",
+   "name": "Bold",
+   "plus": "def"
+  },
+  "brave": {
+   "id": "brave",
+   "minus": "spe",
+   "name": "Brave",
+   "plus": "atk"
+  },
+  "calm": {
+   "id": "calm",
+   "minus": "atk",
+   "name": "Calm",
+   "plus": "spd"
+  },
+  "careful": {
+   "id": "careful",
+   "minus": "spa",
+   "name": "Careful",
+   "plus": "spd"
+  },
+  "docile": {
+   "id": "docile",
+   "minus": null,
+   "name": "Docile",
+   "plus": null
+  },
+  "gentle": {
+   "id": "gentle",
+   "minus": "def",
+   "name": "Gentle",
+   "plus": "spd"
+  },
+  "hardy": {
+   "id": "hardy",
+   "minus": null,
+   "name": "Hardy",
+   "plus": null
+  },
+  "hasty": {
+   "id": "hasty",
+   "minus": "def",
+   "name": "Hasty",
+   "plus": "spe"
+  },
+  "impish": {
+   "id": "impish",
+   "minus": "spa",
+   "name": "Impish",
+   "plus": "def"
+  },
+  "jolly": {
+   "id": "jolly",
+   "minus": "spa",
+   "name": "Jolly",
+   "plus": "spe"
+  },
+  "lax": {
+   "id": "lax",
+   "minus": "spd",
+   "name": "Lax",
+   "plus": "def"
+  },
+  "lonely": {
+   "id": "lonely",
+   "minus": "def",
+   "name": "Lonely",
+   "plus": "atk"
+  },
+  "mild": {
+   "id": "mild",
+   "minus": "def",
+   "name": "Mild",
+   "plus": "spa"
+  },
+  "modest": {
+   "id": "modest",
+   "minus": "atk",
+   "name": "Modest",
+   "plus": "spa"
+  },
+  "naive": {
+   "id": "naive",
+   "minus": "spd",
+   "name": "Naive",
+   "plus": "spe"
+  },
+  "naughty": {
+   "id": "naughty",
+   "minus": "spd",
+   "name": "Naughty",
+   "plus": "atk"
+  },
+  "quiet": {
+   "id": "quiet",
+   "minus": "spe",
+   "name": "Quiet",
+   "plus": "spa"
+  },
+  "quirky": {
+   "id": "quirky",
+   "minus": null,
+   "name": "Quirky",
+   "plus": null
+  },
+  "rash": {
+   "id": "rash",
+   "minus": "spd",
+   "name": "Rash",
+   "plus": "spa"
+  },
+  "relaxed": {
+   "id": "relaxed",
+   "minus": "spe",
+   "name": "Relaxed",
+   "plus": "def"
+  },
+  "sassy": {
+   "id": "sassy",
+   "minus": "spe",
+   "name": "Sassy",
+   "plus": "spd"
+  },
+  "serious": {
+   "id": "serious",
+   "minus": null,
+   "name": "Serious",
+   "plus": null
+  },
+  "timid": {
+   "id": "timid",
+   "minus": "atk",
+   "name": "Timid",
+   "plus": "spe"
+  }
+ },
+ "schema_version": 1
+}

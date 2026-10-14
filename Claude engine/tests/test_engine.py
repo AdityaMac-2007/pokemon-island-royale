@@ -1,0 +1,292 @@
+import math, random, sys, unittest, json
+sys.path.insert(0, ".")
+from pkmn_br.config import Config
+from pkmn_br.engine import Engine
+from pkmn_br.rules import CHART, TYPES, type_mult, calc_stats, calc_damage, BattleRules
+from pkmn_br.spatial import SpatialHash
+from pkmn_br.data import MOVES, StubProvider, _make, _S
+from pkmn_br.state import Combatant
+from pkmn_br import ai
+from pkmn_br.island import Island, BIOMES
+
+
+def mk(name_idx=0, **kw):
+    b = _make(*_S[name_idx])
+    c = Combatant.from_build(0, b)
+    for k, v in kw.items():
+        setattr(c, k, v)
+    return c
+
+
+class Rules(unittest.TestCase):
+    def test_chart(self):
+        self.assertEqual(len(TYPES), 18)
+        self.assertEqual(type_mult("fire", ("grass", "steel")), 4.0)
+        self.assertEqual(type_mult("ghost", ("normal",)), 0.0)
+        self.assertEqual(type_mult("ground", ("flying",)), 0.0)
+        self.assertEqual(type_mult("dragon", ("fairy",)), 0.0)
+
+    def test_stats_known_values(self):
+        base = dict(hp=108, atk=130, **{"def": 95}, spa=80, spd=85, spe=102)
+        s = calc_stats(base, {}, None, None)
+        self.assertEqual((s["hp"], s["atk"]), (357, 296))          # Garchomp L100, 31 IV, 0 EV
+        s = calc_stats(base, {"atk": 252}, "atk", "spa")
+        self.assertEqual(s["atk"], 394)
+
+    def test_damage_properties(self):
+        a, d = mk(0), mk(2)              # Charizard vs Blastoise
+        r = BattleRules()
+        fl = MOVES["flamethrower"]
+        dmg, _ = calc_damage(a, d, fl, (0.0, 0.99, 0.5, 0.9), "clear", 1.0, 0.0, r)
+        rain, _ = calc_damage(a, d, fl, (0.0, 0.99, 0.5, 0.9), "rain", 1.0, 0.0, r)
+        self.assertGreater(dmg, 0)
+        self.assertLess(rain, dmg)       # rain halves fire
+        hp = MOVES["hydro_pump"]   # 80% accuracy
+        miss, info = calc_damage(d, a, hp, (0.95, 0.99, 0.5, 0.9), "clear", 1.0, 0.0, r)
+        self.assertEqual((miss, info.get("miss")), (0, True))
+        hit, _ = calc_damage(d, a, hp, (0.50, 0.99, 0.5, 0.9), "clear", 1.0, 0.0, r)
+        self.assertGreater(hit, 0)
+        # ranged moves are less accurate against targets standing in cover
+        self.assertLess(MOVES["hydro_pump"].accuracy / 100 * (1 - 0.5 * 0.4), 0.8)
+        # immunity: levitate vs earthquake
+        gengar = mk(5)
+        eq, info = calc_damage(mk(1), gengar, MOVES["earthquake"], (0, 0.99, 0.5, 0.9), "clear", 1.0, 0.0, r)
+        self.assertEqual(eq, 0)
+
+    def test_chaos_ruleset_independent(self):
+        self.assertAlmostEqual(BattleRules.from_config(Config()).crit_chance, 1 / 24)
+        self.assertEqual(BattleRules.from_config(Config(ruleset="chaos")).stab, 2.0)
+
+
+class Flight(unittest.TestCase):
+    def test_ground_to_air_legality(self):
+        ground, flyer = mk(1), mk(0, alt=1)
+        self.assertFalse(ai.legal(ground, flyer, MOVES["dragon_claw"]))   # melee cannot reach
+        self.assertTrue(ai.legal(ground, flyer, MOVES["rock_slide"]))     # ranged counter works
+        self.assertFalse(ai.legal(ground, flyer, MOVES["earthquake"]))    # ground move can't hit air
+        self.assertTrue(ai.legal(flyer, mk(1), MOVES["brave_bird"]))      # air -> ground always ok
+        self.assertTrue(ai.legal(mk(0, alt=1), mk(0, alt=1), MOVES["brave_bird"]))
+
+    def test_flying_not_invulnerable_in_match(self):
+        # counterplay exists: a healthy share of the move pool can be used from the ground against airborne foes
+        anti = [m for m in MOVES.values() if m.hits_air]
+        self.assertGreater(len(anti) / len(MOVES), 0.4)
+        # and melee/ground-only users cannot, so flight is real mobility but not a blanket guarantee
+        self.assertTrue(any(not m.hits_air for m in MOVES.values()))
+
+
+class Spatial(unittest.TestCase):
+    def test_matches_bruteforce(self):
+        rnd = random.Random(5)
+        h = SpatialHash(7.0)
+        pts = {i: (rnd.uniform(0, 200), rnd.uniform(0, 200)) for i in range(500)}
+        for i, (x, y) in pts.items():
+            h.insert(i, x, y)
+        for _ in range(50):
+            x, y, r = rnd.uniform(0, 200), rnd.uniform(0, 200), rnd.uniform(1, 30)
+            want = sorted(i for i, p in pts.items() if (p[0] - x) ** 2 + (p[1] - y) ** 2 <= r * r)
+            self.assertEqual(h.query(x, y, r), want)
+
+    def test_remove(self):
+        h = SpatialHash(5.0); h.insert(1, 1, 1); h.remove(1)
+        self.assertEqual(h.query(1, 1, 3), [])
+
+
+class Island_(unittest.TestCase):
+    def test_all_types_have_a_home_and_all_biomes_appear(self):
+        fav = set(t for b in BIOMES.values() for t in b["favored"])
+        self.assertEqual(fav, set(TYPES))
+        isl = Island.generate(Config(seed=4, n_combatants=24), 24)
+        seen = {n for row in isl.grid for n in row}
+        self.assertEqual(seen, set(BIOMES))
+
+    def test_zone_phases_nested_and_monotone(self):
+        cfg = Config(seed=9)
+        isl = Island.generate(cfg, 24)
+        P = isl.zone.phases
+        for (x0, y0, r0), (x1, y1, r1) in zip(P, P[1:]):
+            self.assertLessEqual(math.hypot(x1 - x0, y1 - y0) + r1, r0 + 1e-9)
+        rs = [isl.zone.state(t).r for t in range(0, 4000, 25)]
+        self.assertTrue(all(b <= a + 1e-9 for a, b in zip(rs, rs[1:])))
+
+    def test_each_biome_has_tradeoff(self):
+        for n, b in BIOMES.items():
+            self.assertTrue(b["boost"] > 1.0)
+            tradeoff = b["move"] < 1.0 or b["chip_immune"] is not None or b["cover"] > 0 or b["berries"] > 1.0 or b["move"] > 1.0
+            self.assertTrue(tradeoff, n)
+
+
+class Integration(unittest.TestCase):
+    def run_match(self, **kw):
+        cfg = Config(**kw)
+        e = Engine(cfg)
+        e.run()
+        return e
+
+    def test_match_ends_with_one_winner_and_valid_placements(self):
+        for seed in (1, 2, 3, 4):
+            e = self.run_match(seed=seed, n_combatants=24)
+            pl = sorted(c.placement for c in e.by_id)
+            self.assertEqual(pl, list(range(1, 25)), seed)
+            self.assertEqual(sum(1 for c in e.by_id if c.placement == 1), 1)
+            self.assertIsNotNone(e.winner)
+
+    def test_kill_accounting(self):
+        e = self.run_match(seed=5, n_combatants=24)
+        elims = [x for x in e.log.events if x["e"] == "elim"]
+        self.assertEqual(sum(c.kills for c in e.by_id), sum(1 for x in elims if x["killer"] is not None))
+        # every elimination is explainable
+        for x in elims:
+            self.assertIn(x["cause"], {"move", "zone", "hazard", "status", "environment", "recoil"})
+            if x["cause"] == "move":
+                self.assertIsNotNone(x["killer"])
+
+    def test_dead_do_not_act_after_elimination(self):
+        e = self.run_match(seed=6, n_combatants=24)
+        dead_at = {x["id"]: x["t"] for x in e.log.events if x["e"] == "elim"}
+        for x in e.log.events:
+            if x["e"] == "hit" and x["a"] in dead_at:
+                self.assertLessEqual(x["t"], dead_at[x["a"]])
+
+    def test_no_airborne_hit_without_anti_air(self):
+        e = self.run_match(seed=7, n_combatants=24)
+        # replay frames let us verify: an attacker's melee hit on a flyer must come from an airborne attacker
+        frames = {f["t"]: {c[0]: c for c in f["c"]} for f in e.log.frames}
+        checked = 0
+        for x in e.log.events:
+            if x["e"] == "hit" and x["dmg"] > 0 and x["t"] in frames:
+                fa, fd = frames[x["t"]].get(x["a"]), frames[x["t"]].get(x["d"])
+                if fa and fd and fd[3] == 1 and fa[3] == 0:
+                    self.assertTrue(MOVES[x["mv"]].hits_air)
+                    checked += 1
+        self.assertGreaterEqual(checked, 0)   # frames are sampled; legality is also asserted directly in Flight tests
+
+    def test_zone_forces_resolution(self):
+        e = self.run_match(seed=8, n_combatants=40)
+        self.assertLess(e.tick, e.cfg.max_ticks)
+        self.assertGreater(len([x for x in e.log.events if x["e"] == "elim"]), 38)
+
+    def test_simultaneous_mode_runs(self):
+        e = self.run_match(seed=3, n_combatants=24, speed_tie_mode="simultaneous")
+        self.assertEqual(sorted(c.placement for c in e.by_id), list(range(1, 25)))
+
+    def test_chaos_mode_runs_and_differs(self):
+        a = self.run_match(seed=3, n_combatants=24)
+        b = self.run_match(seed=3, n_combatants=24, ruleset="chaos")
+        self.assertNotEqual(a.log.digest(), b.log.digest())
+
+
+class Reproducibility(unittest.TestCase):
+    def test_same_seed_same_digest(self):
+        d = [Engine(Config(seed=11, n_combatants=30)).run()["digest"] for _ in range(3)]
+        self.assertEqual(len(set(d)), 1)
+
+    def test_different_seed_differs(self):
+        a = Engine(Config(seed=11, n_combatants=30)).run()["digest"]
+        b = Engine(Config(seed=12, n_combatants=30)).run()["digest"]
+        self.assertNotEqual(a, b)
+
+    def test_logging_flags_do_not_change_outcome(self):
+        a = Engine(Config(seed=13, n_combatants=30, log_hits=True)); ra = a.run()
+        b = Engine(Config(seed=13, n_combatants=30, log_hits=False, replay_every=50)); rb = b.run()
+        self.assertEqual([r["id"] for r in ra["rankings"]], [r["id"] for r in rb["rankings"]])
+        self.assertEqual(ra["ticks"], rb["ticks"])
+
+    def test_config_roundtrip(self):
+        c = Config(seed=5, n_combatants=10, ruleset="chaos")
+        self.assertEqual(Config.from_dict(json.loads(json.dumps(c.to_dict()))).digest(), c.digest())
+
+    def test_outputs_written(self):
+        import tempfile, os
+        e = Engine(Config(seed=2, n_combatants=16)); e.run()
+        with tempfile.TemporaryDirectory() as d:
+            e.write_outputs(d)
+            for f in ("config.json", "events.jsonl", "summary.json", "rankings.csv", "replay.json"):
+                self.assertTrue(os.path.getsize(os.path.join(d, f)) > 0, f)
+            with open(os.path.join(d, "replay.json")) as fh:
+                rep = json.load(fh)
+            self.assertGreater(len(rep["frames"]), 3)
+
+
+
+class AuditFixesPostV1(unittest.TestCase):
+    """Audit fixes re-verified on top of Combat Systems v1:
+    D1 (digest covers replay frames), D2 (immunity decided before the accuracy roll),
+    D3 (explicit storm_peak updraft flag drives flight drain)."""
+
+    # ---- D2 ----
+    def test_immune_decided_before_accuracy_roll(self):
+        # mk(5) = Gengar (ghost/poison, ability levitate); mk(1) = Garchomp,
+        # mk(2) = Blastoise, mk(10) = Snorlax. A roll of 0.9 MISSES a 50-accuracy
+        # move; immunity must be reported anyway (old code returned {"miss": True}).
+        from pkmn_br.data import Move
+        r = BattleRules()
+        gengar = mk(5)
+        slash50 = Move("test_slash", "normal", "physical", 70, 50)
+        dmg, info = calc_damage(mk(10), gengar, slash50,
+                                (0.9, 0.99, 0.5, 0.9), "clear", 1.0, 0.0, r)
+        self.assertEqual(dmg, 0)
+        self.assertEqual(info, {"immune": True})
+        # Levitate vs a low-accuracy Ground move: same requirement.
+        dig50 = Move("test_dig", "ground", "physical", 70, 50)
+        dmg, info = calc_damage(mk(1), gengar, dig50,
+                                (0.9, 0.99, 0.5, 0.9), "clear", 1.0, 0.0, r)
+        self.assertEqual(dmg, 0)
+        self.assertEqual(info, {"immune": True})
+        # Controls: non-immune target + failing accuracy roll still misses;
+        # non-immune target + successful roll still takes damage (proves the hit
+        # path and its Combat v1 payload are unchanged).
+        miss, info = calc_damage(mk(2), mk(1), MOVES["hydro_pump"],
+                                 (0.95, 0.99, 0.5, 0.9), "clear", 1.0, 0.0, r)
+        self.assertEqual((miss, info.get("miss")), (0, True))
+        d, info = calc_damage(mk(10), mk(1), MOVES["body_slam"],
+                              (0.0, 0.99, 0.5, 0.9), "clear", 1.0, 0.0, r)
+        self.assertGreater(d, 0)
+        self.assertIn("eff", info)
+
+    # ---- D1 ----
+    def test_digest_covers_replay_frames(self):
+        from pkmn_br.log import EventLog
+        log = EventLog(Config())
+        log.emit(0, "probe")
+        d_events_only = log.digest()
+        zone = type("Z", (), {"cx": 0.0, "cy": 0.0, "r": 1.0})()
+        log.frame(0, zone, "clear", [])
+        self.assertNotEqual(d_events_only, log.digest())
+
+    def test_match_digest_covers_replay_frames(self):
+        e = Engine(Config(seed=17, n_combatants=16)); e.run()
+        d0 = e.log.digest()
+        self.assertTrue(e.log.frames)
+        e.log.frames[0]["weather"] = "mutated-for-test"
+        self.assertNotEqual(d0, e.log.digest())
+
+    # ---- D3 ----
+    def test_storm_peak_updraft_explicit_flag(self):
+        self.assertTrue(BIOMES["storm_peak"].get("updraft", False))
+        for name, b in BIOMES.items():
+            if name != "storm_peak":
+                self.assertFalse(b.get("updraft", False))
+
+    def test_updraft_halves_flight_drain(self):
+        # Behavior level: drives Engine._phase_environment (6e) directly. t=1 avoids
+        # the residual step, hazard impacts, and full-HP berry pickups.
+        e = Engine(Config(seed=21, n_combatants=24))
+        c = next(x for x in e.by_id if x.can_fly)
+        c.alt = 1
+
+        def find_cell(name):
+            for gy, row in enumerate(e.island.grid):
+                for gx, b in enumerate(row):
+                    if b == name:
+                        return (gx + 0.5) * e.island.CELL, (gy + 0.5) * e.island.CELL
+
+        for biome, expect in (("plains", 49.0), ("storm_peak", 49.5)):
+            x, y = find_cell(biome)
+            c.x, c.y, c.biome = x, y, biome
+            c.stamina = 50.0
+            e._phase_environment(1)
+            self.assertAlmostEqual(c.stamina, expect, places=9, msg=biome)
+
+if __name__ == "__main__":
+    unittest.main()

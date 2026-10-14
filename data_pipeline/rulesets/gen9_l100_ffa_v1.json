@@ -1,0 +1,21 @@
+{
+ "id": "gen9-l100-ffa-v1",
+ "description": "Level 100 free-for-all using Showdown's current-generation (Gen 9) data. A species/form is eligible only if the data carries no isNonstandard marker and the form policy admits its class. Moves must have a Gen 9 source in the species' own, prevo-chain or base-form learnset. Terastallization is not modelled.",
+ "level": 100,
+ "form_policy": "battle_forms",
+ "learnset_generation": 9,
+ "regular_sources": ["M", "T", "L", "E"],
+ "allow_event_only_moves": false,
+ "ev_max_each": 252,
+ "ev_max_total": 510,
+ "iv_min": 0,
+ "iv_max": 31,
+ "not_enforced": [
+  "event-only ability/move/IV combinations (a '9S' move is rejected unless allow_event_only_moves is true; combinations are not checked)",
+  "egg-move compatibility between two egg moves, and breeding-chain restrictions",
+  "level-up evolution timing (everything is level 100)",
+  "Pokemon HOME / transfer rules, shiny locks, gender locks, ball restrictions",
+  "Terastallization (tera_type is ignored with a warning; engine does not model it)",
+  "team-level clauses (species/item clauses): each combatant is validated alone"
+ ]
+}

@@ -1,0 +1,8150 @@
+{
+ "items": {
+  "abilityshield": {
+   "engine_id": "ability_shield",
+   "forced_forme": null,
+   "handlers": [
+    "onSetAbility"
+   ],
+   "id": "abilityshield",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Ability Shield",
+   "num": 1881
+  },
+  "abomasite": {
+   "engine_id": "abomasite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "abomasite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "abomasnow"
+   ],
+   "name": "Abomasite",
+   "num": 674
+  },
+  "absolite": {
+   "engine_id": "absolite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "absolite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "absol"
+   ],
+   "name": "Absolite",
+   "num": 677
+  },
+  "absolitez": {
+   "engine_id": "absolite_z",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "absolitez",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "absol"
+   ],
+   "name": "Absolite Z",
+   "num": 2638
+  },
+  "absorbbulb": {
+   "engine_id": "absorb_bulb",
+   "forced_forme": null,
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "absorbbulb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Absorb Bulb",
+   "num": 545
+  },
+  "adamantcrystal": {
+   "engine_id": "adamant_crystal",
+   "forced_forme": "dialgaorigin",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "adamantcrystal",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "dialgaorigin"
+   ],
+   "name": "Adamant Crystal",
+   "num": 1777
+  },
+  "adamantorb": {
+   "engine_id": "adamant_orb",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "adamantorb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "dialga"
+   ],
+   "name": "Adamant Orb",
+   "num": 135
+  },
+  "adrenalineorb": {
+   "engine_id": "adrenaline_orb",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterBoost"
+   ],
+   "id": "adrenalineorb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Adrenaline Orb",
+   "num": 846
+  },
+  "aerodactylite": {
+   "engine_id": "aerodactylite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "aerodactylite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "aerodactyl"
+   ],
+   "name": "Aerodactylite",
+   "num": 672
+  },
+  "aggronite": {
+   "engine_id": "aggronite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "aggronite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "aggron"
+   ],
+   "name": "Aggronite",
+   "num": 667
+  },
+  "aguavberry": {
+   "engine_id": "aguav_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onTryEatItem",
+    "onUpdate"
+   ],
+   "id": "aguavberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Aguav Berry",
+   "num": 162
+  },
+  "airballoon": {
+   "engine_id": "air_balloon",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterSubDamage",
+    "onDamagingHit",
+    "onStart"
+   ],
+   "id": "airballoon",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Air Balloon",
+   "num": 541
+  },
+  "alakazite": {
+   "engine_id": "alakazite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "alakazite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "alakazam"
+   ],
+   "name": "Alakazite",
+   "num": 679
+  },
+  "aloraichiumz": {
+   "engine_id": "aloraichium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "aloraichiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "raichualola"
+   ],
+   "name": "Aloraichium Z",
+   "num": 803
+  },
+  "altarianite": {
+   "engine_id": "altarianite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "altarianite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "altaria"
+   ],
+   "name": "Altarianite",
+   "num": 755
+  },
+  "ampharosite": {
+   "engine_id": "ampharosite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "ampharosite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "ampharos"
+   ],
+   "name": "Ampharosite",
+   "num": 658
+  },
+  "apicotberry": {
+   "engine_id": "apicot_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "apicotberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Apicot Berry",
+   "num": 205
+  },
+  "armorfossil": {
+   "engine_id": "armor_fossil",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "armorfossil",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Armor Fossil",
+   "num": 104
+  },
+  "aspearberry": {
+   "engine_id": "aspear_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "aspearberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Aspear Berry",
+   "num": 153
+  },
+  "assaultvest": {
+   "engine_id": "assault_vest",
+   "forced_forme": null,
+   "handlers": [
+    "onDisableMove",
+    "onModifySpD"
+   ],
+   "id": "assaultvest",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Assault Vest",
+   "num": 640
+  },
+  "audinite": {
+   "engine_id": "audinite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "audinite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "audino"
+   ],
+   "name": "Audinite",
+   "num": 757
+  },
+  "auspiciousarmor": {
+   "engine_id": "auspicious_armor",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "auspiciousarmor",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Auspicious Armor",
+   "num": 2344
+  },
+  "babiriberry": {
+   "engine_id": "babiri_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "babiriberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Babiri Berry",
+   "num": 199
+  },
+  "banettite": {
+   "engine_id": "banettite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "banettite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "banette"
+   ],
+   "name": "Banettite",
+   "num": 668
+  },
+  "barbaracite": {
+   "engine_id": "barbaracite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "barbaracite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "barbaracle"
+   ],
+   "name": "Barbaracite",
+   "num": 2581
+  },
+  "baxcalibrite": {
+   "engine_id": "baxcalibrite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "baxcalibrite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "baxcalibur"
+   ],
+   "name": "Baxcalibrite",
+   "num": 2648
+  },
+  "beastball": {
+   "engine_id": "beast_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "beastball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Beast Ball",
+   "num": 851
+  },
+  "beedrillite": {
+   "engine_id": "beedrillite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "beedrillite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "beedrill"
+   ],
+   "name": "Beedrillite",
+   "num": 770
+  },
+  "belueberry": {
+   "engine_id": "belue_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "belueberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Belue Berry",
+   "num": 183
+  },
+  "berry": {
+   "engine_id": "berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onResidual",
+    "onTryEatItem"
+   ],
+   "id": "berry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Berry",
+   "num": 155
+  },
+  "berryjuice": {
+   "engine_id": "berry_juice",
+   "forced_forme": null,
+   "handlers": [
+    "onUpdate"
+   ],
+   "id": "berryjuice",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Berry Juice",
+   "num": 43
+  },
+  "berrysweet": {
+   "engine_id": "berry_sweet",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "berrysweet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Berry Sweet",
+   "num": 1111
+  },
+  "berserkgene": {
+   "engine_id": "berserk_gene",
+   "forced_forme": null,
+   "handlers": [
+    "onUpdate"
+   ],
+   "id": "berserkgene",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Berserk Gene",
+   "num": 0
+  },
+  "bignugget": {
+   "engine_id": "big_nugget",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "bignugget",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Big Nugget",
+   "num": 581
+  },
+  "bigroot": {
+   "engine_id": "big_root",
+   "forced_forme": null,
+   "handlers": [
+    "onTryHeal"
+   ],
+   "id": "bigroot",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Big Root",
+   "num": 296
+  },
+  "bindingband": {
+   "engine_id": "binding_band",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "bindingband",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Binding Band",
+   "num": 544
+  },
+  "bitterberry": {
+   "engine_id": "bitter_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "bitterberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Bitter Berry",
+   "num": 156
+  },
+  "blackbelt": {
+   "engine_id": "black_belt",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "blackbelt",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Black Belt",
+   "num": 241
+  },
+  "blackglasses": {
+   "engine_id": "black_glasses",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "blackglasses",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Black Glasses",
+   "num": 240
+  },
+  "blacksludge": {
+   "engine_id": "black_sludge",
+   "forced_forme": null,
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "blacksludge",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Black Sludge",
+   "num": 281
+  },
+  "blastoisinite": {
+   "engine_id": "blastoisinite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "blastoisinite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "blastoise"
+   ],
+   "name": "Blastoisinite",
+   "num": 661
+  },
+  "blazikenite": {
+   "engine_id": "blazikenite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "blazikenite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "blaziken"
+   ],
+   "name": "Blazikenite",
+   "num": 664
+  },
+  "blueorb": {
+   "engine_id": "blue_orb",
+   "forced_forme": null,
+   "handlers": [
+    "onSwitchIn",
+    "onTakeItem"
+   ],
+   "id": "blueorb",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "kyogre"
+   ],
+   "name": "Blue Orb",
+   "num": 535
+  },
+  "blukberry": {
+   "engine_id": "bluk_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "blukberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Bluk Berry",
+   "num": 165
+  },
+  "blunderpolicy": {
+   "engine_id": "blunder_policy",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "blunderpolicy",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Blunder Policy",
+   "num": 1121
+  },
+  "boosterenergy": {
+   "engine_id": "booster_energy",
+   "forced_forme": null,
+   "handlers": [
+    "onStart",
+    "onTakeItem",
+    "onUpdate"
+   ],
+   "id": "boosterenergy",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Booster Energy",
+   "num": 1880
+  },
+  "bottlecap": {
+   "engine_id": "bottle_cap",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "bottlecap",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Bottle Cap",
+   "num": 795
+  },
+  "brightpowder": {
+   "engine_id": "bright_powder",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyAccuracy"
+   ],
+   "id": "brightpowder",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Bright Powder",
+   "num": 213
+  },
+  "buggem": {
+   "engine_id": "bug_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "buggem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Bug Gem",
+   "num": 558
+  },
+  "buginiumz": {
+   "engine_id": "buginium_z",
+   "forced_forme": "arceusbug",
+   "handlers": [],
+   "id": "buginiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Buginium Z",
+   "num": 787
+  },
+  "bugmemory": {
+   "engine_id": "bug_memory",
+   "forced_forme": "silvallybug",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "bugmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallybug"
+   ],
+   "name": "Bug Memory",
+   "num": 909
+  },
+  "burndrive": {
+   "engine_id": "burn_drive",
+   "forced_forme": "genesectburn",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "burndrive",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "genesectburn"
+   ],
+   "name": "Burn Drive",
+   "num": 118
+  },
+  "burntberry": {
+   "engine_id": "burnt_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "burntberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Burnt Berry",
+   "num": 153
+  },
+  "cameruptite": {
+   "engine_id": "cameruptite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "cameruptite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "camerupt"
+   ],
+   "name": "Cameruptite",
+   "num": 767
+  },
+  "cellbattery": {
+   "engine_id": "cell_battery",
+   "forced_forme": null,
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "cellbattery",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Cell Battery",
+   "num": 546
+  },
+  "chandelurite": {
+   "engine_id": "chandelurite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "chandelurite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "chandelure"
+   ],
+   "name": "Chandelurite",
+   "num": 2574
+  },
+  "charcoal": {
+   "engine_id": "charcoal",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "charcoal",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Charcoal",
+   "num": 249
+  },
+  "charizarditex": {
+   "engine_id": "charizardite_x",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "charizarditex",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "charizard"
+   ],
+   "name": "Charizardite X",
+   "num": 660
+  },
+  "charizarditey": {
+   "engine_id": "charizardite_y",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "charizarditey",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "charizard"
+   ],
+   "name": "Charizardite Y",
+   "num": 678
+  },
+  "chartiberry": {
+   "engine_id": "charti_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "chartiberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Charti Berry",
+   "num": 195
+  },
+  "cheriberry": {
+   "engine_id": "cheri_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "cheriberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Cheri Berry",
+   "num": 149
+  },
+  "cherishball": {
+   "engine_id": "cherish_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "cherishball",
+   "is_mega_stone": false,
+   "is_nonstandard": "Unobtainable",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Cherish Ball",
+   "num": 16
+  },
+  "chesnaughtite": {
+   "engine_id": "chesnaughtite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "chesnaughtite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "chesnaught"
+   ],
+   "name": "Chesnaughtite",
+   "num": 2575
+  },
+  "chestoberry": {
+   "engine_id": "chesto_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "chestoberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Chesto Berry",
+   "num": 150
+  },
+  "chilanberry": {
+   "engine_id": "chilan_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "chilanberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Chilan Berry",
+   "num": 200
+  },
+  "chilldrive": {
+   "engine_id": "chill_drive",
+   "forced_forme": "genesectchill",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "chilldrive",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "genesectchill"
+   ],
+   "name": "Chill Drive",
+   "num": 119
+  },
+  "chimechite": {
+   "engine_id": "chimechite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "chimechite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "chimecho"
+   ],
+   "name": "Chimechite",
+   "num": 2637
+  },
+  "chippedpot": {
+   "engine_id": "chipped_pot",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "chippedpot",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Chipped Pot",
+   "num": 1254
+  },
+  "choiceband": {
+   "engine_id": "choice_band",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyAtk",
+    "onModifyMove",
+    "onStart"
+   ],
+   "id": "choiceband",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Choice Band",
+   "num": 220
+  },
+  "choicescarf": {
+   "engine_id": "choice_scarf",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyMove",
+    "onModifySpe",
+    "onStart"
+   ],
+   "id": "choicescarf",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Choice Scarf",
+   "num": 287
+  },
+  "choicespecs": {
+   "engine_id": "choice_specs",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyMove",
+    "onModifySpA",
+    "onStart"
+   ],
+   "id": "choicespecs",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Choice Specs",
+   "num": 297
+  },
+  "chopleberry": {
+   "engine_id": "chople_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "chopleberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Chople Berry",
+   "num": 189
+  },
+  "clawfossil": {
+   "engine_id": "claw_fossil",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "clawfossil",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Claw Fossil",
+   "num": 100
+  },
+  "clearamulet": {
+   "engine_id": "clear_amulet",
+   "forced_forme": null,
+   "handlers": [
+    "onTryBoost"
+   ],
+   "id": "clearamulet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Clear Amulet",
+   "num": 1882
+  },
+  "clefablite": {
+   "engine_id": "clefablite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "clefablite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "clefable"
+   ],
+   "name": "Clefablite",
+   "num": 2559
+  },
+  "cloversweet": {
+   "engine_id": "clover_sweet",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "cloversweet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Clover Sweet",
+   "num": 1112
+  },
+  "cobaberry": {
+   "engine_id": "coba_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "cobaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Coba Berry",
+   "num": 192
+  },
+  "colburberry": {
+   "engine_id": "colbur_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "colburberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Colbur Berry",
+   "num": 198
+  },
+  "cornerstonemask": {
+   "engine_id": "cornerstone_mask",
+   "forced_forme": "ogerponcornerstone",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "cornerstonemask",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "ogerponcornerstone"
+   ],
+   "name": "Cornerstone Mask",
+   "num": 2406
+  },
+  "cornnberry": {
+   "engine_id": "cornn_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "cornnberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Cornn Berry",
+   "num": 175
+  },
+  "coverfossil": {
+   "engine_id": "cover_fossil",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "coverfossil",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Cover Fossil",
+   "num": 572
+  },
+  "covertcloak": {
+   "engine_id": "covert_cloak",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySecondaries"
+   ],
+   "id": "covertcloak",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Covert Cloak",
+   "num": 1885
+  },
+  "crabominite": {
+   "engine_id": "crabominite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "crabominite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "crabominable"
+   ],
+   "name": "Crabominite",
+   "num": 2644
+  },
+  "crackedpot": {
+   "engine_id": "cracked_pot",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "crackedpot",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Cracked Pot",
+   "num": 1253
+  },
+  "crucibellite": {
+   "engine_id": "crucibellite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "crucibellite",
+   "is_mega_stone": true,
+   "is_nonstandard": "CAP",
+   "is_z_crystal": false,
+   "item_user": [
+    "crucibelle"
+   ],
+   "name": "Crucibellite",
+   "num": -1
+  },
+  "custapberry": {
+   "engine_id": "custap_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onFractionalPriority"
+   ],
+   "id": "custapberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Custap Berry",
+   "num": 210
+  },
+  "damprock": {
+   "engine_id": "damp_rock",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "damprock",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Damp Rock",
+   "num": 285
+  },
+  "darkgem": {
+   "engine_id": "dark_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "darkgem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dark Gem",
+   "num": 562
+  },
+  "darkiniumz": {
+   "engine_id": "darkinium_z",
+   "forced_forme": "arceusdark",
+   "handlers": [],
+   "id": "darkiniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Darkinium Z",
+   "num": 791
+  },
+  "darkmemory": {
+   "engine_id": "dark_memory",
+   "forced_forme": "silvallydark",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "darkmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallydark"
+   ],
+   "name": "Dark Memory",
+   "num": 919
+  },
+  "darkranite": {
+   "engine_id": "darkranite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "darkranite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "darkrai"
+   ],
+   "name": "Darkranite",
+   "num": 2568
+  },
+  "dawnstone": {
+   "engine_id": "dawn_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "dawnstone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dawn Stone",
+   "num": 109
+  },
+  "decidiumz": {
+   "engine_id": "decidium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "decidiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "decidueye"
+   ],
+   "name": "Decidium Z",
+   "num": 798
+  },
+  "deepseascale": {
+   "engine_id": "deep_sea_scale",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySpD"
+   ],
+   "id": "deepseascale",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "clamperl"
+   ],
+   "name": "Deep Sea Scale",
+   "num": 227
+  },
+  "deepseatooth": {
+   "engine_id": "deep_sea_tooth",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySpA"
+   ],
+   "id": "deepseatooth",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "clamperl"
+   ],
+   "name": "Deep Sea Tooth",
+   "num": 226
+  },
+  "delphoxite": {
+   "engine_id": "delphoxite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "delphoxite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "delphox"
+   ],
+   "name": "Delphoxite",
+   "num": 2576
+  },
+  "destinyknot": {
+   "engine_id": "destiny_knot",
+   "forced_forme": null,
+   "handlers": [
+    "onAttract"
+   ],
+   "id": "destinyknot",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Destiny Knot",
+   "num": 280
+  },
+  "diancite": {
+   "engine_id": "diancite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "diancite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "diancie"
+   ],
+   "name": "Diancite",
+   "num": 764
+  },
+  "diveball": {
+   "engine_id": "dive_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "diveball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dive Ball",
+   "num": 7
+  },
+  "domefossil": {
+   "engine_id": "dome_fossil",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "domefossil",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dome Fossil",
+   "num": 102
+  },
+  "dousedrive": {
+   "engine_id": "douse_drive",
+   "forced_forme": "genesectdouse",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "dousedrive",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "genesectdouse"
+   ],
+   "name": "Douse Drive",
+   "num": 116
+  },
+  "dracoplate": {
+   "engine_id": "draco_plate",
+   "forced_forme": "arceusdragon",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "dracoplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Draco Plate",
+   "num": 311
+  },
+  "dragalgite": {
+   "engine_id": "dragalgite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "dragalgite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "dragalge"
+   ],
+   "name": "Dragalgite",
+   "num": 2582
+  },
+  "dragonfang": {
+   "engine_id": "dragon_fang",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "dragonfang",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dragon Fang",
+   "num": 250
+  },
+  "dragongem": {
+   "engine_id": "dragon_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "dragongem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dragon Gem",
+   "num": 561
+  },
+  "dragoninite": {
+   "engine_id": "dragoninite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "dragoninite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "dragonite"
+   ],
+   "name": "Dragoninite",
+   "num": 2562
+  },
+  "dragoniumz": {
+   "engine_id": "dragonium_z",
+   "forced_forme": "arceusdragon",
+   "handlers": [],
+   "id": "dragoniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Dragonium Z",
+   "num": 790
+  },
+  "dragonmemory": {
+   "engine_id": "dragon_memory",
+   "forced_forme": "silvallydragon",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "dragonmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallydragon"
+   ],
+   "name": "Dragon Memory",
+   "num": 918
+  },
+  "dragonscale": {
+   "engine_id": "dragon_scale",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "dragonscale",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dragon Scale",
+   "num": 235
+  },
+  "drampanite": {
+   "engine_id": "drampanite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "drampanite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "drampa"
+   ],
+   "name": "Drampanite",
+   "num": 2585
+  },
+  "dreadplate": {
+   "engine_id": "dread_plate",
+   "forced_forme": "arceusdark",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "dreadplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dread Plate",
+   "num": 312
+  },
+  "dreamball": {
+   "engine_id": "dream_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "dreamball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dream Ball",
+   "num": 576
+  },
+  "dubiousdisc": {
+   "engine_id": "dubious_disc",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "dubiousdisc",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dubious Disc",
+   "num": 324
+  },
+  "durinberry": {
+   "engine_id": "durin_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "durinberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Durin Berry",
+   "num": 182
+  },
+  "duskball": {
+   "engine_id": "dusk_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "duskball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dusk Ball",
+   "num": 13
+  },
+  "duskstone": {
+   "engine_id": "dusk_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "duskstone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Dusk Stone",
+   "num": 108
+  },
+  "earthplate": {
+   "engine_id": "earth_plate",
+   "forced_forme": "arceusground",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "earthplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Earth Plate",
+   "num": 305
+  },
+  "eelektrossite": {
+   "engine_id": "eelektrossite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "eelektrossite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "eelektross"
+   ],
+   "name": "Eelektrossite",
+   "num": 2573
+  },
+  "eeviumz": {
+   "engine_id": "eevium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "eeviumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "eevee"
+   ],
+   "name": "Eevium Z",
+   "num": 805
+  },
+  "ejectbutton": {
+   "engine_id": "eject_button",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterMoveSecondary"
+   ],
+   "id": "ejectbutton",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Eject Button",
+   "num": 547
+  },
+  "ejectpack": {
+   "engine_id": "eject_pack",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterBoost",
+    "onAnyAfterMega",
+    "onAnyAfterMove",
+    "onAnySwitchIn",
+    "onEnd",
+    "onResidual",
+    "onUse",
+    "onUseItem"
+   ],
+   "id": "ejectpack",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Eject Pack",
+   "num": 1119
+  },
+  "electirizer": {
+   "engine_id": "electirizer",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "electirizer",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Electirizer",
+   "num": 322
+  },
+  "electricgem": {
+   "engine_id": "electric_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "electricgem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Electric Gem",
+   "num": 550
+  },
+  "electricmemory": {
+   "engine_id": "electric_memory",
+   "forced_forme": "silvallyelectric",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "electricmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallyelectric"
+   ],
+   "name": "Electric Memory",
+   "num": 915
+  },
+  "electricseed": {
+   "engine_id": "electric_seed",
+   "forced_forme": null,
+   "handlers": [
+    "onStart",
+    "onTerrainChange"
+   ],
+   "id": "electricseed",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Electric Seed",
+   "num": 881
+  },
+  "electriumz": {
+   "engine_id": "electrium_z",
+   "forced_forme": "arceuselectric",
+   "handlers": [],
+   "id": "electriumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Electrium Z",
+   "num": 779
+  },
+  "emboarite": {
+   "engine_id": "emboarite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "emboarite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "emboar"
+   ],
+   "name": "Emboarite",
+   "num": 2569
+  },
+  "enigmaberry": {
+   "engine_id": "enigma_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onHit",
+    "onTryEatItem"
+   ],
+   "id": "enigmaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Enigma Berry",
+   "num": 208
+  },
+  "eviolite": {
+   "engine_id": "eviolite",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyDef",
+    "onModifySpD"
+   ],
+   "id": "eviolite",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Eviolite",
+   "num": 538
+  },
+  "excadrite": {
+   "engine_id": "excadrite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "excadrite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "excadrill"
+   ],
+   "name": "Excadrite",
+   "num": 2570
+  },
+  "expertbelt": {
+   "engine_id": "expert_belt",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyDamage"
+   ],
+   "id": "expertbelt",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Expert Belt",
+   "num": 268
+  },
+  "fairiumz": {
+   "engine_id": "fairium_z",
+   "forced_forme": "arceusfairy",
+   "handlers": [],
+   "id": "fairiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Fairium Z",
+   "num": 793
+  },
+  "fairyfeather": {
+   "engine_id": "fairy_feather",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "fairyfeather",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fairy Feather",
+   "num": 2401
+  },
+  "fairygem": {
+   "engine_id": "fairy_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "fairygem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fairy Gem",
+   "num": 715
+  },
+  "fairymemory": {
+   "engine_id": "fairy_memory",
+   "forced_forme": "silvallyfairy",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "fairymemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallyfairy"
+   ],
+   "name": "Fairy Memory",
+   "num": 920
+  },
+  "falinksite": {
+   "engine_id": "falinksite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "falinksite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "falinks"
+   ],
+   "name": "Falinksite",
+   "num": 2587
+  },
+  "fastball": {
+   "engine_id": "fast_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "fastball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fast Ball",
+   "num": 492
+  },
+  "feraligite": {
+   "engine_id": "feraligite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "feraligite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "feraligatr"
+   ],
+   "name": "Feraligite",
+   "num": 2564
+  },
+  "fightinggem": {
+   "engine_id": "fighting_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "fightinggem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fighting Gem",
+   "num": 553
+  },
+  "fightingmemory": {
+   "engine_id": "fighting_memory",
+   "forced_forme": "silvallyfighting",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "fightingmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallyfighting"
+   ],
+   "name": "Fighting Memory",
+   "num": 904
+  },
+  "fightiniumz": {
+   "engine_id": "fightinium_z",
+   "forced_forme": "arceusfighting",
+   "handlers": [],
+   "id": "fightiniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Fightinium Z",
+   "num": 782
+  },
+  "figyberry": {
+   "engine_id": "figy_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onTryEatItem",
+    "onUpdate"
+   ],
+   "id": "figyberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Figy Berry",
+   "num": 159
+  },
+  "firegem": {
+   "engine_id": "fire_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "firegem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fire Gem",
+   "num": 548
+  },
+  "firememory": {
+   "engine_id": "fire_memory",
+   "forced_forme": "silvallyfire",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "firememory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallyfire"
+   ],
+   "name": "Fire Memory",
+   "num": 912
+  },
+  "firestone": {
+   "engine_id": "fire_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "firestone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fire Stone",
+   "num": 82
+  },
+  "firiumz": {
+   "engine_id": "firium_z",
+   "forced_forme": "arceusfire",
+   "handlers": [],
+   "id": "firiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Firium Z",
+   "num": 777
+  },
+  "fistplate": {
+   "engine_id": "fist_plate",
+   "forced_forme": "arceusfighting",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "fistplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fist Plate",
+   "num": 303
+  },
+  "flameorb": {
+   "engine_id": "flame_orb",
+   "forced_forme": null,
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "flameorb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Flame Orb",
+   "num": 273
+  },
+  "flameplate": {
+   "engine_id": "flame_plate",
+   "forced_forme": "arceusfire",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "flameplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Flame Plate",
+   "num": 298
+  },
+  "floatstone": {
+   "engine_id": "float_stone",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyWeight"
+   ],
+   "id": "floatstone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Float Stone",
+   "num": 539
+  },
+  "floettite": {
+   "engine_id": "floettite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "floettite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "floetteeternal"
+   ],
+   "name": "Floettite",
+   "num": 2579
+  },
+  "flowersweet": {
+   "engine_id": "flower_sweet",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "flowersweet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Flower Sweet",
+   "num": 1113
+  },
+  "flyinggem": {
+   "engine_id": "flying_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "flyinggem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Flying Gem",
+   "num": 556
+  },
+  "flyingmemory": {
+   "engine_id": "flying_memory",
+   "forced_forme": "silvallyflying",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "flyingmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallyflying"
+   ],
+   "name": "Flying Memory",
+   "num": 905
+  },
+  "flyiniumz": {
+   "engine_id": "flyinium_z",
+   "forced_forme": "arceusflying",
+   "handlers": [],
+   "id": "flyiniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Flyinium Z",
+   "num": 785
+  },
+  "focusband": {
+   "engine_id": "focus_band",
+   "forced_forme": null,
+   "handlers": [
+    "onDamage"
+   ],
+   "id": "focusband",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Focus Band",
+   "num": 230
+  },
+  "focussash": {
+   "engine_id": "focus_sash",
+   "forced_forme": null,
+   "handlers": [
+    "onDamage"
+   ],
+   "id": "focussash",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Focus Sash",
+   "num": 275
+  },
+  "fossilizedbird": {
+   "engine_id": "fossilized_bird",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "fossilizedbird",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fossilized Bird",
+   "num": 1105
+  },
+  "fossilizeddino": {
+   "engine_id": "fossilized_dino",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "fossilizeddino",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fossilized Dino",
+   "num": 1108
+  },
+  "fossilizeddrake": {
+   "engine_id": "fossilized_drake",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "fossilizeddrake",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fossilized Drake",
+   "num": 1107
+  },
+  "fossilizedfish": {
+   "engine_id": "fossilized_fish",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "fossilizedfish",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Fossilized Fish",
+   "num": 1106
+  },
+  "friendball": {
+   "engine_id": "friend_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "friendball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Friend Ball",
+   "num": 497
+  },
+  "froslassite": {
+   "engine_id": "froslassite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "froslassite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "froslass"
+   ],
+   "name": "Froslassite",
+   "num": 2566
+  },
+  "fullincense": {
+   "engine_id": "full_incense",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "fullincense",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Full Incense",
+   "num": 316
+  },
+  "galaricacuff": {
+   "engine_id": "galarica_cuff",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "galaricacuff",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Galarica Cuff",
+   "num": 1582
+  },
+  "galaricawreath": {
+   "engine_id": "galarica_wreath",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "galaricawreath",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Galarica Wreath",
+   "num": 1592
+  },
+  "galladite": {
+   "engine_id": "galladite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "galladite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "gallade"
+   ],
+   "name": "Galladite",
+   "num": 756
+  },
+  "ganlonberry": {
+   "engine_id": "ganlon_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "ganlonberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Ganlon Berry",
+   "num": 202
+  },
+  "garchompite": {
+   "engine_id": "garchompite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "garchompite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "garchomp"
+   ],
+   "name": "Garchompite",
+   "num": 683
+  },
+  "garchompitez": {
+   "engine_id": "garchompite_z",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "garchompitez",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "garchomp"
+   ],
+   "name": "Garchompite Z",
+   "num": 2640
+  },
+  "gardevoirite": {
+   "engine_id": "gardevoirite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "gardevoirite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "gardevoir"
+   ],
+   "name": "Gardevoirite",
+   "num": 657
+  },
+  "gengarite": {
+   "engine_id": "gengarite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "gengarite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "gengar"
+   ],
+   "name": "Gengarite",
+   "num": 656
+  },
+  "ghostgem": {
+   "engine_id": "ghost_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "ghostgem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Ghost Gem",
+   "num": 560
+  },
+  "ghostiumz": {
+   "engine_id": "ghostium_z",
+   "forced_forme": "arceusghost",
+   "handlers": [],
+   "id": "ghostiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Ghostium Z",
+   "num": 789
+  },
+  "ghostmemory": {
+   "engine_id": "ghost_memory",
+   "forced_forme": "silvallyghost",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "ghostmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallyghost"
+   ],
+   "name": "Ghost Memory",
+   "num": 910
+  },
+  "glalitite": {
+   "engine_id": "glalitite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "glalitite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "glalie"
+   ],
+   "name": "Glalitite",
+   "num": 763
+  },
+  "glimmoranite": {
+   "engine_id": "glimmoranite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "glimmoranite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "glimmora"
+   ],
+   "name": "Glimmoranite",
+   "num": 2650
+  },
+  "goldberry": {
+   "engine_id": "gold_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onResidual",
+    "onTryEatItem"
+   ],
+   "id": "goldberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Gold Berry",
+   "num": 158
+  },
+  "goldbottlecap": {
+   "engine_id": "gold_bottle_cap",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "goldbottlecap",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Gold Bottle Cap",
+   "num": 796
+  },
+  "golisopite": {
+   "engine_id": "golisopite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "golisopite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "golisopod"
+   ],
+   "name": "Golisopite",
+   "num": 2645
+  },
+  "golurkite": {
+   "engine_id": "golurkite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "golurkite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "golurk"
+   ],
+   "name": "Golurkite",
+   "num": 2642
+  },
+  "grassgem": {
+   "engine_id": "grass_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "grassgem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Grass Gem",
+   "num": 551
+  },
+  "grassiumz": {
+   "engine_id": "grassium_z",
+   "forced_forme": "arceusgrass",
+   "handlers": [],
+   "id": "grassiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Grassium Z",
+   "num": 780
+  },
+  "grassmemory": {
+   "engine_id": "grass_memory",
+   "forced_forme": "silvallygrass",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "grassmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallygrass"
+   ],
+   "name": "Grass Memory",
+   "num": 914
+  },
+  "grassyseed": {
+   "engine_id": "grassy_seed",
+   "forced_forme": null,
+   "handlers": [
+    "onStart",
+    "onTerrainChange"
+   ],
+   "id": "grassyseed",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Grassy Seed",
+   "num": 884
+  },
+  "greatball": {
+   "engine_id": "great_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "greatball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Great Ball",
+   "num": 3
+  },
+  "greninjite": {
+   "engine_id": "greninjite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "greninjite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "greninja"
+   ],
+   "name": "Greninjite",
+   "num": 2577
+  },
+  "grepaberry": {
+   "engine_id": "grepa_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "grepaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Grepa Berry",
+   "num": 173
+  },
+  "gripclaw": {
+   "engine_id": "grip_claw",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "gripclaw",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Grip Claw",
+   "num": 286
+  },
+  "griseouscore": {
+   "engine_id": "griseous_core",
+   "forced_forme": "giratinaorigin",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "griseouscore",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "giratinaorigin"
+   ],
+   "name": "Griseous Core",
+   "num": 1779
+  },
+  "griseousorb": {
+   "engine_id": "griseous_orb",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "griseousorb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "giratina"
+   ],
+   "name": "Griseous Orb",
+   "num": 112
+  },
+  "groundgem": {
+   "engine_id": "ground_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "groundgem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Ground Gem",
+   "num": 555
+  },
+  "groundiumz": {
+   "engine_id": "groundium_z",
+   "forced_forme": "arceusground",
+   "handlers": [],
+   "id": "groundiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Groundium Z",
+   "num": 784
+  },
+  "groundmemory": {
+   "engine_id": "ground_memory",
+   "forced_forme": "silvallyground",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "groundmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallyground"
+   ],
+   "name": "Ground Memory",
+   "num": 907
+  },
+  "gyaradosite": {
+   "engine_id": "gyaradosite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "gyaradosite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "gyarados"
+   ],
+   "name": "Gyaradosite",
+   "num": 676
+  },
+  "habanberry": {
+   "engine_id": "haban_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "habanberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Haban Berry",
+   "num": 197
+  },
+  "hardstone": {
+   "engine_id": "hard_stone",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "hardstone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Hard Stone",
+   "num": 238
+  },
+  "hawluchanite": {
+   "engine_id": "hawluchanite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "hawluchanite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "hawlucha"
+   ],
+   "name": "Hawluchanite",
+   "num": 2583
+  },
+  "healball": {
+   "engine_id": "heal_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "healball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Heal Ball",
+   "num": 14
+  },
+  "hearthflamemask": {
+   "engine_id": "hearthflame_mask",
+   "forced_forme": "ogerponhearthflame",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "hearthflamemask",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "ogerponhearthflame"
+   ],
+   "name": "Hearthflame Mask",
+   "num": 2408
+  },
+  "heatranite": {
+   "engine_id": "heatranite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "heatranite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "heatran"
+   ],
+   "name": "Heatranite",
+   "num": 2567
+  },
+  "heatrock": {
+   "engine_id": "heat_rock",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "heatrock",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Heat Rock",
+   "num": 284
+  },
+  "heavyball": {
+   "engine_id": "heavy_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "heavyball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Heavy Ball",
+   "num": 495
+  },
+  "heavydutyboots": {
+   "engine_id": "heavy_duty_boots",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "heavydutyboots",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Heavy-Duty Boots",
+   "num": 1120
+  },
+  "helixfossil": {
+   "engine_id": "helix_fossil",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "helixfossil",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Helix Fossil",
+   "num": 101
+  },
+  "heracronite": {
+   "engine_id": "heracronite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "heracronite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "heracross"
+   ],
+   "name": "Heracronite",
+   "num": 680
+  },
+  "hondewberry": {
+   "engine_id": "hondew_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "hondewberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Hondew Berry",
+   "num": 172
+  },
+  "houndoominite": {
+   "engine_id": "houndoominite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "houndoominite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "houndoom"
+   ],
+   "name": "Houndoominite",
+   "num": 666
+  },
+  "iapapaberry": {
+   "engine_id": "iapapa_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onTryEatItem",
+    "onUpdate"
+   ],
+   "id": "iapapaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Iapapa Berry",
+   "num": 163
+  },
+  "iceberry": {
+   "engine_id": "ice_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "iceberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Ice Berry",
+   "num": 152
+  },
+  "icegem": {
+   "engine_id": "ice_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "icegem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Ice Gem",
+   "num": 552
+  },
+  "icememory": {
+   "engine_id": "ice_memory",
+   "forced_forme": "silvallyice",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "icememory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallyice"
+   ],
+   "name": "Ice Memory",
+   "num": 917
+  },
+  "icestone": {
+   "engine_id": "ice_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "icestone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Ice Stone",
+   "num": 849
+  },
+  "icicleplate": {
+   "engine_id": "icicle_plate",
+   "forced_forme": "arceusice",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "icicleplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Icicle Plate",
+   "num": 302
+  },
+  "iciumz": {
+   "engine_id": "icium_z",
+   "forced_forme": "arceusice",
+   "handlers": [],
+   "id": "iciumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Icium Z",
+   "num": 781
+  },
+  "icyrock": {
+   "engine_id": "icy_rock",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "icyrock",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Icy Rock",
+   "num": 282
+  },
+  "inciniumz": {
+   "engine_id": "incinium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "inciniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "incineroar"
+   ],
+   "name": "Incinium Z",
+   "num": 799
+  },
+  "insectplate": {
+   "engine_id": "insect_plate",
+   "forced_forme": "arceusbug",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "insectplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Insect Plate",
+   "num": 308
+  },
+  "ironball": {
+   "engine_id": "iron_ball",
+   "forced_forme": null,
+   "handlers": [
+    "onEffectiveness",
+    "onModifySpe"
+   ],
+   "id": "ironball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Iron Ball",
+   "num": 278
+  },
+  "ironplate": {
+   "engine_id": "iron_plate",
+   "forced_forme": "arceussteel",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "ironplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Iron Plate",
+   "num": 313
+  },
+  "jabocaberry": {
+   "engine_id": "jaboca_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onDamagingHit",
+    "onEat"
+   ],
+   "id": "jabocaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Jaboca Berry",
+   "num": 211
+  },
+  "jawfossil": {
+   "engine_id": "jaw_fossil",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "jawfossil",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Jaw Fossil",
+   "num": 710
+  },
+  "kangaskhanite": {
+   "engine_id": "kangaskhanite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "kangaskhanite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "kangaskhan"
+   ],
+   "name": "Kangaskhanite",
+   "num": 675
+  },
+  "kasibberry": {
+   "engine_id": "kasib_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "kasibberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Kasib Berry",
+   "num": 196
+  },
+  "kebiaberry": {
+   "engine_id": "kebia_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "kebiaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Kebia Berry",
+   "num": 190
+  },
+  "keeberry": {
+   "engine_id": "kee_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterMoveSecondary",
+    "onEat"
+   ],
+   "id": "keeberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Kee Berry",
+   "num": 687
+  },
+  "kelpsyberry": {
+   "engine_id": "kelpsy_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "kelpsyberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Kelpsy Berry",
+   "num": 170
+  },
+  "kingsrock": {
+   "engine_id": "kings_rock",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "kingsrock",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "King's Rock",
+   "num": 221
+  },
+  "kommoniumz": {
+   "engine_id": "kommonium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "kommoniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "kommoo",
+    "kommoototem"
+   ],
+   "name": "Kommonium Z",
+   "num": 926
+  },
+  "laggingtail": {
+   "engine_id": "lagging_tail",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "laggingtail",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Lagging Tail",
+   "num": 279
+  },
+  "lansatberry": {
+   "engine_id": "lansat_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "lansatberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Lansat Berry",
+   "num": 206
+  },
+  "latiasite": {
+   "engine_id": "latiasite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "latiasite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "latias"
+   ],
+   "name": "Latiasite",
+   "num": 684
+  },
+  "latiosite": {
+   "engine_id": "latiosite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "latiosite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "latios"
+   ],
+   "name": "Latiosite",
+   "num": 685
+  },
+  "laxincense": {
+   "engine_id": "lax_incense",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyAccuracy"
+   ],
+   "id": "laxincense",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Lax Incense",
+   "num": 255
+  },
+  "leafstone": {
+   "engine_id": "leaf_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "leafstone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Leaf Stone",
+   "num": 85
+  },
+  "leek": {
+   "engine_id": "leek",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyCritRatio"
+   ],
+   "id": "leek",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "farfetchd",
+    "farfetchdgalar",
+    "sirfetchd"
+   ],
+   "name": "Leek",
+   "num": 259
+  },
+  "leftovers": {
+   "engine_id": "leftovers",
+   "forced_forme": null,
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "leftovers",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Leftovers",
+   "num": 234
+  },
+  "leppaberry": {
+   "engine_id": "leppa_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "leppaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Leppa Berry",
+   "num": 154
+  },
+  "levelball": {
+   "engine_id": "level_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "levelball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Level Ball",
+   "num": 493
+  },
+  "liechiberry": {
+   "engine_id": "liechi_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "liechiberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Liechi Berry",
+   "num": 201
+  },
+  "lifeorb": {
+   "engine_id": "life_orb",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterMoveSecondarySelf",
+    "onModifyDamage"
+   ],
+   "id": "lifeorb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Life Orb",
+   "num": 270
+  },
+  "lightball": {
+   "engine_id": "light_ball",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyAtk",
+    "onModifySpA"
+   ],
+   "id": "lightball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "pikachu",
+    "pikachucosplay",
+    "pikachurockstar",
+    "pikachubelle",
+    "pikachupopstar",
+    "pikachuphd",
+    "pikachulibre",
+    "pikachuoriginal",
+    "pikachuhoenn",
+    "pikachusinnoh",
+    "pikachuunova",
+    "pikachukalos",
+    "pikachualola",
+    "pikachupartner",
+    "pikachustarter",
+    "pikachuworld"
+   ],
+   "name": "Light Ball",
+   "num": 236
+  },
+  "lightclay": {
+   "engine_id": "light_clay",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "lightclay",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Light Clay",
+   "num": 269
+  },
+  "loadeddice": {
+   "engine_id": "loaded_dice",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "loadeddice",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Loaded Dice",
+   "num": 1886
+  },
+  "lopunnite": {
+   "engine_id": "lopunnite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "lopunnite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "lopunny"
+   ],
+   "name": "Lopunnite",
+   "num": 768
+  },
+  "loveball": {
+   "engine_id": "love_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "loveball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Love Ball",
+   "num": 496
+  },
+  "lovesweet": {
+   "engine_id": "love_sweet",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "lovesweet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Love Sweet",
+   "num": 1110
+  },
+  "lucarionite": {
+   "engine_id": "lucarionite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "lucarionite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "lucario"
+   ],
+   "name": "Lucarionite",
+   "num": 673
+  },
+  "lucarionitez": {
+   "engine_id": "lucarionite_z",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "lucarionitez",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "lucario"
+   ],
+   "name": "Lucarionite Z",
+   "num": 2641
+  },
+  "luckypunch": {
+   "engine_id": "lucky_punch",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyCritRatio"
+   ],
+   "id": "luckypunch",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "chansey"
+   ],
+   "name": "Lucky Punch",
+   "num": 256
+  },
+  "lumberry": {
+   "engine_id": "lum_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterSetStatus",
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "lumberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Lum Berry",
+   "num": 157
+  },
+  "luminousmoss": {
+   "engine_id": "luminous_moss",
+   "forced_forme": null,
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "luminousmoss",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Luminous Moss",
+   "num": 648
+  },
+  "lunaliumz": {
+   "engine_id": "lunalium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "lunaliumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "lunala",
+    "necrozmadawnwings"
+   ],
+   "name": "Lunalium Z",
+   "num": 922
+  },
+  "lureball": {
+   "engine_id": "lure_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "lureball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Lure Ball",
+   "num": 494
+  },
+  "lustrousglobe": {
+   "engine_id": "lustrous_globe",
+   "forced_forme": "palkiaorigin",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "lustrousglobe",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "palkiaorigin"
+   ],
+   "name": "Lustrous Globe",
+   "num": 1778
+  },
+  "lustrousorb": {
+   "engine_id": "lustrous_orb",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "lustrousorb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "palkia"
+   ],
+   "name": "Lustrous Orb",
+   "num": 136
+  },
+  "luxuryball": {
+   "engine_id": "luxury_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "luxuryball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Luxury Ball",
+   "num": 11
+  },
+  "lycaniumz": {
+   "engine_id": "lycanium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "lycaniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "lycanroc",
+    "lycanrocmidnight",
+    "lycanrocdusk"
+   ],
+   "name": "Lycanium Z",
+   "num": 925
+  },
+  "machobrace": {
+   "engine_id": "macho_brace",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "machobrace",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Macho Brace",
+   "num": 215
+  },
+  "magearnite": {
+   "engine_id": "magearnite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "magearnite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "magearna",
+    "magearnaoriginal"
+   ],
+   "name": "Magearnite",
+   "num": 2646
+  },
+  "magmarizer": {
+   "engine_id": "magmarizer",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "magmarizer",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Magmarizer",
+   "num": 323
+  },
+  "magnet": {
+   "engine_id": "magnet",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "magnet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Magnet",
+   "num": 242
+  },
+  "magoberry": {
+   "engine_id": "mago_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onTryEatItem",
+    "onUpdate"
+   ],
+   "id": "magoberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Mago Berry",
+   "num": 161
+  },
+  "magostberry": {
+   "engine_id": "magost_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "magostberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Magost Berry",
+   "num": 176
+  },
+  "mail": {
+   "engine_id": "mail",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "mail",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Mail",
+   "num": 137
+  },
+  "malamarite": {
+   "engine_id": "malamarite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "malamarite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "malamar"
+   ],
+   "name": "Malamarite",
+   "num": 2580
+  },
+  "maliciousarmor": {
+   "engine_id": "malicious_armor",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "maliciousarmor",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Malicious Armor",
+   "num": 1861
+  },
+  "manectite": {
+   "engine_id": "manectite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "manectite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "manectric"
+   ],
+   "name": "Manectite",
+   "num": 682
+  },
+  "marangaberry": {
+   "engine_id": "maranga_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterMoveSecondary",
+    "onEat"
+   ],
+   "id": "marangaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Maranga Berry",
+   "num": 688
+  },
+  "marshadiumz": {
+   "engine_id": "marshadium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "marshadiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "marshadow"
+   ],
+   "name": "Marshadium Z",
+   "num": 802
+  },
+  "masterball": {
+   "engine_id": "master_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "masterball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Master Ball",
+   "num": 1
+  },
+  "masterpieceteacup": {
+   "engine_id": "masterpiece_teacup",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "masterpieceteacup",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Masterpiece Teacup",
+   "num": 2404
+  },
+  "mawilite": {
+   "engine_id": "mawilite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "mawilite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "mawile"
+   ],
+   "name": "Mawilite",
+   "num": 681
+  },
+  "meadowplate": {
+   "engine_id": "meadow_plate",
+   "forced_forme": "arceusgrass",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "meadowplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Meadow Plate",
+   "num": 301
+  },
+  "medichamite": {
+   "engine_id": "medichamite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "medichamite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "medicham"
+   ],
+   "name": "Medichamite",
+   "num": 665
+  },
+  "meganiumite": {
+   "engine_id": "meganiumite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "meganiumite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "meganium"
+   ],
+   "name": "Meganiumite",
+   "num": 2563
+  },
+  "mentalherb": {
+   "engine_id": "mental_herb",
+   "forced_forme": null,
+   "handlers": [
+    "fling.effect",
+    "onUpdate"
+   ],
+   "id": "mentalherb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Mental Herb",
+   "num": 219
+  },
+  "meowsticite": {
+   "engine_id": "meowsticite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "meowsticite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "meowstic",
+    "meowsticf"
+   ],
+   "name": "Meowsticite",
+   "num": 2643
+  },
+  "metagrossite": {
+   "engine_id": "metagrossite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "metagrossite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "metagross"
+   ],
+   "name": "Metagrossite",
+   "num": 758
+  },
+  "metalalloy": {
+   "engine_id": "metal_alloy",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "metalalloy",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Metal Alloy",
+   "num": 2482
+  },
+  "metalcoat": {
+   "engine_id": "metal_coat",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "metalcoat",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Metal Coat",
+   "num": 233
+  },
+  "metalpowder": {
+   "engine_id": "metal_powder",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyDef"
+   ],
+   "id": "metalpowder",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "ditto"
+   ],
+   "name": "Metal Powder",
+   "num": 257
+  },
+  "metronome": {
+   "engine_id": "metronome",
+   "forced_forme": null,
+   "handlers": [
+    "condition.onModifyDamage",
+    "condition.onStart",
+    "condition.onTryMove",
+    "onStart"
+   ],
+   "id": "metronome",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Metronome",
+   "num": 277
+  },
+  "mewniumz": {
+   "engine_id": "mewnium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "mewniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "mew"
+   ],
+   "name": "Mewnium Z",
+   "num": 806
+  },
+  "mewtwonitex": {
+   "engine_id": "mewtwonite_x",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "mewtwonitex",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "mewtwo"
+   ],
+   "name": "Mewtwonite X",
+   "num": 662
+  },
+  "mewtwonitey": {
+   "engine_id": "mewtwonite_y",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "mewtwonitey",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "mewtwo"
+   ],
+   "name": "Mewtwonite Y",
+   "num": 663
+  },
+  "micleberry": {
+   "engine_id": "micle_berry",
+   "forced_forme": null,
+   "handlers": [
+    "condition.onSourceAccuracy",
+    "onEat",
+    "onResidual"
+   ],
+   "id": "micleberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Micle Berry",
+   "num": 209
+  },
+  "mimikiumz": {
+   "engine_id": "mimikium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "mimikiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "mimikyu",
+    "mimikyubusted",
+    "mimikyutotem",
+    "mimikyubustedtotem"
+   ],
+   "name": "Mimikium Z",
+   "num": 924
+  },
+  "mindplate": {
+   "engine_id": "mind_plate",
+   "forced_forme": "arceuspsychic",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "mindplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Mind Plate",
+   "num": 307
+  },
+  "mintberry": {
+   "engine_id": "mint_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "mintberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Mint Berry",
+   "num": 150
+  },
+  "miracleberry": {
+   "engine_id": "miracle_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "miracleberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Miracle Berry",
+   "num": 157
+  },
+  "miracleseed": {
+   "engine_id": "miracle_seed",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "miracleseed",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Miracle Seed",
+   "num": 239
+  },
+  "mirrorherb": {
+   "engine_id": "mirror_herb",
+   "forced_forme": null,
+   "handlers": [
+    "onAnyAfterMega",
+    "onAnyAfterMove",
+    "onAnyAfterTerastallization",
+    "onAnySwitchIn",
+    "onEnd",
+    "onFoeAfterBoost",
+    "onResidual",
+    "onUse"
+   ],
+   "id": "mirrorherb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Mirror Herb",
+   "num": 1883
+  },
+  "mistyseed": {
+   "engine_id": "misty_seed",
+   "forced_forme": null,
+   "handlers": [
+    "onStart",
+    "onTerrainChange"
+   ],
+   "id": "mistyseed",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Misty Seed",
+   "num": 883
+  },
+  "moonball": {
+   "engine_id": "moon_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "moonball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Moon Ball",
+   "num": 498
+  },
+  "moonstone": {
+   "engine_id": "moon_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "moonstone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Moon Stone",
+   "num": 81
+  },
+  "muscleband": {
+   "engine_id": "muscle_band",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "muscleband",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Muscle Band",
+   "num": 266
+  },
+  "mysteryberry": {
+   "engine_id": "mystery_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "mysteryberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Mystery Berry",
+   "num": 154
+  },
+  "mysticwater": {
+   "engine_id": "mystic_water",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "mysticwater",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Mystic Water",
+   "num": 243
+  },
+  "nanabberry": {
+   "engine_id": "nanab_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "nanabberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Nanab Berry",
+   "num": 166
+  },
+  "nestball": {
+   "engine_id": "nest_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "nestball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Nest Ball",
+   "num": 8
+  },
+  "netball": {
+   "engine_id": "net_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "netball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Net Ball",
+   "num": 6
+  },
+  "nevermeltice": {
+   "engine_id": "never_melt_ice",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "nevermeltice",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Never-Melt Ice",
+   "num": 246
+  },
+  "nomelberry": {
+   "engine_id": "nomel_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "nomelberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Nomel Berry",
+   "num": 178
+  },
+  "normalgem": {
+   "engine_id": "normal_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "normalgem",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Normal Gem",
+   "num": 564
+  },
+  "normaliumz": {
+   "engine_id": "normalium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "normaliumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Normalium Z",
+   "num": 776
+  },
+  "occaberry": {
+   "engine_id": "occa_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "occaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Occa Berry",
+   "num": 184
+  },
+  "oddincense": {
+   "engine_id": "odd_incense",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "oddincense",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Odd Incense",
+   "num": 314
+  },
+  "oldamber": {
+   "engine_id": "old_amber",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "oldamber",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Old Amber",
+   "num": 103
+  },
+  "oranberry": {
+   "engine_id": "oran_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onTryEatItem",
+    "onUpdate"
+   ],
+   "id": "oranberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Oran Berry",
+   "num": 155
+  },
+  "ovalstone": {
+   "engine_id": "oval_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "ovalstone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Oval Stone",
+   "num": 110
+  },
+  "pamtreberry": {
+   "engine_id": "pamtre_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "pamtreberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Pamtre Berry",
+   "num": 180
+  },
+  "parkball": {
+   "engine_id": "park_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "parkball",
+   "is_mega_stone": false,
+   "is_nonstandard": "Unobtainable",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Park Ball",
+   "num": 500
+  },
+  "passhoberry": {
+   "engine_id": "passho_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "passhoberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Passho Berry",
+   "num": 185
+  },
+  "payapaberry": {
+   "engine_id": "payapa_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "payapaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Payapa Berry",
+   "num": 193
+  },
+  "pechaberry": {
+   "engine_id": "pecha_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "pechaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Pecha Berry",
+   "num": 151
+  },
+  "persimberry": {
+   "engine_id": "persim_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "persimberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Persim Berry",
+   "num": 156
+  },
+  "petayaberry": {
+   "engine_id": "petaya_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "petayaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Petaya Berry",
+   "num": 204
+  },
+  "pidgeotite": {
+   "engine_id": "pidgeotite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "pidgeotite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "pidgeot"
+   ],
+   "name": "Pidgeotite",
+   "num": 762
+  },
+  "pikaniumz": {
+   "engine_id": "pikanium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "pikaniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "pikachu"
+   ],
+   "name": "Pikanium Z",
+   "num": 794
+  },
+  "pikashuniumz": {
+   "engine_id": "pikashunium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "pikashuniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "pikachuoriginal",
+    "pikachuhoenn",
+    "pikachusinnoh",
+    "pikachuunova",
+    "pikachukalos",
+    "pikachualola",
+    "pikachupartner"
+   ],
+   "name": "Pikashunium Z",
+   "num": 836
+  },
+  "pinapberry": {
+   "engine_id": "pinap_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "pinapberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Pinap Berry",
+   "num": 168
+  },
+  "pinkbow": {
+   "engine_id": "pink_bow",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "pinkbow",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Pink Bow",
+   "num": 251
+  },
+  "pinsirite": {
+   "engine_id": "pinsirite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "pinsirite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "pinsir"
+   ],
+   "name": "Pinsirite",
+   "num": 671
+  },
+  "pixieplate": {
+   "engine_id": "pixie_plate",
+   "forced_forme": "arceusfairy",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "pixieplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Pixie Plate",
+   "num": 644
+  },
+  "plumefossil": {
+   "engine_id": "plume_fossil",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "plumefossil",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Plume Fossil",
+   "num": 573
+  },
+  "poisonbarb": {
+   "engine_id": "poison_barb",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "poisonbarb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Poison Barb",
+   "num": 245
+  },
+  "poisongem": {
+   "engine_id": "poison_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "poisongem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Poison Gem",
+   "num": 554
+  },
+  "poisoniumz": {
+   "engine_id": "poisonium_z",
+   "forced_forme": "arceuspoison",
+   "handlers": [],
+   "id": "poisoniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Poisonium Z",
+   "num": 783
+  },
+  "poisonmemory": {
+   "engine_id": "poison_memory",
+   "forced_forme": "silvallypoison",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "poisonmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallypoison"
+   ],
+   "name": "Poison Memory",
+   "num": 906
+  },
+  "pokeball": {
+   "engine_id": "poke_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "pokeball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Poke Ball",
+   "num": 4
+  },
+  "polkadotbow": {
+   "engine_id": "polkadot_bow",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "polkadotbow",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Polkadot Bow",
+   "num": 251
+  },
+  "pomegberry": {
+   "engine_id": "pomeg_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "pomegberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Pomeg Berry",
+   "num": 169
+  },
+  "poweranklet": {
+   "engine_id": "power_anklet",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "poweranklet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Power Anklet",
+   "num": 293
+  },
+  "powerband": {
+   "engine_id": "power_band",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "powerband",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Power Band",
+   "num": 292
+  },
+  "powerbelt": {
+   "engine_id": "power_belt",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "powerbelt",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Power Belt",
+   "num": 290
+  },
+  "powerbracer": {
+   "engine_id": "power_bracer",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "powerbracer",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Power Bracer",
+   "num": 289
+  },
+  "powerherb": {
+   "engine_id": "power_herb",
+   "forced_forme": null,
+   "handlers": [
+    "onChargeMove"
+   ],
+   "id": "powerherb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Power Herb",
+   "num": 271
+  },
+  "powerlens": {
+   "engine_id": "power_lens",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "powerlens",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Power Lens",
+   "num": 291
+  },
+  "powerweight": {
+   "engine_id": "power_weight",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "powerweight",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Power Weight",
+   "num": 294
+  },
+  "premierball": {
+   "engine_id": "premier_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "premierball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Premier Ball",
+   "num": 12
+  },
+  "prettyfeather": {
+   "engine_id": "pretty_feather",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "prettyfeather",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Pretty Feather",
+   "num": 571
+  },
+  "primariumz": {
+   "engine_id": "primarium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "primariumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "primarina"
+   ],
+   "name": "Primarium Z",
+   "num": 800
+  },
+  "prismscale": {
+   "engine_id": "prism_scale",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "prismscale",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Prism Scale",
+   "num": 537
+  },
+  "protectivepads": {
+   "engine_id": "protective_pads",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "protectivepads",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Protective Pads",
+   "num": 880
+  },
+  "protector": {
+   "engine_id": "protector",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "protector",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Protector",
+   "num": 321
+  },
+  "przcureberry": {
+   "engine_id": "prz_cure_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "przcureberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "PRZ Cure Berry",
+   "num": 149
+  },
+  "psncureberry": {
+   "engine_id": "psn_cure_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "psncureberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "PSN Cure Berry",
+   "num": 151
+  },
+  "psychicgem": {
+   "engine_id": "psychic_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "psychicgem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Psychic Gem",
+   "num": 557
+  },
+  "psychicmemory": {
+   "engine_id": "psychic_memory",
+   "forced_forme": "silvallypsychic",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "psychicmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallypsychic"
+   ],
+   "name": "Psychic Memory",
+   "num": 916
+  },
+  "psychicseed": {
+   "engine_id": "psychic_seed",
+   "forced_forme": null,
+   "handlers": [
+    "onStart",
+    "onTerrainChange"
+   ],
+   "id": "psychicseed",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Psychic Seed",
+   "num": 882
+  },
+  "psychiumz": {
+   "engine_id": "psychium_z",
+   "forced_forme": "arceuspsychic",
+   "handlers": [],
+   "id": "psychiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Psychium Z",
+   "num": 786
+  },
+  "punchingglove": {
+   "engine_id": "punching_glove",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower",
+    "onModifyMove"
+   ],
+   "id": "punchingglove",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Punching Glove",
+   "num": 1884
+  },
+  "pyroarite": {
+   "engine_id": "pyroarite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "pyroarite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "pyroar"
+   ],
+   "name": "Pyroarite",
+   "num": 2578
+  },
+  "qualotberry": {
+   "engine_id": "qualot_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "qualotberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Qualot Berry",
+   "num": 171
+  },
+  "quickball": {
+   "engine_id": "quick_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "quickball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Quick Ball",
+   "num": 15
+  },
+  "quickclaw": {
+   "engine_id": "quick_claw",
+   "forced_forme": null,
+   "handlers": [
+    "onFractionalPriority"
+   ],
+   "id": "quickclaw",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Quick Claw",
+   "num": 217
+  },
+  "quickpowder": {
+   "engine_id": "quick_powder",
+   "forced_forme": null,
+   "handlers": [
+    "onModifySpe"
+   ],
+   "id": "quickpowder",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "ditto"
+   ],
+   "name": "Quick Powder",
+   "num": 274
+  },
+  "rabutaberry": {
+   "engine_id": "rabuta_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "rabutaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Rabuta Berry",
+   "num": 177
+  },
+  "raichunitex": {
+   "engine_id": "raichunite_x",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "raichunitex",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "raichu"
+   ],
+   "name": "Raichunite X",
+   "num": 2635
+  },
+  "raichunitey": {
+   "engine_id": "raichunite_y",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "raichunitey",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "raichu"
+   ],
+   "name": "Raichunite Y",
+   "num": 2636
+  },
+  "rarebone": {
+   "engine_id": "rare_bone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "rarebone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Rare Bone",
+   "num": 106
+  },
+  "rawstberry": {
+   "engine_id": "rawst_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "rawstberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Rawst Berry",
+   "num": 152
+  },
+  "razorclaw": {
+   "engine_id": "razor_claw",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyCritRatio"
+   ],
+   "id": "razorclaw",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Razor Claw",
+   "num": 326
+  },
+  "razorfang": {
+   "engine_id": "razor_fang",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyMove"
+   ],
+   "id": "razorfang",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Razor Fang",
+   "num": 327
+  },
+  "razzberry": {
+   "engine_id": "razz_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "razzberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Razz Berry",
+   "num": 164
+  },
+  "reapercloth": {
+   "engine_id": "reaper_cloth",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "reapercloth",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Reaper Cloth",
+   "num": 325
+  },
+  "redcard": {
+   "engine_id": "red_card",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterMoveSecondary"
+   ],
+   "id": "redcard",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Red Card",
+   "num": 542
+  },
+  "redorb": {
+   "engine_id": "red_orb",
+   "forced_forme": null,
+   "handlers": [
+    "onSwitchIn",
+    "onTakeItem"
+   ],
+   "id": "redorb",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "groudon"
+   ],
+   "name": "Red Orb",
+   "num": 534
+  },
+  "repeatball": {
+   "engine_id": "repeat_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "repeatball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Repeat Ball",
+   "num": 9
+  },
+  "ribbonsweet": {
+   "engine_id": "ribbon_sweet",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "ribbonsweet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Ribbon Sweet",
+   "num": 1115
+  },
+  "rindoberry": {
+   "engine_id": "rindo_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "rindoberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Rindo Berry",
+   "num": 187
+  },
+  "ringtarget": {
+   "engine_id": "ring_target",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "ringtarget",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Ring Target",
+   "num": 543
+  },
+  "rockgem": {
+   "engine_id": "rock_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "rockgem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Rock Gem",
+   "num": 559
+  },
+  "rockincense": {
+   "engine_id": "rock_incense",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "rockincense",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Rock Incense",
+   "num": 315
+  },
+  "rockiumz": {
+   "engine_id": "rockium_z",
+   "forced_forme": "arceusrock",
+   "handlers": [],
+   "id": "rockiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Rockium Z",
+   "num": 788
+  },
+  "rockmemory": {
+   "engine_id": "rock_memory",
+   "forced_forme": "silvallyrock",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "rockmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallyrock"
+   ],
+   "name": "Rock Memory",
+   "num": 908
+  },
+  "rockyhelmet": {
+   "engine_id": "rocky_helmet",
+   "forced_forme": null,
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "rockyhelmet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Rocky Helmet",
+   "num": 540
+  },
+  "roomservice": {
+   "engine_id": "room_service",
+   "forced_forme": null,
+   "handlers": [
+    "onAnyPseudoWeatherChange",
+    "onStart"
+   ],
+   "id": "roomservice",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Room Service",
+   "num": 1122
+  },
+  "rootfossil": {
+   "engine_id": "root_fossil",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "rootfossil",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Root Fossil",
+   "num": 99
+  },
+  "roseincense": {
+   "engine_id": "rose_incense",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "roseincense",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Rose Incense",
+   "num": 318
+  },
+  "roseliberry": {
+   "engine_id": "roseli_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "roseliberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Roseli Berry",
+   "num": 686
+  },
+  "rowapberry": {
+   "engine_id": "rowap_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onDamagingHit",
+    "onEat"
+   ],
+   "id": "rowapberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Rowap Berry",
+   "num": 212
+  },
+  "rustedshield": {
+   "engine_id": "rusted_shield",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "rustedshield",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "zamazentacrowned"
+   ],
+   "name": "Rusted Shield",
+   "num": 1104
+  },
+  "rustedsword": {
+   "engine_id": "rusted_sword",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "rustedsword",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "zaciancrowned"
+   ],
+   "name": "Rusted Sword",
+   "num": 1103
+  },
+  "sablenite": {
+   "engine_id": "sablenite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "sablenite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "sableye"
+   ],
+   "name": "Sablenite",
+   "num": 754
+  },
+  "sachet": {
+   "engine_id": "sachet",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "sachet",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Sachet",
+   "num": 647
+  },
+  "safariball": {
+   "engine_id": "safari_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "safariball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Safari Ball",
+   "num": 5
+  },
+  "safetygoggles": {
+   "engine_id": "safety_goggles",
+   "forced_forme": null,
+   "handlers": [
+    "onImmunity",
+    "onTryHit"
+   ],
+   "id": "safetygoggles",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Safety Goggles",
+   "num": 650
+  },
+  "sailfossil": {
+   "engine_id": "sail_fossil",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "sailfossil",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Sail Fossil",
+   "num": 711
+  },
+  "salacberry": {
+   "engine_id": "salac_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "salacberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Salac Berry",
+   "num": 203
+  },
+  "salamencite": {
+   "engine_id": "salamencite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "salamencite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "salamence"
+   ],
+   "name": "Salamencite",
+   "num": 769
+  },
+  "sceptilite": {
+   "engine_id": "sceptilite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "sceptilite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "sceptile"
+   ],
+   "name": "Sceptilite",
+   "num": 753
+  },
+  "scizorite": {
+   "engine_id": "scizorite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "scizorite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "scizor"
+   ],
+   "name": "Scizorite",
+   "num": 670
+  },
+  "scolipite": {
+   "engine_id": "scolipite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "scolipite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "scolipede"
+   ],
+   "name": "Scolipite",
+   "num": 2571
+  },
+  "scopelens": {
+   "engine_id": "scope_lens",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyCritRatio"
+   ],
+   "id": "scopelens",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Scope Lens",
+   "num": 232
+  },
+  "scovillainite": {
+   "engine_id": "scovillainite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "scovillainite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "scovillain"
+   ],
+   "name": "Scovillainite",
+   "num": 2647
+  },
+  "scraftinite": {
+   "engine_id": "scraftinite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "scraftinite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "scrafty"
+   ],
+   "name": "Scraftinite",
+   "num": 2572
+  },
+  "seaincense": {
+   "engine_id": "sea_incense",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "seaincense",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Sea Incense",
+   "num": 254
+  },
+  "sharpbeak": {
+   "engine_id": "sharp_beak",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "sharpbeak",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Sharp Beak",
+   "num": 244
+  },
+  "sharpedonite": {
+   "engine_id": "sharpedonite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "sharpedonite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "sharpedo"
+   ],
+   "name": "Sharpedonite",
+   "num": 759
+  },
+  "shedshell": {
+   "engine_id": "shed_shell",
+   "forced_forme": null,
+   "handlers": [
+    "onMaybeTrapPokemon",
+    "onTrapPokemon"
+   ],
+   "id": "shedshell",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Shed Shell",
+   "num": 295
+  },
+  "shellbell": {
+   "engine_id": "shell_bell",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterMoveSecondarySelf"
+   ],
+   "id": "shellbell",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Shell Bell",
+   "num": 253
+  },
+  "shinystone": {
+   "engine_id": "shiny_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "shinystone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Shiny Stone",
+   "num": 107
+  },
+  "shockdrive": {
+   "engine_id": "shock_drive",
+   "forced_forme": "genesectshock",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "shockdrive",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "genesectshock"
+   ],
+   "name": "Shock Drive",
+   "num": 117
+  },
+  "shucaberry": {
+   "engine_id": "shuca_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "shucaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Shuca Berry",
+   "num": 191
+  },
+  "silkscarf": {
+   "engine_id": "silk_scarf",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "silkscarf",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Silk Scarf",
+   "num": 251
+  },
+  "silverpowder": {
+   "engine_id": "silver_powder",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "silverpowder",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Silver Powder",
+   "num": 222
+  },
+  "sitrusberry": {
+   "engine_id": "sitrus_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onTryEatItem",
+    "onUpdate"
+   ],
+   "id": "sitrusberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Sitrus Berry",
+   "num": 158
+  },
+  "skarmorite": {
+   "engine_id": "skarmorite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "skarmorite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "skarmory"
+   ],
+   "name": "Skarmorite",
+   "num": 2565
+  },
+  "skullfossil": {
+   "engine_id": "skull_fossil",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "skullfossil",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Skull Fossil",
+   "num": 105
+  },
+  "skyplate": {
+   "engine_id": "sky_plate",
+   "forced_forme": "arceusflying",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "skyplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Sky Plate",
+   "num": 306
+  },
+  "slowbronite": {
+   "engine_id": "slowbronite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "slowbronite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "slowbro"
+   ],
+   "name": "Slowbronite",
+   "num": 760
+  },
+  "smoothrock": {
+   "engine_id": "smooth_rock",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "smoothrock",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Smooth Rock",
+   "num": 283
+  },
+  "snorliumz": {
+   "engine_id": "snorlium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "snorliumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "snorlax"
+   ],
+   "name": "Snorlium Z",
+   "num": 804
+  },
+  "snowball": {
+   "engine_id": "snowball",
+   "forced_forme": null,
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "snowball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Snowball",
+   "num": 649
+  },
+  "softsand": {
+   "engine_id": "soft_sand",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "softsand",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Soft Sand",
+   "num": 237
+  },
+  "solganiumz": {
+   "engine_id": "solganium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "solganiumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "solgaleo",
+    "necrozmaduskmane"
+   ],
+   "name": "Solganium Z",
+   "num": 921
+  },
+  "souldew": {
+   "engine_id": "soul_dew",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "souldew",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "latios",
+    "latias"
+   ],
+   "name": "Soul Dew",
+   "num": 225
+  },
+  "spelltag": {
+   "engine_id": "spell_tag",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "spelltag",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Spell Tag",
+   "num": 247
+  },
+  "spelonberry": {
+   "engine_id": "spelon_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "spelonberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Spelon Berry",
+   "num": 179
+  },
+  "splashplate": {
+   "engine_id": "splash_plate",
+   "forced_forme": "arceuswater",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "splashplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Splash Plate",
+   "num": 299
+  },
+  "spookyplate": {
+   "engine_id": "spooky_plate",
+   "forced_forme": "arceusghost",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "spookyplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Spooky Plate",
+   "num": 310
+  },
+  "sportball": {
+   "engine_id": "sport_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "sportball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Sport Ball",
+   "num": 499
+  },
+  "staraptite": {
+   "engine_id": "staraptite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "staraptite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "staraptor"
+   ],
+   "name": "Staraptite",
+   "num": 2639
+  },
+  "starfberry": {
+   "engine_id": "starf_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onUpdate"
+   ],
+   "id": "starfberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Starf Berry",
+   "num": 207
+  },
+  "starminite": {
+   "engine_id": "starminite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "starminite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "starmie"
+   ],
+   "name": "Starminite",
+   "num": 2561
+  },
+  "starsweet": {
+   "engine_id": "star_sweet",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "starsweet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Star Sweet",
+   "num": 1114
+  },
+  "steelgem": {
+   "engine_id": "steel_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "steelgem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Steel Gem",
+   "num": 563
+  },
+  "steeliumz": {
+   "engine_id": "steelium_z",
+   "forced_forme": "arceussteel",
+   "handlers": [],
+   "id": "steeliumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Steelium Z",
+   "num": 792
+  },
+  "steelixite": {
+   "engine_id": "steelixite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "steelixite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "steelix"
+   ],
+   "name": "Steelixite",
+   "num": 761
+  },
+  "steelmemory": {
+   "engine_id": "steel_memory",
+   "forced_forme": "silvallysteel",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "steelmemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallysteel"
+   ],
+   "name": "Steel Memory",
+   "num": 911
+  },
+  "stick": {
+   "engine_id": "stick",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyCritRatio"
+   ],
+   "id": "stick",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "farfetchd"
+   ],
+   "name": "Stick",
+   "num": 259
+  },
+  "stickybarb": {
+   "engine_id": "sticky_barb",
+   "forced_forme": null,
+   "handlers": [
+    "onHit",
+    "onResidual"
+   ],
+   "id": "stickybarb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Sticky Barb",
+   "num": 288
+  },
+  "stoneplate": {
+   "engine_id": "stone_plate",
+   "forced_forme": "arceusrock",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "stoneplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Stone Plate",
+   "num": 309
+  },
+  "strangeball": {
+   "engine_id": "strange_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "strangeball",
+   "is_mega_stone": false,
+   "is_nonstandard": "Unobtainable",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Strange Ball",
+   "num": 1785
+  },
+  "strawberrysweet": {
+   "engine_id": "strawberry_sweet",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "strawberrysweet",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Strawberry Sweet",
+   "num": 1109
+  },
+  "sunstone": {
+   "engine_id": "sun_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "sunstone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Sun Stone",
+   "num": 80
+  },
+  "swampertite": {
+   "engine_id": "swampertite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "swampertite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "swampert"
+   ],
+   "name": "Swampertite",
+   "num": 752
+  },
+  "sweetapple": {
+   "engine_id": "sweet_apple",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "sweetapple",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Sweet Apple",
+   "num": 1116
+  },
+  "syrupyapple": {
+   "engine_id": "syrupy_apple",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "syrupyapple",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Syrupy Apple",
+   "num": 2402
+  },
+  "tamatoberry": {
+   "engine_id": "tamato_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tamatoberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Tamato Berry",
+   "num": 174
+  },
+  "tangaberry": {
+   "engine_id": "tanga_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "tangaberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Tanga Berry",
+   "num": 194
+  },
+  "tapuniumz": {
+   "engine_id": "tapunium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tapuniumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "tapukoko",
+    "tapulele",
+    "tapubulu",
+    "tapufini"
+   ],
+   "name": "Tapunium Z",
+   "num": 801
+  },
+  "tartapple": {
+   "engine_id": "tart_apple",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tartapple",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Tart Apple",
+   "num": 1117
+  },
+  "tatsugirinite": {
+   "engine_id": "tatsugirinite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "tatsugirinite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "tatsugiri",
+    "tatsugiridroopy",
+    "tatsugiristretchy"
+   ],
+   "name": "Tatsugirinite",
+   "num": 2649
+  },
+  "terrainextender": {
+   "engine_id": "terrain_extender",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "terrainextender",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Terrain Extender",
+   "num": 879
+  },
+  "thickclub": {
+   "engine_id": "thick_club",
+   "forced_forme": null,
+   "handlers": [
+    "onModifyAtk"
+   ],
+   "id": "thickclub",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "marowak",
+    "marowakalola",
+    "marowakalolatotem",
+    "cubone"
+   ],
+   "name": "Thick Club",
+   "num": 258
+  },
+  "throatspray": {
+   "engine_id": "throat_spray",
+   "forced_forme": null,
+   "handlers": [
+    "onAfterMoveSecondarySelf"
+   ],
+   "id": "throatspray",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Throat Spray",
+   "num": 1118
+  },
+  "thunderstone": {
+   "engine_id": "thunder_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "thunderstone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Thunder Stone",
+   "num": 83
+  },
+  "timerball": {
+   "engine_id": "timer_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "timerball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Timer Ball",
+   "num": 10
+  },
+  "toxicorb": {
+   "engine_id": "toxic_orb",
+   "forced_forme": null,
+   "handlers": [
+    "onResidual"
+   ],
+   "id": "toxicorb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Toxic Orb",
+   "num": 272
+  },
+  "toxicplate": {
+   "engine_id": "toxic_plate",
+   "forced_forme": "arceuspoison",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "toxicplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Toxic Plate",
+   "num": 304
+  },
+  "tr00": {
+   "engine_id": "tr00",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr00",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR00",
+   "num": 1130
+  },
+  "tr01": {
+   "engine_id": "tr01",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr01",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR01",
+   "num": 1131
+  },
+  "tr02": {
+   "engine_id": "tr02",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr02",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR02",
+   "num": 1132
+  },
+  "tr03": {
+   "engine_id": "tr03",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr03",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR03",
+   "num": 1133
+  },
+  "tr04": {
+   "engine_id": "tr04",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr04",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR04",
+   "num": 1134
+  },
+  "tr05": {
+   "engine_id": "tr05",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr05",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR05",
+   "num": 1135
+  },
+  "tr06": {
+   "engine_id": "tr06",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr06",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR06",
+   "num": 1136
+  },
+  "tr07": {
+   "engine_id": "tr07",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr07",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR07",
+   "num": 1137
+  },
+  "tr08": {
+   "engine_id": "tr08",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr08",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR08",
+   "num": 1138
+  },
+  "tr09": {
+   "engine_id": "tr09",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr09",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR09",
+   "num": 1139
+  },
+  "tr10": {
+   "engine_id": "tr10",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr10",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR10",
+   "num": 1140
+  },
+  "tr11": {
+   "engine_id": "tr11",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr11",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR11",
+   "num": 1141
+  },
+  "tr12": {
+   "engine_id": "tr12",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr12",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR12",
+   "num": 1142
+  },
+  "tr13": {
+   "engine_id": "tr13",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr13",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR13",
+   "num": 1143
+  },
+  "tr14": {
+   "engine_id": "tr14",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr14",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR14",
+   "num": 1144
+  },
+  "tr15": {
+   "engine_id": "tr15",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr15",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR15",
+   "num": 1145
+  },
+  "tr16": {
+   "engine_id": "tr16",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr16",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR16",
+   "num": 1146
+  },
+  "tr17": {
+   "engine_id": "tr17",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr17",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR17",
+   "num": 1147
+  },
+  "tr18": {
+   "engine_id": "tr18",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr18",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR18",
+   "num": 1148
+  },
+  "tr19": {
+   "engine_id": "tr19",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr19",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR19",
+   "num": 1149
+  },
+  "tr20": {
+   "engine_id": "tr20",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr20",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR20",
+   "num": 1150
+  },
+  "tr21": {
+   "engine_id": "tr21",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr21",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR21",
+   "num": 1151
+  },
+  "tr22": {
+   "engine_id": "tr22",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr22",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR22",
+   "num": 1152
+  },
+  "tr23": {
+   "engine_id": "tr23",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr23",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR23",
+   "num": 1153
+  },
+  "tr24": {
+   "engine_id": "tr24",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr24",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR24",
+   "num": 1154
+  },
+  "tr25": {
+   "engine_id": "tr25",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr25",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR25",
+   "num": 1155
+  },
+  "tr26": {
+   "engine_id": "tr26",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr26",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR26",
+   "num": 1156
+  },
+  "tr27": {
+   "engine_id": "tr27",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr27",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR27",
+   "num": 1157
+  },
+  "tr28": {
+   "engine_id": "tr28",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr28",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR28",
+   "num": 1158
+  },
+  "tr29": {
+   "engine_id": "tr29",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr29",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR29",
+   "num": 1159
+  },
+  "tr30": {
+   "engine_id": "tr30",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr30",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR30",
+   "num": 1160
+  },
+  "tr31": {
+   "engine_id": "tr31",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr31",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR31",
+   "num": 1161
+  },
+  "tr32": {
+   "engine_id": "tr32",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr32",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR32",
+   "num": 1162
+  },
+  "tr33": {
+   "engine_id": "tr33",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr33",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR33",
+   "num": 1163
+  },
+  "tr34": {
+   "engine_id": "tr34",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr34",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR34",
+   "num": 1164
+  },
+  "tr35": {
+   "engine_id": "tr35",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr35",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR35",
+   "num": 1165
+  },
+  "tr36": {
+   "engine_id": "tr36",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr36",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR36",
+   "num": 1166
+  },
+  "tr37": {
+   "engine_id": "tr37",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr37",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR37",
+   "num": 1167
+  },
+  "tr38": {
+   "engine_id": "tr38",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr38",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR38",
+   "num": 1168
+  },
+  "tr39": {
+   "engine_id": "tr39",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr39",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR39",
+   "num": 1169
+  },
+  "tr40": {
+   "engine_id": "tr40",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr40",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR40",
+   "num": 1170
+  },
+  "tr41": {
+   "engine_id": "tr41",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr41",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR41",
+   "num": 1171
+  },
+  "tr42": {
+   "engine_id": "tr42",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr42",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR42",
+   "num": 1172
+  },
+  "tr43": {
+   "engine_id": "tr43",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr43",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR43",
+   "num": 1173
+  },
+  "tr44": {
+   "engine_id": "tr44",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr44",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR44",
+   "num": 1174
+  },
+  "tr45": {
+   "engine_id": "tr45",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr45",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR45",
+   "num": 1175
+  },
+  "tr46": {
+   "engine_id": "tr46",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr46",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR46",
+   "num": 1176
+  },
+  "tr47": {
+   "engine_id": "tr47",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr47",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR47",
+   "num": 1177
+  },
+  "tr48": {
+   "engine_id": "tr48",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr48",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR48",
+   "num": 1178
+  },
+  "tr49": {
+   "engine_id": "tr49",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr49",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR49",
+   "num": 1179
+  },
+  "tr50": {
+   "engine_id": "tr50",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr50",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR50",
+   "num": 1180
+  },
+  "tr51": {
+   "engine_id": "tr51",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr51",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR51",
+   "num": 1181
+  },
+  "tr52": {
+   "engine_id": "tr52",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr52",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR52",
+   "num": 1182
+  },
+  "tr53": {
+   "engine_id": "tr53",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr53",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR53",
+   "num": 1183
+  },
+  "tr54": {
+   "engine_id": "tr54",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr54",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR54",
+   "num": 1184
+  },
+  "tr55": {
+   "engine_id": "tr55",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr55",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR55",
+   "num": 1185
+  },
+  "tr56": {
+   "engine_id": "tr56",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr56",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR56",
+   "num": 1186
+  },
+  "tr57": {
+   "engine_id": "tr57",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr57",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR57",
+   "num": 1187
+  },
+  "tr58": {
+   "engine_id": "tr58",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr58",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR58",
+   "num": 1188
+  },
+  "tr59": {
+   "engine_id": "tr59",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr59",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR59",
+   "num": 1189
+  },
+  "tr60": {
+   "engine_id": "tr60",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr60",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR60",
+   "num": 1190
+  },
+  "tr61": {
+   "engine_id": "tr61",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr61",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR61",
+   "num": 1191
+  },
+  "tr62": {
+   "engine_id": "tr62",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr62",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR62",
+   "num": 1192
+  },
+  "tr63": {
+   "engine_id": "tr63",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr63",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR63",
+   "num": 1193
+  },
+  "tr64": {
+   "engine_id": "tr64",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr64",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR64",
+   "num": 1194
+  },
+  "tr65": {
+   "engine_id": "tr65",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr65",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR65",
+   "num": 1195
+  },
+  "tr66": {
+   "engine_id": "tr66",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr66",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR66",
+   "num": 1196
+  },
+  "tr67": {
+   "engine_id": "tr67",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr67",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR67",
+   "num": 1197
+  },
+  "tr68": {
+   "engine_id": "tr68",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr68",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR68",
+   "num": 1198
+  },
+  "tr69": {
+   "engine_id": "tr69",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr69",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR69",
+   "num": 1199
+  },
+  "tr70": {
+   "engine_id": "tr70",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr70",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR70",
+   "num": 1200
+  },
+  "tr71": {
+   "engine_id": "tr71",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr71",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR71",
+   "num": 1201
+  },
+  "tr72": {
+   "engine_id": "tr72",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr72",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR72",
+   "num": 1202
+  },
+  "tr73": {
+   "engine_id": "tr73",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr73",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR73",
+   "num": 1203
+  },
+  "tr74": {
+   "engine_id": "tr74",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr74",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR74",
+   "num": 1204
+  },
+  "tr75": {
+   "engine_id": "tr75",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr75",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR75",
+   "num": 1205
+  },
+  "tr76": {
+   "engine_id": "tr76",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr76",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR76",
+   "num": 1206
+  },
+  "tr77": {
+   "engine_id": "tr77",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr77",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR77",
+   "num": 1207
+  },
+  "tr78": {
+   "engine_id": "tr78",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr78",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR78",
+   "num": 1208
+  },
+  "tr79": {
+   "engine_id": "tr79",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr79",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR79",
+   "num": 1209
+  },
+  "tr80": {
+   "engine_id": "tr80",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr80",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR80",
+   "num": 1210
+  },
+  "tr81": {
+   "engine_id": "tr81",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr81",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR81",
+   "num": 1211
+  },
+  "tr82": {
+   "engine_id": "tr82",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr82",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR82",
+   "num": 1212
+  },
+  "tr83": {
+   "engine_id": "tr83",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr83",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR83",
+   "num": 1213
+  },
+  "tr84": {
+   "engine_id": "tr84",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr84",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR84",
+   "num": 1214
+  },
+  "tr85": {
+   "engine_id": "tr85",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr85",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR85",
+   "num": 1215
+  },
+  "tr86": {
+   "engine_id": "tr86",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr86",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR86",
+   "num": 1216
+  },
+  "tr87": {
+   "engine_id": "tr87",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr87",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR87",
+   "num": 1217
+  },
+  "tr88": {
+   "engine_id": "tr88",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr88",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR88",
+   "num": 1218
+  },
+  "tr89": {
+   "engine_id": "tr89",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr89",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR89",
+   "num": 1219
+  },
+  "tr90": {
+   "engine_id": "tr90",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr90",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR90",
+   "num": 1220
+  },
+  "tr91": {
+   "engine_id": "tr91",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr91",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR91",
+   "num": 1221
+  },
+  "tr92": {
+   "engine_id": "tr92",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr92",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR92",
+   "num": 1222
+  },
+  "tr93": {
+   "engine_id": "tr93",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr93",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR93",
+   "num": 1223
+  },
+  "tr94": {
+   "engine_id": "tr94",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr94",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR94",
+   "num": 1224
+  },
+  "tr95": {
+   "engine_id": "tr95",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr95",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR95",
+   "num": 1225
+  },
+  "tr96": {
+   "engine_id": "tr96",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr96",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR96",
+   "num": 1226
+  },
+  "tr97": {
+   "engine_id": "tr97",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr97",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR97",
+   "num": 1227
+  },
+  "tr98": {
+   "engine_id": "tr98",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr98",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR98",
+   "num": 1228
+  },
+  "tr99": {
+   "engine_id": "tr99",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "tr99",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "TR99",
+   "num": 1229
+  },
+  "twistedspoon": {
+   "engine_id": "twisted_spoon",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "twistedspoon",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Twisted Spoon",
+   "num": 248
+  },
+  "tyranitarite": {
+   "engine_id": "tyranitarite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "tyranitarite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "tyranitar"
+   ],
+   "name": "Tyranitarite",
+   "num": 669
+  },
+  "ultraball": {
+   "engine_id": "ultra_ball",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "ultraball",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Ultra Ball",
+   "num": 2
+  },
+  "ultranecroziumz": {
+   "engine_id": "ultranecrozium_z",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "ultranecroziumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [
+    "necrozmaultra"
+   ],
+   "name": "Ultranecrozium Z",
+   "num": 923
+  },
+  "unremarkableteacup": {
+   "engine_id": "unremarkable_teacup",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "unremarkableteacup",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Unremarkable Teacup",
+   "num": 2403
+  },
+  "upgrade": {
+   "engine_id": "up_grade",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "upgrade",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Up-Grade",
+   "num": 252
+  },
+  "utilityumbrella": {
+   "engine_id": "utility_umbrella",
+   "forced_forme": null,
+   "handlers": [
+    "onEnd",
+    "onStart",
+    "onUpdate"
+   ],
+   "id": "utilityumbrella",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Utility Umbrella",
+   "num": 1123
+  },
+  "venusaurite": {
+   "engine_id": "venusaurite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "venusaurite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "venusaur"
+   ],
+   "name": "Venusaurite",
+   "num": 659
+  },
+  "victreebelite": {
+   "engine_id": "victreebelite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "victreebelite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "victreebel"
+   ],
+   "name": "Victreebelite",
+   "num": 2560
+  },
+  "vilevial": {
+   "engine_id": "vile_vial",
+   "forced_forme": "venomiconepilogue",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "vilevial",
+   "is_mega_stone": false,
+   "is_nonstandard": "CAP",
+   "is_z_crystal": false,
+   "item_user": [
+    "venomiconepilogue"
+   ],
+   "name": "Vile Vial",
+   "num": -2
+  },
+  "wacanberry": {
+   "engine_id": "wacan_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "wacanberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Wacan Berry",
+   "num": 186
+  },
+  "watergem": {
+   "engine_id": "water_gem",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceTryPrimaryHit"
+   ],
+   "id": "watergem",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Water Gem",
+   "num": 549
+  },
+  "wateriumz": {
+   "engine_id": "waterium_z",
+   "forced_forme": "arceuswater",
+   "handlers": [],
+   "id": "wateriumz",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": true,
+   "item_user": [],
+   "name": "Waterium Z",
+   "num": 778
+  },
+  "watermemory": {
+   "engine_id": "water_memory",
+   "forced_forme": "silvallywater",
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "watermemory",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [
+    "silvallywater"
+   ],
+   "name": "Water Memory",
+   "num": 913
+  },
+  "waterstone": {
+   "engine_id": "water_stone",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "waterstone",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Water Stone",
+   "num": 84
+  },
+  "watmelberry": {
+   "engine_id": "watmel_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "watmelberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Watmel Berry",
+   "num": 181
+  },
+  "waveincense": {
+   "engine_id": "wave_incense",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "waveincense",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Wave Incense",
+   "num": 317
+  },
+  "weaknesspolicy": {
+   "engine_id": "weakness_policy",
+   "forced_forme": null,
+   "handlers": [
+    "onDamagingHit"
+   ],
+   "id": "weaknesspolicy",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Weakness Policy",
+   "num": 639
+  },
+  "wellspringmask": {
+   "engine_id": "wellspring_mask",
+   "forced_forme": "ogerponwellspring",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "wellspringmask",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [
+    "ogerponwellspring"
+   ],
+   "name": "Wellspring Mask",
+   "num": 2407
+  },
+  "wepearberry": {
+   "engine_id": "wepear_berry",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "wepearberry",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Wepear Berry",
+   "num": 167
+  },
+  "whippeddream": {
+   "engine_id": "whipped_dream",
+   "forced_forme": null,
+   "handlers": [],
+   "id": "whippeddream",
+   "is_mega_stone": false,
+   "is_nonstandard": "Past",
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Whipped Dream",
+   "num": 646
+  },
+  "whiteherb": {
+   "engine_id": "white_herb",
+   "forced_forme": null,
+   "handlers": [
+    "fling.effect",
+    "onAnyAfterMega",
+    "onAnyAfterMove",
+    "onAnySwitchIn",
+    "onResidual",
+    "onStart",
+    "onUse"
+   ],
+   "id": "whiteherb",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "White Herb",
+   "num": 214
+  },
+  "widelens": {
+   "engine_id": "wide_lens",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceModifyAccuracy"
+   ],
+   "id": "widelens",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Wide Lens",
+   "num": 265
+  },
+  "wikiberry": {
+   "engine_id": "wiki_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onTryEatItem",
+    "onUpdate"
+   ],
+   "id": "wikiberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Wiki Berry",
+   "num": 160
+  },
+  "wiseglasses": {
+   "engine_id": "wise_glasses",
+   "forced_forme": null,
+   "handlers": [
+    "onBasePower"
+   ],
+   "id": "wiseglasses",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Wise Glasses",
+   "num": 267
+  },
+  "yacheberry": {
+   "engine_id": "yache_berry",
+   "forced_forme": null,
+   "handlers": [
+    "onEat",
+    "onSourceModifyDamage"
+   ],
+   "id": "yacheberry",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Yache Berry",
+   "num": 188
+  },
+  "zapplate": {
+   "engine_id": "zap_plate",
+   "forced_forme": "arceuselectric",
+   "handlers": [
+    "onBasePower",
+    "onTakeItem"
+   ],
+   "id": "zapplate",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Zap Plate",
+   "num": 300
+  },
+  "zeraorite": {
+   "engine_id": "zeraorite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "zeraorite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "zeraora"
+   ],
+   "name": "Zeraorite",
+   "num": 2586
+  },
+  "zoomlens": {
+   "engine_id": "zoom_lens",
+   "forced_forme": null,
+   "handlers": [
+    "onSourceModifyAccuracy"
+   ],
+   "id": "zoomlens",
+   "is_mega_stone": false,
+   "is_nonstandard": null,
+   "is_z_crystal": false,
+   "item_user": [],
+   "name": "Zoom Lens",
+   "num": 276
+  },
+  "zygardite": {
+   "engine_id": "zygardite",
+   "forced_forme": null,
+   "handlers": [
+    "onTakeItem"
+   ],
+   "id": "zygardite",
+   "is_mega_stone": true,
+   "is_nonstandard": "Future",
+   "is_z_crystal": false,
+   "item_user": [
+    "zygardecomplete"
+   ],
+   "name": "Zygardite",
+   "num": 2584
+  }
+ },
+ "schema_version": 1
+}

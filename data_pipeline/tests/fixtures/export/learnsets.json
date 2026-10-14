@@ -1,0 +1,183 @@
+{
+ "charizard": {
+  "learnset": {
+   "airslash": [
+    "9M"
+   ],
+   "dragonclaw": [
+    "9M"
+   ],
+   "earthquake": [
+    "9M"
+   ],
+   "flamethrower": [
+    "9M"
+   ],
+   "flareblitz": [
+    "9L50"
+   ],
+   "fxscripted": [
+    "9M"
+   ],
+   "protect": [
+    "9M"
+   ]
+  }
+ },
+ "fxbebe": {
+  "learnset": {
+   "flamethrower": [
+    "9L1"
+   ]
+  }
+ },
+ "fxdarm": {
+  "learnset": {
+   "earthquake": [
+    "9M"
+   ]
+  }
+ },
+ "fxlev": {
+  "learnset": {
+   "earthquake": [
+    "8M"
+   ],
+   "thunderbolt": [
+    "9M"
+   ]
+  }
+ },
+ "fxnoteng": {
+  "learnset": {
+   "protect": [
+    "9M"
+   ],
+   "scald": [
+    "9M"
+   ]
+  }
+ },
+ "fxogre": {
+  "learnset": {
+   "earthquake": [
+    "9M"
+   ]
+  }
+ },
+ "fxogrewellspring": {
+  "learnset": {
+   "earthquake": [
+    "9M"
+   ],
+   "surf": [
+    "9S0"
+   ]
+  }
+ },
+ "fxpast": {
+  "learnset": {
+   "earthquake": [
+    "9M"
+   ]
+  }
+ },
+ "fxpast2": {
+  "learnset": {
+   "earthquake": [
+    "9M"
+   ]
+  }
+ },
+ "fxrotom": {
+  "learnset": {
+   "thunderbolt": [
+    "9M"
+   ]
+  }
+ },
+ "fxrotomwash": {
+  "learnset": {
+   "scald": [
+    "9M"
+   ],
+   "surf": [
+    "9M"
+   ],
+   "thunderbolt": [
+    "9M"
+   ]
+  }
+ },
+ "fxtail": {
+  "learnset": {
+   "airslash": [
+    "9L1"
+   ],
+   "thunderbolt": [
+    "9M"
+   ]
+  }
+ },
+ "fxtailalola": {
+  "learnset": {
+   "scald": [
+    "9M"
+   ],
+   "thunderbolt": [
+    "9M"
+   ]
+  }
+ },
+ "fxvivi": {
+  "learnset": {
+   "airslash": [
+    "9L1"
+   ]
+  }
+ },
+ "gabite": {
+  "learnset": {
+   "dragonclaw": [
+    "9L1"
+   ]
+  }
+ },
+ "garchomp": {
+  "learnset": {
+   "closecombat": [
+    "9M"
+   ],
+   "earthquake": [
+    "9M",
+    "8M"
+   ],
+   "fxpastmove": [
+    "9M"
+   ],
+   "scald": [
+    "8M"
+   ],
+   "surf": [
+    "8M"
+   ]
+  }
+ },
+ "gible": {
+  "learnset": {
+   "dracometeor": [
+    "9E"
+   ],
+   "dragonclaw": [
+    "9L5",
+    "8L5"
+   ],
+   "earthquake": [
+    "9M"
+   ],
+   "protect": [
+    "9M"
+   ]
+  }
+ }
+}

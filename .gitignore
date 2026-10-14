@@ -1,0 +1,25 @@
+
+# Python environments and caches
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+
+# Generated simulation output
+out/
+dist/
+build/
+*.egg-info/
+
+# Local configuration and macOS files
+.env
+.DS_Store
+
+# Temporary audit patches and backups
+kimi-*.patch*
+
+# Downloaded repositories and generated caches
+data/cache/
+
+# Installed Node.js dependencies
+data_pipeline/node/node_modules/

@@ -1,0 +1,37 @@
+{
+ "blaze": {
+  "name": "Blaze",
+  "num": 1
+ },
+ "levitate": {
+  "name": "Levitate",
+  "num": 2
+ },
+ "pressure": {
+  "name": "Pressure",
+  "num": 3,
+  "_functions": [
+   "onStart"
+  ]
+ },
+ "roughskin": {
+  "name": "Rough Skin",
+  "num": 4
+ },
+ "sandveil": {
+  "name": "Sand Veil",
+  "num": 5
+ },
+ "solarpower": {
+  "name": "Solar Power",
+  "num": 6
+ },
+ "sturdy": {
+  "name": "Sturdy",
+  "num": 7
+ },
+ "toughclaws": {
+  "name": "Tough Claws",
+  "num": 8
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "charizarditex": {
+  "isNonstandard": "Past",
+  "megaStone": "Charizard-Mega-X",
+  "name": "Charizardite X",
+  "num": 660
+ },
+ "choiceband": {
+  "name": "Choice Band",
+  "num": 220
+ },
+ "choicespecs": {
+  "name": "Choice Specs",
+  "num": 297
+ },
+ "fxmegastone": {
+  "megaStone": "Fxmon-Mega",
+  "name": "Fxmegastone",
+  "num": 9101
+ },
+ "fxpastitem": {
+  "isNonstandard": "Past",
+  "name": "Fxpastitem",
+  "num": 9100
+ },
+ "leftovers": {
+  "name": "Leftovers",
+  "num": 234
+ },
+ "lifeorb": {
+  "name": "Life Orb",
+  "num": 270
+ },
+ "wellspringmask": {
+  "forcedForme": "Fxogre-Wellspring",
+  "itemUser": [
+   "Fxogre-Wellspring"
+  ],
+  "name": "Wellspring Mask",
+  "num": 2407
+ }
+}

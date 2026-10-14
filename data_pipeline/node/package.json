@@ -1,0 +1,9 @@
+{
+  "name": "showdown-export-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transpiles Pokemon Showdown's data/*.ts to plain JSON. Run `npm install` here once and commit package-lock.json.",
+  "dependencies": {
+    "sucrase": "3.35.0"
+  }
+}

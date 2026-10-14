@@ -1,0 +1,30 @@
+{
+ "errors": 0,
+ "issues": [
+  {
+   "code": "EXTRA_TYPES",
+   "detail": "stellar",
+   "severity": "warning",
+   "subject": "typechart"
+  },
+  {
+   "code": "LEARNSET_UNKNOWN_SPECIES",
+   "detail": "",
+   "severity": "warning",
+   "subject": "pokestargiant2"
+  },
+  {
+   "code": "LEARNSET_UNKNOWN_SPECIES",
+   "detail": "",
+   "severity": "warning",
+   "subject": "pokestargiantpropo2"
+  },
+  {
+   "code": "UNRESOLVED_REF",
+   "detail": "abilities.0=''",
+   "severity": "warning",
+   "subject": "missingno"
+  }
+ ],
+ "warnings": 4
+}

@@ -1,0 +1,62 @@
+{
+ "applin": [
+  "no_supported_moves"
+ ],
+ "cosmoem": [
+  "no_supported_moves"
+ ],
+ "cosmog": [
+  "no_supported_moves"
+ ],
+ "ditto": [
+  "no_supported_moves"
+ ],
+ "keldeoresolute": [
+  "default_build_illegal:ERR_REQUIRED_MOVE"
+ ],
+ "kricketot": [
+  "no_supported_moves"
+ ],
+ "magikarp": [
+  "no_supported_moves"
+ ],
+ "milcery": [
+  "no_supported_moves"
+ ],
+ "necrozmadawnwings": [
+  "no_supported_moves"
+ ],
+ "necrozmaduskmane": [
+  "no_supported_moves"
+ ],
+ "rotomfan": [
+  "no_supported_moves"
+ ],
+ "rotomfrost": [
+  "no_supported_moves"
+ ],
+ "rotomheat": [
+  "no_supported_moves"
+ ],
+ "rotommow": [
+  "no_supported_moves"
+ ],
+ "rotomwash": [
+  "no_supported_moves"
+ ],
+ "scatterbug": [
+  "no_supported_moves"
+ ],
+ "smeargle": [
+  "no_supported_moves"
+ ],
+ "spewpa": [
+  "no_supported_moves"
+ ],
+ "toxel": [
+  "no_supported_moves"
+ ],
+ "tynamo": [
+  "no_supported_moves"
+ ]
+}

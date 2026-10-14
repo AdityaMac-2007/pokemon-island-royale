@@ -1,0 +1,124 @@
+{
+ "artifact_groups": {
+  "engine_compatible": [
+   "engine/engine_roster.json",
+   "engine/engine_roster_audit.json",
+   "engine/not_engine_compatible.json"
+  ],
+  "learnsets": [
+   "learnsets.json"
+  ],
+  "normalized": [
+   "species.json",
+   "moves.json",
+   "abilities.json",
+   "items.json",
+   "natures.json",
+   "typechart.json"
+  ],
+  "reports": [
+   "validation_report.json",
+   "coverage.json",
+   "COVERAGE.md"
+  ],
+  "ruleset": [
+   "ruleset_eligibility.json"
+  ]
+ },
+ "artifact_sha256": {
+  "COVERAGE.md": "654a63336e1c2d821b22419add5fc8608bbb0ef913e4d2a2a914734ff5dca600",
+  "abilities.json": "1fcb7564dc4cbf98076a317f675d9f3ad0ba1619b52e8f5fde4d8e039d63e11b",
+  "coverage.json": "651a7de7b588c07209442047b2be57cad39fb5557d792212aa97fcee92ab4473",
+  "engine/engine_roster.json": "96f3d9b29ec84980dd6dea2fe1b184a8636a788a74b9cf1779d6c2d67963836d",
+  "engine/engine_roster_audit.json": "7e83814440434f69ad04a04cf390914a4927d9f5647ba37d113ac9ce476ff0cf",
+  "engine/not_engine_compatible.json": "fc70e1a482980e6b909be00dbe2d151f3d927e19425af1df810b61ebcb4936c3",
+  "items.json": "637b45d2bf0fe6aac4ab246c46f5d54a3c69813daf830a9f83fe1b53e4203913",
+  "learnsets.json": "261e11f08e63f168cbfa6d23d7ea7c9d7899a7893b73f3d8b20721543905bfe8",
+  "moves.json": "aa26f0ba3501a66838585634de6b447a1cedfc1d49d00245e8dbd266b974c0c4",
+  "natures.json": "b56e1dd84bc763246c65e212ec557258ef436595481783512c819d43ff4c5a8c",
+  "ruleset_eligibility.json": "438b22aeaae2152fb06ca28134e5b2c16bd1d8fbef7af696732348d887174bd9",
+  "species.json": "01fc338ad0bb5b2eb3967a709de58354d9293b6be40475902f236bb0d19cfe35",
+  "typechart.json": "28aa77c8957c8caaffa6ec91949d936e8aeaf59784f975a6331f77fff46b8556",
+  "validation_report.json": "4cfa6a6dd4821223cfd40a354119c9b1a750291f954866a1367eee5c74fcc1e1"
+ },
+ "counts": {
+  "abilities": 321,
+  "eligible_species": 860,
+  "engine_roster_rows": 840,
+  "items": 583,
+  "moves": 954,
+  "species": 1518
+ },
+ "engine_registry_moves": 36,
+ "notes": [
+  "Showdown is a community-maintained simulator; see README for licensing and rights notes."
+ ],
+ "pipeline_version": "0.1.0",
+ "raw_snapshot": "data/cache/showdown/3a766f2cfb5e51c1e428cfe87d0dba91a8f01640/export (not copied; hashes above are in source.export.files)",
+ "ruleset": {
+  "digest": "7626eff0b2072c56248c5f15dc5aa9b000682558fe325fbd3aa01c7f765eaed8",
+  "id": "gen9-l100-ffa-v1"
+ },
+ "schema_version": 1,
+ "source": {
+  "commit": "3a766f2cfb5e51c1e428cfe87d0dba91a8f01640",
+  "export": {
+   "files": {
+    "abilities": {
+     "entries": 321,
+     "function_values_dropped": 512,
+     "output_sha256": "a891bd4116b13aaceb68a6151837caca6b9be99fcebcd75187d2d4ee3d38976e",
+     "source_sha256": "53d8558979e337c675907b76b5375185b28a0877f770d7456025b94535e1064d"
+    },
+    "formats-data": {
+     "entries": 1430,
+     "function_values_dropped": 0,
+     "output_sha256": "885b03602bf73907bad0085cf5b910050936181e62d023b632f0b24572213846",
+     "source_sha256": "caab0806e1d4d07a0dfbaa4dec63de17b779e7ca157857bec81c190d5e92e5cc"
+    },
+    "items": {
+     "entries": 583,
+     "function_values_dropped": 471,
+     "output_sha256": "aa61d0a4cf4abccbddcbdd9722002452629811c368f12b7aabebb287985b9c49",
+     "source_sha256": "75da206e2cb09868bb549360f38a144c2f50b24e1d189e03b485d550a4f6357a"
+    },
+    "learnsets": {
+     "entries": 1289,
+     "function_values_dropped": 0,
+     "output_sha256": "a074de6397ec2cf09c149446146d1b74fbb5112ca208f6a0d63354a9339eb4ba",
+     "source_sha256": "26969c5e9ca7310b701612da8c9cea217b7d43efb8cd22a7e46783a6ca9b386e"
+    },
+    "moves": {
+     "entries": 954,
+     "function_values_dropped": 843,
+     "output_sha256": "8b951b7a6ccfa45bc7fa24f208ff69f8cda925a297b50d9d21e97bc4f7d16d5b",
+     "source_sha256": "738b8cfc1ca491537c0188546ab697942aaa313c5e6be83a5432edd5dd8997f7"
+    },
+    "natures": {
+     "entries": 25,
+     "function_values_dropped": 0,
+     "output_sha256": "0031279d188d7dcd76405f96692b8dd4d70e8a8e22535db07b0f45d9daf4fb87",
+     "source_sha256": "5cfefee4c23dd19f629deb9a67f75361226bd24fe34cefe9a13d30d985428416"
+    },
+    "pokedex": {
+     "entries": 1518,
+     "function_values_dropped": 0,
+     "output_sha256": "62c4938a2a420abf837f7c0cd21a981ad2d2ac66ff606ba06e6f6bed2546ee4e",
+     "source_sha256": "73048386b864be5aff093e9393acf32e8016299e9d7b76078bf5120b769e2fe0"
+    },
+    "typechart": {
+     "entries": 19,
+     "function_values_dropped": 0,
+     "output_sha256": "717cbcdabe740bf3ca6206276d6722daa4cf1e7e113faf486b5755ab8b2ae278",
+     "source_sha256": "7b0eae126bdcf98edfd71cbe75af00b763f5f0d5db36024b6f3e7c5e4aea95ac"
+    }
+   },
+   "node_version": "v24.14.0",
+   "sucrase_version": "3.35.0"
+  },
+  "license_files_sha256": {
+   "LICENSE": "b2002a9fd52ba8db3783a05fbdebfb09c34fd09513b90f6b390a2c0dfbc93ed0"
+  },
+  "repo": "https://github.com/smogon/pokemon-showdown.git"
+ }
+}

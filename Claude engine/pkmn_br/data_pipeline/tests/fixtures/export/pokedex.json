@@ -1,0 +1,529 @@
+{
+ "charizard": {
+  "abilities": {
+   "0": "Blaze",
+   "H": "Solar Power"
+  },
+  "baseStats": {
+   "atk": 84,
+   "def": 78,
+   "hp": 78,
+   "spa": 109,
+   "spd": 85,
+   "spe": 100
+  },
+  "heightm": 1,
+  "name": "Charizard",
+  "num": 6,
+  "otherFormes": [
+   "Charizard-Mega-X"
+  ],
+  "types": [
+   "Fire",
+   "Flying"
+  ],
+  "weightkg": 10
+ },
+ "charizardmegax": {
+  "abilities": {
+   "0": "Tough Claws"
+  },
+  "baseSpecies": "Charizard",
+  "baseStats": {
+   "atk": 130,
+   "def": 111,
+   "hp": 78,
+   "spa": 130,
+   "spd": 85,
+   "spe": 100
+  },
+  "forme": "Mega-X",
+  "heightm": 1,
+  "name": "Charizard-Mega-X",
+  "num": 6,
+  "requiredItem": "Charizardite X",
+  "types": [
+   "Fire",
+   "Dragon"
+  ],
+  "weightkg": 10
+ },
+ "fxbebe": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseStats": {
+   "atk": 38,
+   "def": 39,
+   "hp": 44,
+   "spa": 61,
+   "spd": 79,
+   "spe": 42
+  },
+  "evos": [
+   "Fxfloette"
+  ],
+  "heightm": 1,
+  "name": "Fxbébé",
+  "num": 9008,
+  "types": [
+   "Fairy"
+  ],
+  "weightkg": 10
+ },
+ "fxcap": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseStats": {
+   "atk": 50,
+   "def": 50,
+   "hp": 50,
+   "spa": 50,
+   "spd": 50,
+   "spe": 50
+  },
+  "heightm": 1,
+  "isNonstandard": "CAP",
+  "name": "Fxcap",
+  "num": -1,
+  "types": [
+   "Normal"
+  ],
+  "weightkg": 10
+ },
+ "fxdarm": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseStats": {
+   "atk": 140,
+   "def": 55,
+   "hp": 105,
+   "spa": 30,
+   "spd": 55,
+   "spe": 95
+  },
+  "heightm": 1,
+  "name": "Fxdarm",
+  "num": 9005,
+  "otherFormes": [
+   "Fxdarm-Zen"
+  ],
+  "types": [
+   "Fire"
+  ],
+  "weightkg": 10
+ },
+ "fxdarmzen": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseSpecies": "Fxdarm",
+  "baseStats": {
+   "atk": 30,
+   "def": 105,
+   "hp": 105,
+   "spa": 140,
+   "spd": 105,
+   "spe": 55
+  },
+  "battleOnly": "Fxdarm",
+  "forme": "Zen",
+  "heightm": 1,
+  "name": "Fxdarm-Zen",
+  "num": 9005,
+  "types": [
+   "Fire",
+   "Psychic"
+  ],
+  "weightkg": 10
+ },
+ "fxfloette": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseStats": {
+   "atk": 45,
+   "def": 47,
+   "hp": 54,
+   "spa": 75,
+   "spd": 98,
+   "spe": 52
+  },
+  "heightm": 1,
+  "name": "Fxfloette",
+  "num": 9009,
+  "prevo": "Fxbébé",
+  "types": [
+   "Fairy"
+  ],
+  "weightkg": 10
+ },
+ "fxlev": {
+  "abilities": {
+   "0": "Levitate"
+  },
+  "baseStats": {
+   "atk": 65,
+   "def": 60,
+   "hp": 60,
+   "spa": 130,
+   "spd": 75,
+   "spe": 110
+  },
+  "heightm": 1,
+  "name": "Fxlev",
+  "num": 9011,
+  "types": [
+   "Ghost"
+  ],
+  "weightkg": 10
+ },
+ "fxnoteng": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseStats": {
+   "atk": 70,
+   "def": 70,
+   "hp": 70,
+   "spa": 70,
+   "spd": 70,
+   "spe": 70
+  },
+  "heightm": 1,
+  "name": "Fxnoteng",
+  "num": 9010,
+  "types": [
+   "Normal"
+  ],
+  "weightkg": 10
+ },
+ "fxogre": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseStats": {
+   "atk": 120,
+   "def": 84,
+   "hp": 80,
+   "spa": 60,
+   "spd": 96,
+   "spe": 110
+  },
+  "heightm": 1,
+  "name": "Fxogre",
+  "num": 9004,
+  "otherFormes": [
+   "Fxogre-Wellspring"
+  ],
+  "types": [
+   "Grass"
+  ],
+  "weightkg": 10
+ },
+ "fxogrewellspring": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseSpecies": "Fxogre",
+  "baseStats": {
+   "atk": 120,
+   "def": 84,
+   "hp": 80,
+   "spa": 60,
+   "spd": 96,
+   "spe": 110
+  },
+  "forme": "Wellspring",
+  "heightm": 1,
+  "name": "Fxogre-Wellspring",
+  "num": 9004,
+  "requiredItem": "Wellspring Mask",
+  "types": [
+   "Grass",
+   "Water"
+  ],
+  "weightkg": 10
+ },
+ "fxpast": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseStats": {
+   "atk": 60,
+   "def": 60,
+   "hp": 60,
+   "spa": 60,
+   "spd": 60,
+   "spe": 60
+  },
+  "heightm": 1,
+  "isNonstandard": "Past",
+  "name": "Fxpast",
+  "num": 9006,
+  "types": [
+   "Normal"
+  ],
+  "weightkg": 10
+ },
+ "fxpast2": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseStats": {
+   "atk": 60,
+   "def": 60,
+   "hp": 60,
+   "spa": 60,
+   "spd": 60,
+   "spe": 60
+  },
+  "heightm": 1,
+  "name": "Fxpast2",
+  "num": 9007,
+  "types": [
+   "Normal"
+  ],
+  "weightkg": 10
+ },
+ "fxrotom": {
+  "abilities": {
+   "0": "Levitate"
+  },
+  "baseStats": {
+   "atk": 50,
+   "def": 77,
+   "hp": 50,
+   "spa": 95,
+   "spd": 77,
+   "spe": 91
+  },
+  "heightm": 1,
+  "name": "Fxrotom",
+  "num": 9002,
+  "otherFormes": [
+   "Fxrotom-Wash"
+  ],
+  "types": [
+   "Electric",
+   "Ghost"
+  ],
+  "weightkg": 10
+ },
+ "fxrotomwash": {
+  "abilities": {
+   "0": "Levitate"
+  },
+  "baseSpecies": "Fxrotom",
+  "baseStats": {
+   "atk": 65,
+   "def": 107,
+   "hp": 50,
+   "spa": 105,
+   "spd": 107,
+   "spe": 86
+  },
+  "forme": "Wash",
+  "heightm": 1,
+  "name": "Fxrotom-Wash",
+  "num": 9002,
+  "types": [
+   "Electric",
+   "Water"
+  ],
+  "weightkg": 10
+ },
+ "fxtail": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseStats": {
+   "atk": 90,
+   "def": 55,
+   "hp": 60,
+   "spa": 90,
+   "spd": 80,
+   "spe": 110
+  },
+  "heightm": 1,
+  "name": "Fxtail",
+  "num": 9001,
+  "otherFormes": [
+   "Fxtail-Alola",
+   "Fxtail-Galar"
+  ],
+  "types": [
+   "Electric"
+  ],
+  "weightkg": 10
+ },
+ "fxtailalola": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseSpecies": "Fxtail",
+  "baseStats": {
+   "atk": 85,
+   "def": 50,
+   "hp": 60,
+   "spa": 95,
+   "spd": 85,
+   "spe": 110
+  },
+  "forme": "Alola",
+  "heightm": 1,
+  "name": "Fxtail-Alola",
+  "num": 9001,
+  "types": [
+   "Electric",
+   "Psychic"
+  ],
+  "weightkg": 10
+ },
+ "fxtailgalar": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseSpecies": "Fxtail",
+  "baseStats": {
+   "atk": 85,
+   "def": 50,
+   "hp": 60,
+   "spa": 95,
+   "spd": 85,
+   "spe": 110
+  },
+  "forme": "Galar",
+  "heightm": 1,
+  "name": "Fxtail-Galar",
+  "num": 9001,
+  "types": [
+   "Electric",
+   "Steel"
+  ],
+  "weightkg": 10
+ },
+ "fxvivi": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseStats": {
+   "atk": 52,
+   "def": 50,
+   "hp": 80,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "cosmeticFormes": [
+   "Fxvivi-Polar"
+  ],
+  "heightm": 1,
+  "name": "Fxvivi",
+  "num": 9003,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "weightkg": 10
+ },
+ "fxvivipolar": {
+  "abilities": {
+   "0": "Pressure"
+  },
+  "baseSpecies": "Fxvivi",
+  "baseStats": {
+   "atk": 52,
+   "def": 50,
+   "hp": 80,
+   "spa": 90,
+   "spd": 50,
+   "spe": 89
+  },
+  "forme": "Polar",
+  "heightm": 1,
+  "name": "Fxvivi-Polar",
+  "num": 9003,
+  "types": [
+   "Bug",
+   "Flying"
+  ],
+  "weightkg": 10
+ },
+ "gabite": {
+  "abilities": {
+   "0": "Sand Veil",
+   "H": "Rough Skin"
+  },
+  "baseStats": {
+   "atk": 90,
+   "def": 65,
+   "hp": 68,
+   "spa": 50,
+   "spd": 55,
+   "spe": 82
+  },
+  "evos": [
+   "Garchomp"
+  ],
+  "heightm": 1,
+  "name": "Gabite",
+  "num": 444,
+  "prevo": "Gible",
+  "types": [
+   "Dragon",
+   "Ground"
+  ],
+  "weightkg": 10
+ },
+ "garchomp": {
+  "abilities": {
+   "0": "Sand Veil",
+   "H": "Rough Skin"
+  },
+  "baseStats": {
+   "atk": 130,
+   "def": 95,
+   "hp": 108,
+   "spa": 80,
+   "spd": 85,
+   "spe": 102
+  },
+  "heightm": 1,
+  "name": "Garchomp",
+  "num": 445,
+  "prevo": "Gabite",
+  "types": [
+   "Dragon",
+   "Ground"
+  ],
+  "weightkg": 10
+ },
+ "gible": {
+  "abilities": {
+   "0": "Sand Veil",
+   "H": "Rough Skin"
+  },
+  "baseStats": {
+   "atk": 70,
+   "def": 45,
+   "hp": 58,
+   "spa": 40,
+   "spd": 45,
+   "spe": 42
+  },
+  "evos": [
+   "Gabite"
+  ],
+  "heightm": 1,
+  "name": "Gible",
+  "num": 443,
+  "types": [
+   "Dragon",
+   "Ground"
+  ],
+  "weightkg": 10
+ }
+}

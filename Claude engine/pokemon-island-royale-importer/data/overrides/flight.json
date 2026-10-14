@@ -1,0 +1,33 @@
+{
+ "schema_version": 1,
+ "description": "Explicit flight capability by Showdown species id. Seeded verbatim from gemini/adapter.py SPECIES_FLIGHT_REGISTRY (27 entries). Species not listed are 'unreviewed' and default to can_fly=false. Add entries by human review only; the importer never infers flight.",
+ "species": {
+  "alakazam": false,
+  "arcanine": false,
+  "blastoise": false,
+  "charizard": true,
+  "corviknight": true,
+  "dragapult": false,
+  "dragonite": true,
+  "excadrill": false,
+  "ferrothorn": false,
+  "garchomp": false,
+  "gengar": false,
+  "gyarados": true,
+  "lapras": false,
+  "latios": true,
+  "lucario": false,
+  "magnezone": false,
+  "pikachu": false,
+  "salamence": true,
+  "sceptile": false,
+  "scizor": false,
+  "skarmory": true,
+  "snorlax": false,
+  "togekiss": true,
+  "toxapex": false,
+  "tyranitar": false,
+  "venusaur": false,
+  "weavile": false
+ }
+}
