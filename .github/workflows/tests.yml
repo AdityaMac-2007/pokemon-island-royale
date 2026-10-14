@@ -29,6 +29,11 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Install Python test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-test.txt
+
       - name: Install data-pipeline dependencies
         working-directory: data_pipeline/node
         run: npm ci
@@ -54,6 +59,16 @@ jobs:
           python -m unittest discover \
             -s gemini \
             -p "test_adapter.py" \
+            -v
+
+      - name: Run island viewer tests
+        env:
+          SDL_VIDEODRIVER: dummy
+          SDL_AUDIODRIVER: dummy
+        run: |
+          python -m unittest discover \
+            -s gemini \
+            -p "test_island_2d.py" \
             -v
 
       - name: Verify simulation reproducibility
