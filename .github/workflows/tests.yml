@@ -1,0 +1,45 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  combat-tests:
+    name: Combat engine tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.15"
+
+      - name: Show Python version
+        run: python --version
+
+      - name: Run combat test suite
+        env:
+          PYTHONPATH: Claude engine
+        run: |
+          python -m unittest discover \
+            -s "Claude engine/tests" \
+            -p "test_*.py" \
+            -v
+
+      - name: Verify simulation reproducibility
+        run: |
+          python run_simulation.py \
+            --roster data/gen9/engine/engine_roster.json \
+            --count 24 \
+            --seed 42 \
+            --verify-repro
