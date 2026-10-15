@@ -289,6 +289,8 @@ def build_run_parser():
                         help="explicitly permit filling the field with duplicate builds")
     parser.add_argument("--max-ticks", type=_positive_int, help="override the configured tick cap")
     parser.add_argument("--speed-tie-mode", choices=TIE_MODES, help="resolve exact speed ties")
+    parser.add_argument("--policy", choices=("legacy", "tactical_v1"), default="legacy",
+                        help="AI policy for every combatant (default: legacy)")
     parser.add_argument("--no-hit-log", action="store_true", help="omit individual hit events")
     parser.add_argument("--verify-repro", action="store_true", help="run twice and require identical digests")
     parser.add_argument("--validate-only", action="store_true", help="validate inputs without simulating")
@@ -371,31 +373,35 @@ def prepare_run(args):
 
 
 # --------------------------------------------------------------------------- execution
-def run_once(plan, eng):
+def run_once(plan, eng, policy="legacy"):
+    """Run one match with an explicit AI policy assigned before the first tick."""
     start = time.perf_counter()
     engine = eng.Engine(plan.cfg, plan.provider)
+    for combatant in engine.by_id:
+        combatant.ai_policy = policy
     result = engine.run()
     return engine, result, time.perf_counter() - start
 
 
-def output_dir_for(plan, base):
-    name = f"match_seed{plan.cfg.seed}_{plan.cfg.digest()[:8]}_{plan.fingerprint[:8]}"
+def output_dir_for(plan, base, policy="legacy"):
+    name = f"match_seed{plan.cfg.seed}_{plan.cfg.digest()[:8]}_{plan.fingerprint[:8]}_{policy}"
     return os.path.join(base, name)
 
 
 def execute(plan, args):
     eng = _import_engine()
-    engine, result, elapsed = run_once(plan, eng)
+    engine, result, elapsed = run_once(plan, eng, args.policy)
     base = os.path.abspath(os.path.expanduser(args.out)) if args.out else DEFAULT_OUT
     if os.path.exists(base) and not os.path.isdir(base):
         raise LauncherError(f"--out path exists and is not a directory: {base}")
-    outdir = output_dir_for(plan, base)
+    outdir = output_dir_for(plan, base, args.policy)
 
     try:
         engine.write_outputs(outdir)
         winner = engine.winner
         metadata = {
             "launcher_version": LAUNCHER_VERSION,
+            "ai_policy": args.policy,
             "argv": sys.argv[1:],
             "seed": plan.cfg.seed,
             "config_digest": plan.cfg.digest(),
@@ -417,7 +423,7 @@ def execute(plan, args):
 
     reproducible = None
     if args.verify_repro:
-        _, second, _ = run_once(plan, eng)
+        _, second, _ = run_once(plan, eng, args.policy)
         reproducible = second["digest"] == result["digest"]
         if not reproducible:
             print(

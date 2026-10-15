@@ -5,6 +5,7 @@ import math
 import os
 
 from . import ai
+from .abilities import AbilityTrigger, check_ability_immunity, get_ability_hook
 from .config import Config
 from .effects import FX_DRAWS, HANDLERS, IDX_PARA, FxContext
 from .data import select_roster
@@ -343,15 +344,26 @@ class Engine:
             if rolls[0] >= hit_chance(mv, cover):
                 self.emit(t, "move_miss", a=a.id, d=d.id, mv=mv.name, reason="accuracy")
                 return
+            if check_ability_immunity(d, mv):
+                self._trigger_absorb_ability(t, a, d, mv)
+                self.emit(t, "move_miss", a=a.id, d=d.id, mv=mv.name, reason="immune")
+                return
         self._run_effects(t, a, d, mv, "use", 0, fx)
+
+    def _trigger_absorb_ability(self, t, a, d, mv):
+        absorb_hook = get_ability_hook(getattr(d, "ability", None), AbilityTrigger.ON_ABSORB_HIT)
+        if absorb_hook is not None:
+            absorb_hook(self, t, a, d, mv)
 
     def _apply_hit(self, t, a, d, mv, dmg, info, rolls, fx):
         if not d.alive:
             return
         hp_before = d.hp
-        if dmg > 0 and d.ability == "sturdy" and d.hp == d.max_hp and dmg >= d.hp and not d.sturdy_used:
-            dmg, d.sturdy_used = d.hp - 1, True
-            info["sturdy"] = True
+        if info.get("absorb"):
+            self._trigger_absorb_ability(t, a, d, mv)
+        def_hook = get_ability_hook(getattr(d, "ability", None), AbilityTrigger.ON_HIT_DEFENSE)
+        if def_hook is not None:
+            dmg, _ = def_hook(self, t, a, d, mv, dmg, info)
         if dmg > 0:
             d.hp -= dmg
             d.dmg_taken += dmg

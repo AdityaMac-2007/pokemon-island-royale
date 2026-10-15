@@ -42,6 +42,7 @@ class Combatant:
     target: int | None = None
     mode: str = "wander"
     sturdy_used: bool = False
+    flash_fire_active: bool = False
     stages: dict = field(default_factory=lambda: {s: 0 for s in STAGE_STATS})
     protected_until: int = -1          # blocks moves aimed at this combatant while tick < protected_until
     protect_streak: int = 0
@@ -62,6 +63,8 @@ class Combatant:
         c = cls(i, b.species, tuple(b.types), dict(b.stats), [MOVES[m] for m in b.moves], b.ability, b.item, b.can_fly)
         c.max_hp = c.hp = b.stats["hp"]
         c.utility = [i for i, m in enumerate(c.moves) if m.category == "status"]
+        c.sturdy_used = False
+        c.flash_fire_active = False
         return c
 
     def eff_speed(self) -> int:

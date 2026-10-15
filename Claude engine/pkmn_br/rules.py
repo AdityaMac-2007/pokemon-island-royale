@@ -3,6 +3,14 @@ Gen 5+ damage formula). Contains NO battle-royale logic (zone, biomes, flight)."
 from __future__ import annotations
 from dataclasses import dataclass
 
+from .abilities import (
+    apply_atk_abilities,
+    apply_def_abilities,
+    apply_incoming_damage_abilities,
+    check_ability_immunity,
+    has_absorb_hook,
+)
+
 TYPES = ["normal", "fire", "water", "electric", "grass", "ice", "fighting", "poison", "ground",
          "flying", "psychic", "bug", "rock", "ghost", "dragon", "dark", "steel", "fairy"]
 
@@ -105,7 +113,7 @@ def _core(att, dfn, mv, weather, boost, rules: BattleRules, crit: float, roll: f
     te = type_mult(mv.type, dfn.types)
     if te == 0.0:
         return 0.0
-    if mv.type == "ground" and dfn.ability in GROUND_IMMUNE_ABILITIES:
+    if check_ability_immunity(dfn, mv):
         return 0.0
     phys = mv.category == "physical"
     ak, dk = ("atk", "def") if phys else ("spa", "spd")
@@ -125,8 +133,8 @@ def _core(att, dfn, mv, weather, boost, rules: BattleRules, crit: float, roll: f
         A = int(A * it["phys_mult"])
     if (not phys) and "spec_mult" in it:
         A = int(A * it["spec_mult"])
-    if PINCH_ABILITY.get(att.ability) == mv.type and att.hp * 3 <= att.max_hp:
-        A = int(A * 1.5)
+    A = apply_atk_abilities(att, dfn, mv, weather, A)
+    D, A = apply_def_abilities(att, dfn, mv, weather, D, A)
     base = (42 * mv.power * A // D) // 50 + 2           # level 100: floor(2*100/5)+2 = 42
     m = weather_mult(weather, mv.type) * boost
     m *= (rules.crit_mult if crit else 1.0)
@@ -134,6 +142,7 @@ def _core(att, dfn, mv, weather, boost, rules: BattleRules, crit: float, roll: f
     if mv.type in att.types:
         m *= rules.stab
     m *= te
+    m = apply_incoming_damage_abilities(att, dfn, mv, weather, m, te)
     m *= it.get("dmg_mult", 1.0)
     return base * m
 
@@ -153,10 +162,15 @@ def calc_damage(att, dfn, mv, rolls, weather, boost, cover, rules):
     # mechanics are untouched. The raw <= 0 guard below is kept for every other
     # non-positive outcome.
     te = type_mult(mv.type, dfn.types)
-    if te == 0.0 or (mv.type == "ground" and dfn.ability in GROUND_IMMUNE_ABILITIES):
+    is_ability_immune = check_ability_immunity(dfn, mv)
+    # Passive immunities (e.g. Levitate) apply before accuracy; reactive absorption/boost
+    # abilities (Water/Volt Absorb, Flash Fire) require the move to pass accuracy first.
+    if te == 0.0 or (is_ability_immune and not has_absorb_hook(dfn)):
         return 0, {"immune": True}
     if rolls[0] >= hit_chance(mv, cover):
         return 0, {"miss": True}
+    if is_ability_immune:
+        return 0, {"immune": True, "absorb": True}
     crit = 1.0 if rolls[1] < rules.crit_chance else 0.0
     roll = rules.roll_lo + (rules.roll_hi - rules.roll_lo) * rolls[2]
     raw = _core(att, dfn, mv, weather, boost, rules, crit, roll)

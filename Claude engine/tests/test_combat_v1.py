@@ -678,5 +678,57 @@ class Regression(unittest.TestCase):
             self.assertTrue(set(b.moves) <= legacy_names)
 
 
+    def test_sturdy_full_lifecycle_and_elimination(self):
+        """Sturdy saves a full-HP defender from one lethal hit, but not the next."""
+        eng, attacker, defender = duel(
+            ["close_combat"],
+            ["hyper_voice"],
+            a_stats={**STATS, "atk": 999},
+            b_stats={**STATS, "def": 50, "hp": 100},
+        )
+
+        defender.ability = "sturdy"
+        defender.sturdy_used = False
+
+        self.assertEqual(defender.hp, defender.max_hp)
+
+        # First lethal hit: Sturdy must leave the defender at exactly 1 HP.
+        fire(eng, attacker, defender, "close_combat", t=0)
+
+        self.assertTrue(defender.alive, "Sturdy defender should survive the first hit")
+        self.assertEqual(defender.hp, 1)
+        self.assertTrue(defender.sturdy_used)
+        self.assertEqual(
+            evs(eng, "elim"),
+            [],
+            "The defender must not be eliminated by the first hit",
+        )
+
+        # Confirm the real engine recorded Sturdy activation.
+        sturdy_events = [
+            event
+            for kind in ("hit", "damage")
+            for event in evs(eng, kind)
+            if event.get("sturdy") is True
+        ]
+        self.assertTrue(
+            sturdy_events,
+            "Expected a hit or damage event marking Sturdy activation",
+        )
+
+        # Second lethal hit: Sturdy has already been consumed.
+        fire(eng, attacker, defender, "close_combat", t=1)
+
+        self.assertFalse(defender.alive)
+        self.assertEqual(defender.hp, 0)
+
+        eliminations = evs(eng, "elim")
+        self.assertEqual(len(eliminations), 1)
+        self.assertEqual(eliminations[0]["id"], defender.id)
+        self.assertEqual(eliminations[0]["cause"], "move")
+        self.assertEqual(eliminations[0]["killer"], attacker.id)
+
+
+
 if __name__ == "__main__":
     unittest.main()

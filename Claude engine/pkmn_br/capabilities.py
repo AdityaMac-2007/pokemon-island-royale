@@ -2,11 +2,10 @@
 Importers/pipelines/viewers should consult this instead of assuming a move or ability works."""
 from __future__ import annotations
 
+from .abilities import get_active_abilities
 from .data import MOVES
 from .effects import HANDLERS, VALIDATED_STATUSES
-from .rules import GROUND_IMMUNE_ABILITIES, ITEMS, PINCH_ABILITY, STAGE_STATS
-
-INLINE_ABILITIES = {"sturdy"}   # applied inline in Engine._apply_hit
+from .rules import ITEMS, STAGE_STATS
 
 
 def engine_capabilities() -> dict:
@@ -19,7 +18,7 @@ def engine_capabilities() -> dict:
         "moves": {n: {"category": m.category, "priority": m.priority, "effects": [e.kind for e in m.effects]}
                   for n, m in sorted(MOVES.items())},
         "moves_with_effects": sorted(n for n, m in MOVES.items() if m.effects),
-        "abilities_with_effect": sorted(set(PINCH_ABILITY) | GROUND_IMMUNE_ABILITIES | INLINE_ABILITIES),
+        "abilities_with_effect": get_active_abilities(),
         "items_with_effect": sorted(ITEMS),
         "statuses": ["burn", "poison", "para"],
         "note": "A move/ability/item absent from these lists has NO engine effect, regardless of imported data.",
