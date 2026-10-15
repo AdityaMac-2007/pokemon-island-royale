@@ -5,7 +5,14 @@ import math
 import os
 
 from . import ai
-from .abilities import AbilityTrigger, check_ability_immunity, get_ability_hook
+from .abilities import (
+    ignores_sandstorm_damage,
+    AbilityTrigger,
+    apply_stage_change_abilities,
+    check_ability_immunity,
+    check_status_immunity,
+    get_ability_hook,
+)
 from .config import Config
 from .effects import FX_DRAWS, HANDLERS, IDX_PARA, FxContext
 from .data import select_roster
@@ -52,7 +59,10 @@ class Engine:
             for _ in range(40):
                 a = rng.random() * 2 * math.pi
                 d = isl.radius * 0.92 * math.sqrt(rng.random())
-                x, y = isl.cx + d * math.cos(a), isl.cy + d * math.sin(a)
+                if isl.shape == "circle":
+                    x, y = isl.cx + d * math.cos(a), isl.cy + d * math.sin(a)
+                else:
+                    x, y = isl.random_land_point(rng, margin=0.4)
                 if not grid.query(x, y, 2.5):
                     break
             grid.insert(i, x, y)
@@ -80,6 +90,9 @@ class Engine:
             self.log.emit(t, ev, **kw)
 
     def change_stage(self, t, c, stat, delta, src, mv):
+        delta = apply_stage_change_abilities(self, t, c, stat, delta, src, mv)
+        if delta == 0:
+            return 0
         cur = c.stages[stat]
         new = max(-6, min(6, cur + delta))
         c.stages[stat] = new
@@ -95,6 +108,10 @@ class Engine:
 
     def try_status(self, t, src_id, d, status):
         if d.status is not None or (set(d.types) & STATUS_IMMUNE[status]):
+            return False
+        if check_status_immunity(d, status):
+            self.emit(t, "ability_trigger", id=d.id, ability=d.ability,
+                      effect="prevent_status", status=status, src=src_id)
             return False
         d.status = status
         self.log.emit(t, "status", id=d.id, status=status, src=src_id)
@@ -219,11 +236,14 @@ class Engine:
 
     def _clamp_to_island(self, c):
         isl = self.island
-        dx, dy = c.x - isl.cx, c.y - isl.cy
-        n = math.sqrt(dx * dx + dy * dy)
-        lim = isl.radius - 0.3
-        if n > lim:
-            c.x, c.y = isl.cx + dx / n * lim, isl.cy + dy / n * lim
+        if isl.shape == "circle":
+            dx, dy = c.x - isl.cx, c.y - isl.cy
+            n = math.sqrt(dx * dx + dy * dy)
+            lim = isl.radius - 0.3
+            if n > lim:
+                c.x, c.y = isl.cx + dx / n * lim, isl.cy + dy / n * lim
+        else:
+            c.x, c.y = isl.project_to_land(c.x, c.y, margin=0.3)
 
     def _separate(self):
         """Single deterministic pass pushing overlapping same-layer bodies apart."""
@@ -341,7 +361,7 @@ class Engine:
                 self.emit(t, "move_blocked", a=a.id, d=d.id, mv=mv.name, by="protect")
                 return
             cover = BIOMES[d.biome]["cover"] if d.alt == 0 else 0.0
-            if rolls[0] >= hit_chance(mv, cover):
+            if rolls[0] >= hit_chance(mv, cover, self.weather, a, d):
                 self.emit(t, "move_miss", a=a.id, d=d.id, mv=mv.name, reason="accuracy")
                 return
             if check_ability_immunity(d, mv):
@@ -372,8 +392,7 @@ class Engine:
             del d.recent[:-5]
             if (mv.status and d.status is None and rolls[3] < mv.status_chance
                     and not (set(d.types) & STATUS_IMMUNE[mv.status])):
-                d.status = mv.status
-                self.log.emit(t, "status", id=d.id, status=mv.status, src=a.id)
+                self.try_status(t, a.id, d, mv.status)
         if self.cfg.log_hits:
             self.log.emit(t, "hit", a=a.id, d=d.id, mv=mv.name, dmg=dmg, hp=max(0, d.hp), **{k: v for k, v in info.items() if v})
         dealt = min(dmg, hp_before) if dmg > 0 else 0
@@ -439,7 +458,8 @@ class Engine:
                 dmg, why = 0, None
                 if c.status in ("burn", "poison"):
                     dmg += max(1, c.max_hp // 16); why = c.status
-                if self.weather == "sand" and not (set(c.types) & {"rock", "ground", "steel"}):
+                if (self.weather == "sand" and not ignores_sandstorm_damage(c)
+                        and not (set(c.types) & {"rock", "ground", "steel"})):
                     dmg += max(1, c.max_hp // 16); why = why or "sandstorm"
                 if self.weather == "snow" and "ice" not in c.types:
                     dmg += max(1, c.max_hp // 32); why = why or "snow"

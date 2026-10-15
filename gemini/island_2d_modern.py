@@ -394,6 +394,29 @@ class IslandViewer:
             self.pan_x = -(c.x - self.engine.island.cx) * s
             self.pan_y = -(c.y - self.engine.island.cy) * s
 
+    def _zoom_at(self, point: tuple[int, int], factor: float) -> None:
+        """Zoom toward a screen point, preserving the world point under the cursor.
+
+        While following a selected Pokémon, zoom remains centred on that Pokémon.
+        Zoom range is deliberately wide enough to inspect individual sprites.
+        """
+        rect = self.map_rect()
+        px, py = point
+        old_scale = self.world_scale()
+        if old_scale <= 0:
+            return
+        island = self.engine.island
+        if self.follow_selected:
+            self.zoom = clamp(self.zoom * factor, 0.45, 6.0)
+            self._center_on_selected()
+            return
+        world_x = island.cx + (px - rect.centerx - self.pan_x) / old_scale
+        world_y = island.cy + (py - rect.centery - self.pan_y) / old_scale
+        self.zoom = clamp(self.zoom * factor, 0.45, 6.0)
+        new_scale = self.world_scale()
+        self.pan_x = px - rect.centerx - (world_x - island.cx) * new_scale
+        self.pan_y = py - rect.centery - (world_y - island.cy) * new_scale
+
     def _events_to_visuals(self) -> None:
         events = self.engine.log.events
         if self.events_seen > len(events):
@@ -506,7 +529,16 @@ class IslandViewer:
                     self.speed_index = event.key - pygame.K_1
                 elif event.key == pygame.K_f:
                     self.follow_selected = not self.follow_selected
-                    if self.follow_selected: self._center_on_selected()
+                    if self.follow_selected:
+                        self.zoom = clamp(max(self.zoom, 2.0), 0.45, 6.0)
+                        self._center_on_selected()
+                elif event.key in (pygame.K_EQUALS, pygame.K_PLUS, pygame.K_KP_PLUS):
+                    self._zoom_at(self.map_rect().center, 1.20)
+                elif event.key in (pygame.K_MINUS, pygame.K_KP_MINUS):
+                    self._zoom_at(self.map_rect().center, 1.0 / 1.20)
+                elif event.key in (pygame.K_0, pygame.K_HOME):
+                    self.zoom, self.pan_x, self.pan_y = 1.0, 0.0, 0.0
+                    self.follow_selected = False
                 elif event.key == pygame.K_TAB:
                     living = self._living()
                     if living:
@@ -522,8 +554,11 @@ class IslandViewer:
                 elif event.key == pygame.K_h:
                     self.help_visible = not self.help_visible
             elif event.type == pygame.MOUSEWHEEL:
-                self.zoom = clamp(self.zoom * (1.12 ** event.y), 0.60, 2.8)
-                if self.follow_selected: self._center_on_selected()
+                point = getattr(event, "pos", None)
+                if point is None:
+                    point = pygame.mouse.get_pos()
+                if self.map_rect().collidepoint(point):
+                    self._zoom_at(point, 1.15 ** event.y)
             elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 self._select_at(event.pos)
 
@@ -621,13 +656,15 @@ class IslandViewer:
             pygame.draw.arc(self.screen, c, (sx - half, sy - 3, half * 2, 7), math.pi * 0.08, math.pi * 0.92, 1)
 
         isl = self.engine.island
-        center = self.world_to_screen(isl.cx, isl.cy)
-        radius = self.world_radius(isl.radius)
-        # Island drop shadow, dark rocky lip, beach and grassy underlay.
-        pygame.draw.circle(self.screen, (6, 18, 27), (center[0] + 7, center[1] + 11), radius + self.world_radius(2.1))
-        pygame.draw.circle(self.screen, (28, 64, 64), center, radius + self.world_radius(2.1))
-        pygame.draw.circle(self.screen, (210, 187, 130), center, radius + self.world_radius(1.45))
-        pygame.draw.circle(self.screen, (74, 137, 99), center, radius + self.world_radius(0.22))
+        # Polygon rings are derived from the same seeded coastline as gameplay.
+        coast = [self.world_to_screen(x, y) for x, y in isl.coastline_points(segments=180, scale=1.0)]
+        beach = [self.world_to_screen(x, y) for x, y in isl.coastline_points(segments=180, scale=1.035)]
+        rock = [self.world_to_screen(x, y) for x, y in isl.coastline_points(segments=180, scale=1.065)]
+        shadow = [(x + 7, y + 11) for x, y in rock]
+        pygame.draw.polygon(self.screen, (6, 18, 27), shadow)
+        pygame.draw.polygon(self.screen, (28, 64, 64), rock)
+        pygame.draw.polygon(self.screen, (210, 187, 130), beach)
+        pygame.draw.polygon(self.screen, (74, 137, 99), coast)
 
         scale = self.world_scale()
         cell = isl.CELL
@@ -635,10 +672,10 @@ class IslandViewer:
             y0, y1 = gy * cell, (gy + 1) * cell
             for gx, biome in enumerate(row):
                 x0, x1 = gx * cell, (gx + 1) * cell
-                # Entire tile must stay inside the circular island; the underlying
-                # green disc naturally softens the blocky boundary at the shore.
+                # Every tile corner must remain inside the shared irregular coastline.
+                # This keeps terrain rendering aligned with the simulation boundary.
                 corners = ((x0, y0), (x1, y0), (x0, y1), (x1, y1))
-                if any((x - isl.cx) ** 2 + (y - isl.cy) ** 2 > (isl.radius - 0.05) ** 2 for x, y in corners):
+                if any(not isl.point_is_land(x, y) for x, y in corners):
                     continue
                 sx0, sy0 = self.world_to_screen(x0, y0)
                 sx1, sy1 = self.world_to_screen(x1, y1)
@@ -651,14 +688,14 @@ class IslandViewer:
                 pygame.draw.rect(self.screen, col, tile, border_radius=max(0, min(5, tile.width // 7)))
                 self._draw_tile_motif(tile, biome, d)
 
-        # Coastal foam speckles provide a little movement around the edge.
-        for i in range(38):
-            angle = i * math.tau / 38 + self.sim_time * 0.018
-            rr = radius + self.world_radius(1.2 + 0.12 * math.sin(i + self.sim_time))
-            xx = round(center[0] + math.cos(angle) * rr)
-            yy = round(center[1] + math.sin(angle) * rr)
+        # Coastal foam speckles sample the actual generated shoreline, not a circle.
+        foam_points = isl.coastline_points(segments=38, scale=1.012)
+        for i, world_point in enumerate(foam_points):
+            xx, yy = self.world_to_screen(*world_point)
             if r.collidepoint(xx, yy):
-                pygame.draw.circle(self.screen, (222, 237, 216), (xx, yy), max(1, round(scale * 0.06)))
+                wobble = 0 if (i + int(self.sim_time * 3)) % 3 else 1
+                pygame.draw.circle(self.screen, (222, 237, 216), (xx, yy),
+                                   max(1, round(scale * 0.06)) + wobble)
         self.screen.set_clip(old_clip)
 
     def _draw_tile_motif(self, rect: pygame.Rect, biome: str, deco: dict[str, Any]) -> None:
@@ -920,7 +957,15 @@ class IslandViewer:
         y += 24
         type_line = " / ".join(str(t).upper() for t in c.types) or "UNKNOWN"
         self._text(type_line, inner_x, y, "tiny", ccol)
-        y += 21
+        y += 18
+        ability_name = str(getattr(c, "ability", None) or "None").replace("_", " ").title()
+        self._text(f"ABILITY  {ability_name}"[:32], inner_x, y, "tiny", UI["gold"])
+        y += 16
+        biome_name = str(getattr(c, "biome", "unknown")).replace("_", " ").title()
+        self._text(f"BIOME  {biome_name}"[:32], inner_x, y, "tiny", UI["muted"])
+        y += 16
+        self._text(f"POS  {c.x:.1f}, {c.y:.1f}  ALT {c.alt}", inner_x, y, "tiny", UI["muted"])
+        y += 18
         status = "AIRBORNE" if c.alt else "GROUNDED"
         if c.status: status += f" · {str(c.status).upper()}"
         self._text(status, inner_x, y, "small", UI["blue"] if c.alt else UI["muted"])
@@ -987,6 +1032,9 @@ class IslandViewer:
             (".", "Advance exactly one simulation tick while paused"),
             ("1–4", "Change simulation speed"),
             ("WASD / ARROWS", "Pan the camera around the island"),
+            ("MOUSE WHEEL", "Zoom at cursor (0.45x to 6x)"),
+            ("F / TAB", "Focus-follow / select next living Pokémon"),
+            ("+ / - / 0", "Zoom in / out / reset full-island view"),
             ("MOUSE WHEEL", "Zoom in / out"),
             ("CLICK POKÉMON", "Inspect a combatant in the right panel"),
             ("F / TAB", "Follow selected / select next survivor"),

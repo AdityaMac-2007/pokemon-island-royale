@@ -622,7 +622,9 @@ class Regression(unittest.TestCase):
             golden = json.load(f)
         self.assertEqual(len(golden), 11)
         for g in golden:
-            e = Engine(Config(**g["cfg"]))
+            legacy_cfg = dict(g["cfg"])
+            legacy_cfg["island_shape"] = "circle"
+            e = Engine(Config(**legacy_cfg))
             r = e.run()
             tag = str(g["cfg"])
             self.assertEqual(r["winner"], g["winner"], tag)

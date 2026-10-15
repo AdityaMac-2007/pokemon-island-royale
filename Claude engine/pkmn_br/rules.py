@@ -5,10 +5,12 @@ from dataclasses import dataclass
 
 from .abilities import (
     apply_atk_abilities,
+    apply_hit_chance_abilities,
     apply_def_abilities,
     apply_incoming_damage_abilities,
     check_ability_immunity,
     has_absorb_hook,
+    ignores_burn_atk_drop,
 )
 
 TYPES = ["normal", "fire", "water", "electric", "grass", "ice", "fighting", "poison", "ground",
@@ -126,7 +128,7 @@ def _core(att, dfn, mv, weather, boost, rules: BattleRules, crit: float, roll: f
         A = apply_stage(A, sa)
     if sd:
         D = apply_stage(D, sd)
-    if phys and att.status == "burn":
+    if phys and att.status == "burn" and not ignores_burn_atk_drop(att):
         A = A // 2
     it = ITEMS.get(att.item or "", {})
     if phys and "phys_mult" in it:
@@ -147,11 +149,18 @@ def _core(att, dfn, mv, weather, boost, rules: BattleRules, crit: float, roll: f
     return base * m
 
 
-def hit_chance(mv, cover: float) -> float:
+def hit_chance(mv, cover: float, weather: str = "", att=None, dfn=None) -> float:
+    """Calculate hit probability, including cover and defender ability hooks.
+
+    Optional context preserves compatibility with existing two-argument callers.
+    """
     acc = mv.accuracy / 100.0
     if mv.reach == "ranged":
         acc *= (1.0 - 0.5 * cover)                       # cover from the defender's biome
-    return acc
+    if dfn is None:
+        return acc
+    acc = apply_hit_chance_abilities(att, dfn, mv, weather, acc)
+    return max(0.0, min(1.0, acc))
 
 
 def calc_damage(att, dfn, mv, rolls, weather, boost, cover, rules):
@@ -167,7 +176,7 @@ def calc_damage(att, dfn, mv, rolls, weather, boost, cover, rules):
     # abilities (Water/Volt Absorb, Flash Fire) require the move to pass accuracy first.
     if te == 0.0 or (is_ability_immune and not has_absorb_hook(dfn)):
         return 0, {"immune": True}
-    if rolls[0] >= hit_chance(mv, cover):
+    if rolls[0] >= hit_chance(mv, cover, weather, att, dfn):
         return 0, {"miss": True}
     if is_ability_immune:
         return 0, {"immune": True, "absorb": True}
@@ -185,4 +194,4 @@ def expected_damage(att, dfn, mv, weather, boost, cover, rules) -> float:
     avg_roll = (rules.roll_lo + rules.roll_hi) / 2
     raw = _core(att, dfn, mv, weather, boost, rules, 0.0, avg_roll)
     raw *= (1 + (rules.crit_mult - 1) * rules.crit_chance)
-    return raw * hit_chance(mv, cover)
+    return raw * hit_chance(mv, cover, weather, att, dfn)

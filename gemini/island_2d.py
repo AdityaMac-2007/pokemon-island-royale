@@ -423,10 +423,9 @@ class IslandViewer:
         isl = self.engine.island
         cam = self.camera
 
-        # Island base circular landmass
-        center_s = cam.world_to_screen(isl.cx, isl.cy)
-        rad_s = int(isl.radius * cam.zoom)
-        pygame.draw.circle(surf, (110, 165, 80), center_s, rad_s)
+        # Render the same deterministic coastline used by gameplay.
+        coast = [cam.world_to_screen(x, y) for x, y in isl.coastline_points()]
+        pygame.draw.polygon(surf, (110, 165, 80), coast)
 
         # Biome grid cells
         cell_size_s = math.ceil(isl.CELL * cam.zoom)
@@ -436,13 +435,15 @@ class IslandViewer:
                 wy = r * isl.CELL
                 # Distance of cell center to island center
                 dist_sq = (wx + isl.CELL / 2.0 - isl.cx) ** 2 + (wy + isl.CELL / 2.0 - isl.cy) ** 2
-                if dist_sq <= (isl.radius + 0.5) ** 2:
+                corners = ((wx, wy), (wx + isl.CELL, wy), (wx, wy + isl.CELL),
+                           (wx + isl.CELL, wy + isl.CELL))
+                if all(isl.point_is_land(px, py) for px, py in corners):
                     sx, sy = cam.world_to_screen(wx, wy)
                     color = BIOME_COLORS.get(biome, (100, 160, 80))
                     pygame.draw.rect(surf, color, (sx, sy, cell_size_s, cell_size_s))
 
-        # Circular island beach edge
-        pygame.draw.circle(surf, BIOME_COLORS["beach"], center_s, rad_s, width=max(2, int(cam.zoom * 0.4)))
+        # Follow the exact generated coastline for the beach edge.
+        pygame.draw.lines(surf, BIOME_COLORS["beach"], True, coast, width=max(2, int(cam.zoom * 0.4)))
 
     def _render_berries(self, surf: pygame.Surface):
         cam = self.camera

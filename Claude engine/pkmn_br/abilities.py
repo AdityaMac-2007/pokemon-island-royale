@@ -16,6 +16,9 @@ class AbilityTrigger:
     CHECK_IMMUNITY = "check_immunity"  # (dfn, mv) -> bool (True if immune)
     ON_ABSORB_HIT = "on_absorb_hit"    # (eng, t, att, dfn, mv) -> None (mutates state/heals on actual hit)
     ON_HIT_DEFENSE = "on_hit_defense"  # (eng, t, att, dfn, mv, raw_dmg, info) -> (modified_dmg, bool)
+    CHECK_STATUS_IMMUNITY = "check_status_immunity"    # (dfn, status) -> bool (True if status prevented)
+    MODIFY_STAGE_CHANGE = "modify_stage_change"        # (eng, t, tgt, stat, delta, src_id, mv_name) -> int
+    MODIFY_HIT_CHANCE = "modify_hit_chance"          # (att, dfn, mv, weather, accuracy) -> float
 
 
 # Canonical set of triggers verified to have real, active call sites in the engine.
@@ -27,6 +30,9 @@ CONNECTED_TRIGGERS: frozenset[str] = frozenset({
     AbilityTrigger.CHECK_IMMUNITY,
     AbilityTrigger.ON_ABSORB_HIT,
     AbilityTrigger.ON_HIT_DEFENSE,
+    AbilityTrigger.CHECK_STATUS_IMMUNITY,
+    AbilityTrigger.MODIFY_STAGE_CHANGE,
+    AbilityTrigger.MODIFY_HIT_CHANCE,
 })
 
 
@@ -211,6 +217,153 @@ for _name in ("filter", "solid_rock"):
 
 
 # ---------------------------------------------------------------------------
+# Stage 3 Functional Abilities:
+# A. Status Immunity & Status-Triggered (limber, immunity, water_veil, purifying_salt, guts, marvel_scale)
+# B. Stat-Stage Manipulation (clear_body, white_smoke, contrary, simple)
+# C. High-Value Offensive Multipliers (huge_power, pure_power)
+# ---------------------------------------------------------------------------
+
+def _status_immunity_hook(blocked_statuses: frozenset[str]):
+    def hook(dfn, status: str) -> bool:
+        return status in blocked_statuses
+    return hook
+
+
+register_ability(AbilitySpec(
+    name="limber",
+    description="Prevents paralysis.",
+    hooks={AbilityTrigger.CHECK_STATUS_IMMUNITY: _status_immunity_hook(frozenset({"para"}))}
+))
+
+register_ability(AbilitySpec(
+    name="immunity",
+    description="Prevents poisoning.",
+    hooks={AbilityTrigger.CHECK_STATUS_IMMUNITY: _status_immunity_hook(frozenset({"poison"}))}
+))
+
+register_ability(AbilitySpec(
+    name="water_veil",
+    description="Prevents burns.",
+    hooks={AbilityTrigger.CHECK_STATUS_IMMUNITY: _status_immunity_hook(frozenset({"burn"}))}
+))
+
+
+def _purifying_salt_incoming_damage_hook(att, dfn, mv, weather, m: float, te: float) -> float:
+    if mv.type == "ghost":
+        return m * 0.5
+    return m
+
+
+register_ability(AbilitySpec(
+    name="purifying_salt",
+    description="Prevents all status conditions and reduces incoming Ghost-type damage by 50%.",
+    hooks={
+        AbilityTrigger.CHECK_STATUS_IMMUNITY: _status_immunity_hook(frozenset({"burn", "poison", "para"})),
+        AbilityTrigger.MODIFY_INCOMING_DAMAGE: _purifying_salt_incoming_damage_hook,
+    }
+))
+
+
+def _guts_atk_hook(att, dfn, mv, weather, A: int) -> int:
+    if mv.category == "physical" and getattr(att, "status", None) is not None:
+        return int(A * 1.5)
+    return A
+
+
+register_ability(AbilitySpec(
+    name="guts",
+    description="Boosts physical Attack by 1.5x when statused and ignores burn's physical attack halving.",
+    hooks={AbilityTrigger.MODIFY_ATK: _guts_atk_hook}
+))
+
+
+def _marvel_scale_def_hook(att, dfn, mv, weather, D: int, A: int) -> tuple[int, int]:
+    if mv.category == "physical" and getattr(dfn, "status", None) is not None:
+        return int(D * 1.5), A
+    return D, A
+
+
+register_ability(AbilitySpec(
+    name="marvel_scale",
+    description="Boosts physical Defense by 1.5x when statused.",
+    hooks={AbilityTrigger.MODIFY_DEF: _marvel_scale_def_hook}
+))
+
+
+def _prevent_opponent_stat_drop_hook(ability_name: str):
+    def hook(eng, t: int, tgt, stat: str, delta: int, src_id: int, mv_name: str) -> int:
+        if delta < 0 and src_id != getattr(tgt, "id", None):
+            if eng is not None:
+                eng.emit(t, "ability_trigger", id=tgt.id, ability=ability_name,
+                         effect="prevent_stat_drop", stat=stat, src=src_id, mv=mv_name)
+            return 0
+        return delta
+    return hook
+
+
+for _cb_name in ("clear_body", "white_smoke"):
+    register_ability(AbilitySpec(
+        name=_cb_name,
+        description="Prevents opponent-caused stat stage reductions.",
+        hooks={AbilityTrigger.MODIFY_STAGE_CHANGE: _prevent_opponent_stat_drop_hook(_cb_name)}
+    ))
+
+
+def _contrary_stage_hook(eng, t: int, tgt, stat: str, delta: int, src_id: int, mv_name: str) -> int:
+    return -delta
+
+
+register_ability(AbilitySpec(
+    name="contrary",
+    description="Inverts all stat-stage changes.",
+    hooks={AbilityTrigger.MODIFY_STAGE_CHANGE: _contrary_stage_hook}
+))
+
+
+def _simple_stage_hook(eng, t: int, tgt, stat: str, delta: int, src_id: int, mv_name: str) -> int:
+    return delta * 2
+
+
+register_ability(AbilitySpec(
+    name="simple",
+    description="Doubles all stat-stage changes before stage clamping.",
+    hooks={AbilityTrigger.MODIFY_STAGE_CHANGE: _simple_stage_hook}
+))
+
+
+def _double_phys_atk_hook(att, dfn, mv, weather, A: int) -> int:
+    if mv.category == "physical":
+        return A * 2
+    return A
+
+
+for _hp_name in ("huge_power", "pure_power"):
+    register_ability(AbilitySpec(
+        name=_hp_name,
+        description="Doubles physical Attack stat.",
+        hooks={AbilityTrigger.MODIFY_ATK: _double_phys_atk_hook}
+    ))
+
+
+# ---------------------------------------------------------------------------
+# Stage 4: Sand Veil
+# ---------------------------------------------------------------------------
+
+def _sand_veil_hit_chance_hook(att, dfn, mv, weather: str, accuracy: float) -> float:
+    """Sand Veil lowers opposing move accuracy to 0.8x during sandstorm."""
+    if weather == "sand":
+        return accuracy * 0.8
+    return accuracy
+
+
+register_ability(AbilitySpec(
+    name="sand_veil",
+    description="Reduces opposing move accuracy to 0.8x during sandstorm and prevents sandstorm damage.",
+    hooks={AbilityTrigger.MODIFY_HIT_CHANCE: _sand_veil_hit_chance_hook},
+))
+
+
+# ---------------------------------------------------------------------------
 # Dispatch Helpers
 # ---------------------------------------------------------------------------
 
@@ -253,6 +406,42 @@ def check_ability_immunity(dfn, mv) -> bool:
 
 def has_absorb_hook(dfn) -> bool:
     return get_ability_hook(getattr(dfn, "ability", None), AbilityTrigger.ON_ABSORB_HIT) is not None
+
+
+def ignores_burn_atk_drop(att) -> bool:
+    """Return True if attacker's ability ignores the physical attack halving from burn."""
+    return getattr(att, "ability", None) == "guts"
+
+
+def check_status_immunity(dfn, status: str) -> bool:
+    """Pure predicate: return True if dfn's ability prevents the given status condition."""
+    if not status:
+        return False
+    hook = get_ability_hook(getattr(dfn, "ability", None), AbilityTrigger.CHECK_STATUS_IMMUNITY)
+    if hook is not None:
+        return bool(hook(dfn, status))
+    return False
+
+
+def apply_stage_change_abilities(eng, t: int, tgt, stat: str, delta: int, src_id: int, mv_name: str) -> int:
+    """Apply target's stat-stage modification hook (Clear Body, White Smoke, Contrary, Simple)."""
+    hook = get_ability_hook(getattr(tgt, "ability", None), AbilityTrigger.MODIFY_STAGE_CHANGE)
+    if hook is not None:
+        return int(hook(eng, t, tgt, stat, delta, src_id, mv_name))
+    return delta
+
+
+def apply_hit_chance_abilities(att, dfn, mv, weather: str, accuracy: float) -> float:
+    """Apply defender accuracy/evasion abilities to the base hit probability."""
+    hook = get_ability_hook(getattr(dfn, "ability", None), AbilityTrigger.MODIFY_HIT_CHANCE)
+    if hook is not None:
+        accuracy = float(hook(att, dfn, mv, weather, accuracy))
+    return max(0.0, min(1.0, accuracy))
+
+
+def ignores_sandstorm_damage(c) -> bool:
+    """Return True when the combatant's ability prevents sandstorm chip damage."""
+    return getattr(c, "ability", None) == "sand_veil"
 
 
 def get_active_abilities() -> list[str]:

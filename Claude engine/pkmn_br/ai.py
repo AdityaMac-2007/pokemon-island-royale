@@ -9,6 +9,7 @@ altitude legality, biome cover, zone state, telegraphed hazards and per-Pokemon 
 from __future__ import annotations
 import math
 
+from .abilities import check_status_immunity
 from .island import BIOMES, boost_for
 from .rules import ITEMS, PINCH_ABILITY, STATUS_IMMUNE, expected_damage, hit_chance, type_mult
 from .state import Intent
@@ -333,7 +334,8 @@ def _utility_choice(eng, c, mode, tgt, threats, hp_frac):
                 if e.kind == "stat_stage" and e.delta < 0 and o.stages[e.stat] > -2:
                     return (o.id, mi)
                 if (e.kind == "status" and o.status is None and p < 0.9
-                        and type_mult(mv.type, o.types) > 0 and not (set(o.types) & STATUS_IMMUNE[e.status])):
+                        and type_mult(mv.type, o.types) > 0 and not (set(o.types) & STATUS_IMMUNE[e.status])
+                        and not check_status_immunity(o, e.status)):
                     return (o.id, mi)
     if mode in ("hunt", "wander"):                                # 4. self-boost while nobody can hit us soon
         calm = not any(d <= cfg.ranged_range + 3.0 for (_, _, d) in threats)
@@ -410,7 +412,7 @@ def best_move_tactical(eng, a, d):
 
         s = e
         kills = e >= d.hp and not (_sturdy_intact(d) and d.max_hp > 1)
-        acc = hit_chance(mv, cover)
+        acc = hit_chance(mv, cover, eng.weather, a, d)
         if kills:
             s = max(s, d.hp * 1.35) * (0.5 + 0.5 * acc)
             if mv.priority > 0:
@@ -441,7 +443,7 @@ def best_move_tactical(eng, a, d):
 
         status = getattr(mv, "status", None)
         if status and d.status is None and not kills:
-            if not (set(d.types) & STATUS_IMMUNE.get(status, set())):
+            if not (set(d.types) & STATUS_IMMUNE.get(status, set())) and not check_status_immunity(d, status):
                 s += e * 0.15 * getattr(mv, "status_chance", 0.0)
 
         if item_recoil and not kills and a.hp <= max(1, int(a.max_hp * item_recoil)):
@@ -881,7 +883,8 @@ def _utility_choice_tactical(eng, c, t, mode, target, threats, hp_frac, outside=
                         return (opponent.id, mi)
                     if (effect.kind == "status" and opponent.status is None and p < 0.9
                             and type_mult(move.type, opponent.types) > 0
-                            and not (set(opponent.types) & STATUS_IMMUNE.get(effect.status, set()))):
+                            and not (set(opponent.types) & STATUS_IMMUNE.get(effect.status, set()))
+                            and not check_status_immunity(opponent, effect.status)):
                         return (opponent.id, mi)
 
     if mode in ("hunt", "wander") and not outside and hp_frac >= 0.55:

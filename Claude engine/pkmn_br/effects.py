@@ -12,6 +12,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from .abilities import check_status_immunity
 from .rules import STAGE_STATS, STATUS_IMMUNE, type_mult
 
 FX_DRAWS = 6          # seeded draws per ready attacker per tick, from stream(seed, "fx", tick)
@@ -71,7 +72,12 @@ def _h_status(ctx, e):
         return "already_statused"
     if set(tgt.types) & STATUS_IMMUNE[e.status]:
         return "immune_type"                  # e.g. Electric types cannot be paralysed
-    ctx.engine.try_status(ctx.t, ctx.att.id, tgt, e.status)
+    if check_status_immunity(tgt, e.status):
+        if e.when == "use":
+            ctx.engine.emit(ctx.t, "move_blocked", a=ctx.att.id, d=tgt.id, mv=ctx.mv.name, by="immune_ability")
+        return "immune_ability"
+    if not ctx.engine.try_status(ctx.t, ctx.att.id, tgt, e.status):
+        return "status_blocked"
     return None
 
 

@@ -74,6 +74,7 @@ class Config:
     replay_every: int = 5
     zone: ZoneConfig = field(default_factory=ZoneConfig)
     chaos: ChaosConfig = field(default_factory=ChaosConfig)
+    island_shape: str = "irregular"  # "irregular" | "circle"
 
     def resolved_size(self) -> float:
         return self.arena_size if self.arena_size > 0 else max(48.0, 12.0 * math.sqrt(self.n_combatants))
@@ -84,6 +85,9 @@ class Config:
     @classmethod
     def from_dict(cls, d: dict) -> "Config":
         d = dict(d)
+        # Backward compatibility: historical serialized configs predate island_shape
+        # and must retain the original circular arena geometry.
+        d.setdefault("island_shape", "circle")
         z = ZoneConfig(**d.pop("zone", {}))
         c = ChaosConfig(**d.pop("chaos", {}))
         return cls(zone=z, chaos=c, **d)

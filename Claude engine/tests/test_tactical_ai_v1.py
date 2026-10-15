@@ -18,6 +18,7 @@ from pkmn_br.log import legacy_digest
 def _verify_golden_entry(test_case: unittest.TestCase, entry: dict) -> None:
     """Check every output stored by the project's original golden fixture."""
     cfg = Config.from_dict(entry["cfg"])
+    cfg.island_shape = "circle"  # golden fixture records pre-irregular geometry
     engine = Engine(cfg)
     result = engine.run()
 

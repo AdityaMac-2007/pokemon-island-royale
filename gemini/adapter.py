@@ -121,9 +121,9 @@ MOVE_ALIASES: Dict[str, str] = {
     "waterfall": "waterfall",
 }
 
-# The 6 abilities with implemented runtime logic in Claude's engine
+# Abilities recognized as having mechanics in Claude's runtime by the build adapter.
 CLAUDE_IMPLEMENTED_ABILITIES: Set[str] = {
-    "blaze", "overgrow", "torrent", "swarm", "levitate", "sturdy"
+    "blaze", "overgrow", "torrent", "swarm", "levitate", "sturdy", "sand_veil"
 }
 
 # The 4 items with implemented runtime logic in Claude's engine

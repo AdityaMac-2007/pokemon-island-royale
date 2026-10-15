@@ -68,6 +68,27 @@ class Island:
         self.size = cfg.resolved_size()
         self.cx = self.cy = self.size / 2
         self.radius = self.size / 2
+        # New games default to irregular coastlines. The explicit circle mode is
+        # retained for historical fixtures and saved configurations.
+        self.shape = getattr(cfg, "island_shape", "irregular")
+        if self.shape not in ("irregular", "circle"):
+            raise ValueError(f"Unsupported island_shape: {self.shape!r}")
+        if self.shape == "circle":
+            # A unit coastline factor recreates the original circular boundary.
+            self.half_width = self.half_height = self.radius
+            self._coast_base = 1.0
+            self._coast_waves = ()
+        else:
+            # Independent seeded stream: coastline changes never consume the biome,
+            # berry, hazard, spawn, or weather random streams.
+            coast_rng = stream(cfg.seed, "coastline")
+            self.half_width = self.radius * coast_rng.uniform(0.84, 0.90)
+            self.half_height = self.radius * coast_rng.uniform(0.84, 0.90)
+            self._coast_base = coast_rng.uniform(0.935, 0.955)
+            self._coast_waves = tuple(
+                (frequency, coast_rng.uniform(0.010, 0.024), coast_rng.random() * 2 * math.pi)
+                for frequency in (2, 3, 5, 7, 11)
+            )
         rng = stream(cfg.seed, "island")
         # biome map: Voronoi regions around jittered centres; every biome appears at least once
         k = max(len(BIOME_NAMES), int(self.size * self.size / (28 * 28)))
@@ -75,9 +96,14 @@ class Island:
         rng.shuffle(names)
         centres = []
         for i in range(k):
-            a = rng.random() * 2 * math.pi
-            d = self.radius * math.sqrt(rng.random())
-            centres.append((self.cx + d * math.cos(a), self.cy + d * math.sin(a),
+            if self.shape == "circle":
+                # Original sampling sequence is preserved for legacy golden tests.
+                a = rng.random() * 2 * math.pi
+                d = self.radius * math.sqrt(rng.random())
+                x, y = self.cx + d * math.cos(a), self.cy + d * math.sin(a)
+            else:
+                x, y = self.random_land_point(rng, margin=self.CELL * 0.5)
+            centres.append((x, y,
                             names[i] if i < len(names) else BIOME_NAMES[rng.randrange(len(BIOME_NAMES))]))
         self.gw = int(math.ceil(self.size / self.CELL))
         self.grid = []
@@ -98,9 +124,12 @@ class Island:
         want, bid, tries = int(cfg.berry_density * n), 0, 0
         while bid < want and tries < want * 40:
             tries += 1
-            a = br.random() * 2 * math.pi
-            d = self.radius * 0.97 * math.sqrt(br.random())
-            x, y = self.cx + d * math.cos(a), self.cy + d * math.sin(a)
+            if self.shape == "circle":
+                a = br.random() * 2 * math.pi
+                d = self.radius * 0.97 * math.sqrt(br.random())
+                x, y = self.cx + d * math.cos(a), self.cy + d * math.sin(a)
+            else:
+                x, y = self.random_land_point(br, margin=0.35)
             if br.random() < BIOMES[self.biome_at(x, y)]["berries"] / 1.6:
                 self.berries.insert(bid, x, y)
                 bid += 1
@@ -124,9 +153,12 @@ class Island:
                 kind = "lightning" if er.random() < 0.55 else "eruption"
                 want_b = "storm_peak" if kind == "lightning" else "volcanic"
                 for _try in range(25):
-                    a = er.random() * 2 * math.pi
-                    d = self.radius * math.sqrt(er.random())
-                    x, y = self.cx + d * math.cos(a), self.cy + d * math.sin(a)
+                    if self.shape == "circle":
+                        a = er.random() * 2 * math.pi
+                        d = self.radius * math.sqrt(er.random())
+                        x, y = self.cx + d * math.cos(a), self.cy + d * math.sin(a)
+                    else:
+                        x, y = self.random_land_point(er, margin=5.5)
                     if self.biome_at(x, y) == want_b:
                         warn = t
                         self.hazards.append(dict(
@@ -140,6 +172,85 @@ class Island:
         self.hazards.sort(key=lambda h: (h["warn"], h["x"]))
         self.zone = Zone(cfg.zone, self.cx, self.cy, self.radius, stream(cfg.seed, "zone"))
         return self
+
+    def _coast_factor(self, angle: float) -> float:
+        """Normalized shoreline distance for an angle in ellipse coordinates."""
+        return self._coast_base + sum(
+            amplitude * math.sin(frequency * angle + phase)
+            for frequency, amplitude, phase in self._coast_waves
+        )
+
+    def coastline_points(self, segments: int = 160, scale: float = 1.0):
+        """Return deterministic world-coordinate points around the coastline.
+
+        `scale` is intended for renderer-only beach/shadow rings. Gameplay should
+        use `point_is_land`, which always tests the unscaled shoreline.
+        """
+        segments = max(32, int(segments))
+        points = []
+        for i in range(segments):
+            angle = math.tau * i / segments
+            factor = self._coast_factor(angle) * scale
+            points.append((
+                self.cx + self.half_width * factor * math.cos(angle),
+                self.cy + self.half_height * factor * math.sin(angle),
+            ))
+        return points
+
+    def point_is_land(self, x: float, y: float, margin: float = 0.0) -> bool:
+        """True when a world point lies on land, optionally inset from the shore."""
+        dx = (x - self.cx) / self.half_width
+        dy = (y - self.cy) / self.half_height
+        angle = math.atan2(dy, dx)
+        q = math.hypot(dx, dy)
+        radial_world_scale = math.hypot(
+            self.half_width * math.cos(angle),
+            self.half_height * math.sin(angle),
+        )
+        limit = self._coast_factor(angle) - max(0.0, margin) / max(radial_world_scale, 1e-12)
+        return q <= max(0.0, limit) + 1e-12
+
+    def project_to_land(self, x: float, y: float, margin: float = 0.0):
+        """Project a point onto the island, preserving its direction from centre."""
+        dx = (x - self.cx) / self.half_width
+        dy = (y - self.cy) / self.half_height
+        q = math.hypot(dx, dy)
+        if q <= 1e-15:
+            return self.cx, self.cy
+        angle = math.atan2(dy, dx)
+        radial_world_scale = math.hypot(
+            self.half_width * math.cos(angle),
+            self.half_height * math.sin(angle),
+        )
+        limit = max(0.0, self._coast_factor(angle) - max(0.0, margin) / max(radial_world_scale, 1e-12))
+        if q <= limit:
+            return x, y
+        return (
+            self.cx + self.half_width * math.cos(angle) * limit,
+            self.cy + self.half_height * math.sin(angle) * limit,
+        )
+
+    def random_land_point(self, rng, margin: float = 0.0):
+        """Sample a seeded point on land by rejection sampling in the island bounds."""
+        margin = max(0.0, float(margin))
+        for _ in range(1024):
+            x = self.cx + (rng.random() * 2.0 - 1.0) * self.half_width
+            y = self.cy + (rng.random() * 2.0 - 1.0) * self.half_height
+            if self.point_is_land(x, y, margin=margin):
+                return x, y
+
+        # Defensive fallback for unusually narrow coastlines or large margins.
+        angle = rng.random() * math.tau
+        radial_world_scale = math.hypot(
+            self.half_width * math.cos(angle),
+            self.half_height * math.sin(angle),
+        )
+        limit = max(0.0, self._coast_factor(angle) - margin / max(radial_world_scale, 1e-12))
+        q = math.sqrt(rng.random()) * limit
+        return (
+            self.cx + self.half_width * q * math.cos(angle),
+            self.cy + self.half_height * q * math.sin(angle),
+        )
 
     def biome_at(self, x, y):
         gx = min(self.gw - 1, max(0, int(x / self.CELL)))

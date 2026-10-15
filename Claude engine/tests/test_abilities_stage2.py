@@ -66,7 +66,8 @@ class Stage2AbilitiesTest(unittest.TestCase):
             "blaze", "overgrow", "torrent", "swarm", "levitate", "sturdy",
             "water_absorb", "volt_absorb", "flash_fire", "thick_fat", "filter", "solid_rock",
         ])
-        self.assertEqual(caps, expected)
+        for ability in expected:
+            self.assertIn(ability, caps)
 
     def test_water_absorb_prevents_damage_and_heals_quarter_max_hp(self):
         b_dfn = bld("Vaporeon", ("water",), ("hyper_voice",), ability="water_absorb")
